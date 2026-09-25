@@ -1,4 +1,4 @@
-# python make_risk_figures.py --medini 1_.xlsx --llm 2_.xlsx --out figures/
+# python make_risk_figures.py --medini 1_medini_risk_assessment.xlsx --llm 2_llm_risk_assessment.xlsx --out figures/
 import argparse
 import os
 from decimal import Decimal, ROUND_HALF_UP
@@ -166,7 +166,7 @@ def fig_matrix(m, l, path):
     VV = [1, 4, 7, 10]
     ABBR = {"Critical": "C", "High": "H", "Medium": "M", "Low": "L"}
 
-    fig, axs = plt.subplots(1, 2, figsize=(7.16, 2.75))
+    fig, axs = plt.subplots(2, 1, figsize=(3.5, 5.6))
     panels = [(m, f"(a) medini analyze, {len(m)} threats"),
               (l, f"(b) LLM scenarios, {len(l)} scenarios")]
     for ax, (d, title) in zip(axs, panels):
@@ -201,12 +201,12 @@ def fig_matrix(m, l, path):
         for sp in ax.spines.values():
             sp.set_visible(False)
         ax.set_title(title, fontsize=9, pad=4)
-        ax.set_xlabel("Attack feasibility (attack vector)", fontsize=8.5)
-    axs[0].set_ylabel("Impact severity", fontsize=8.5)
+        ax.set_ylabel("Impact severity", fontsize=8.5)
+    axs[-1].set_xlabel("Attack feasibility (attack vector)", fontsize=8.5)
     handles = [Rectangle((0, 0), 1, 1, fc=LCOL[k], ec="#555", lw=0.4) for k in LEV]
     fig.legend(handles, LEV, loc="lower center", ncol=4, frameon=False, fontsize=8,
-               bbox_to_anchor=(0.5, -0.01), handlelength=1.1)
-    fig.tight_layout(rect=(0, 0.06, 1, 1), w_pad=2.0)
+               bbox_to_anchor=(0.5, -0.005), handlelength=1.1)
+    fig.tight_layout(rect=(0, 0.03, 1, 1), h_pad=1.2)
     fig.savefig(path)
     plt.close(fig)
 
@@ -275,8 +275,8 @@ def fig_stride(m, l, path):
 # --------------------------------------------------------------------------------------
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--medini", default="1_.xlsx", help="medini risk assessment export")
-    p.add_argument("--llm", default="2_.xlsx", help="LLM scenario worksheet")
+    p.add_argument("--medini", default="1_medini_risk_assessment.xlsx", help="medini risk assessment export")
+    p.add_argument("--llm", default="2_llm_risk_assessment.xlsx", help="LLM scenario worksheet")
     p.add_argument("--sheet", default="Paper_1", help="sheet name in the medini workbook")
     p.add_argument("--out", default=".", help="output directory")
     args = p.parse_args()
