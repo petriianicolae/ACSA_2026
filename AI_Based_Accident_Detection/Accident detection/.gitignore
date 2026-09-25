@@ -1,0 +1,14 @@
+# Local Medini/Eclipse workspace state
+.autocounter
+.commons.medini
+.preferences
+.profiling
+.trace.medini
+.settings/
+
+# Temporary and editor files
+*.tmp
+*.bak
+*.log
+.DS_Store
+Thumbs.db

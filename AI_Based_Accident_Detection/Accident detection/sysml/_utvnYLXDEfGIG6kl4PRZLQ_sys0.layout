@@ -1,0 +1,17 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<layout:LayoutState xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:layout="http://www.ikv.de/medini/metamodels/LayoutModel/1.0" xmi:id="_uumjALXDEfGIG6kl4PRZLQ" type="sys0">
+  <tables xmi:id="_uumjAbXDEfGIG6kl4PRZLQ">
+    <columns xmi:id="_uumjArXDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!COMPONENT_NAME"/>
+    <columns xmi:id="_uumjA7XDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!PREDICATION_MODE"/>
+    <columns xmi:id="_uumjBLXDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!PARENT_PERCENTAGE"/>
+    <columns xmi:id="_uumjBbXDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!MISSION_PROFILE"/>
+    <columns xmi:id="_uumjBrXDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!RAW_RATE"/>
+    <columns xmi:id="_uumjB7XDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!SCALE_EXPRESSION"/>
+    <columns xmi:id="_uumjCLXDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!SCALE_CHILD"/>
+    <columns xmi:id="_uumjCbXDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!FAILURE_RATE"/>
+    <columns xmi:id="_uumjCrXDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!POTENTIAL_FAILURE"/>
+    <columns xmi:id="_uumjC7XDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!DISTRIBUTION"/>
+    <columns xmi:id="_uumjDLXDEfGIG6kl4PRZLQ" refId="de.ikv.medini.table.ui.model.impl.emf.DefaultEMFTableModelColumn#!FAILURE_FRACTION"/>
+    <columns xmi:id="_uumjDbXDEfGIG6kl4PRZLQ" refId="de.ikv.analyze.sysml.ui.models.VariableColumn#?MVariable.value"/>
+  </tables>
+</layout:LayoutState>

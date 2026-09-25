@@ -1,0 +1,679 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<safety:WeaknessCollection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:safety="http://www.ikv.de/medini/metamodels/SafetyModel/1.0" xmlns:security="http://www.ikv.de/medini/metamodels/Security/1.0" xmlns:sysml="http://www.ikv.de/medini/sysml/1.0" xmi:id="_WuOx6LaVEfG51-STqqQBiw" mediniIdentifier="_WuOx6LaVEfG51-STqqQBiw" name="New Threat Collection">
+  <collectionType href="http://www.ikv.de/medini/metamodels/Security/1.0#//Threat"/>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuGO8LaVEfG51-STqqQBiw" mediniIdentifier="_WuGO8LaVEfG51-STqqQBiw" id="T001" name="Information Disclosure of Mono + Stereo" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_fjGWALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuGO8baVEfG51-STqqQBiw" mediniIdentifier="_WuGO8baVEfG51-STqqQBiw" id="T002" name="Tampering of Mono + Stereo" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_fjGWALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuGO8raVEfG51-STqqQBiw" mediniIdentifier="_WuGO8raVEfG51-STqqQBiw" id="T003" name="Denial of Service of Mono + Stereo" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_fjGWALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuGO87aVEfG51-STqqQBiw" mediniIdentifier="_WuGO87aVEfG51-STqqQBiw" id="T004" name="Spoofing of Mono + Stereo" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_fjGWALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuGO9LaVEfG51-STqqQBiw" mediniIdentifier="_WuGO9LaVEfG51-STqqQBiw" id="T005" name="Elevation of Privilege of Mono + Stereo" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_fjGWALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuGO9baVEfG51-STqqQBiw" mediniIdentifier="_WuGO9baVEfG51-STqqQBiw" id="T006" name="Repudiation of Mono + Stereo" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_fjGWALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2ALaVEfG51-STqqQBiw" mediniIdentifier="_WuG2ALaVEfG51-STqqQBiw" id="T007" name="Information Disclosure of image_out" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_1DUO0LZyEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2AbaVEfG51-STqqQBiw" mediniIdentifier="_WuG2AbaVEfG51-STqqQBiw" id="T008" name="Tampering of image_out" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_1DUO0LZyEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2AraVEfG51-STqqQBiw" mediniIdentifier="_WuG2AraVEfG51-STqqQBiw" id="T009" name="Denial of Service of image_out" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_1DUO0LZyEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2A7aVEfG51-STqqQBiw" mediniIdentifier="_WuG2A7aVEfG51-STqqQBiw" id="T010" name="Information Disclosure of image_out ↔ image_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_913-sLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2BLaVEfG51-STqqQBiw" mediniIdentifier="_WuG2BLaVEfG51-STqqQBiw" id="T011" name="Tampering of image_out ↔ image_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_913-sLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2BbaVEfG51-STqqQBiw" mediniIdentifier="_WuG2BbaVEfG51-STqqQBiw" id="T012" name="Denial of Service of image_out ↔ image_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_913-sLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2DLaVEfG51-STqqQBiw" mediniIdentifier="_WuG2DLaVEfG51-STqqQBiw" id="T013" name="Information Disclosure of YOLOv5 fast path" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gSHYILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2DbaVEfG51-STqqQBiw" mediniIdentifier="_WuG2DbaVEfG51-STqqQBiw" id="T014" name="Tampering of YOLOv5 fast path" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gSHYILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2DraVEfG51-STqqQBiw" mediniIdentifier="_WuG2DraVEfG51-STqqQBiw" id="T015" name="Denial of Service of YOLOv5 fast path" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gSHYILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2D7aVEfG51-STqqQBiw" mediniIdentifier="_WuG2D7aVEfG51-STqqQBiw" id="T016" name="Spoofing of YOLOv5 fast path" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gSHYILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2ELaVEfG51-STqqQBiw" mediniIdentifier="_WuG2ELaVEfG51-STqqQBiw" id="T017" name="Elevation of Privilege of YOLOv5 fast path" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gSHYILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2EbaVEfG51-STqqQBiw" mediniIdentifier="_WuG2EbaVEfG51-STqqQBiw" id="T018" name="Repudiation of YOLOv5 fast path" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gSHYILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2EraVEfG51-STqqQBiw" mediniIdentifier="_WuG2EraVEfG51-STqqQBiw" id="T019" name="Information Disclosure of image_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_6bDvkLZyEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2E7aVEfG51-STqqQBiw" mediniIdentifier="_WuG2E7aVEfG51-STqqQBiw" id="T020" name="Tampering of image_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_6bDvkLZyEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2FLaVEfG51-STqqQBiw" mediniIdentifier="_WuG2FLaVEfG51-STqqQBiw" id="T021" name="Denial of Service of image_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_6bDvkLZyEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2FbaVEfG51-STqqQBiw" mediniIdentifier="_WuG2FbaVEfG51-STqqQBiw" id="T022" name="Information Disclosure of detections_out" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_94uJQLZyEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2FraVEfG51-STqqQBiw" mediniIdentifier="_WuG2FraVEfG51-STqqQBiw" id="T023" name="Tampering of detections_out" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_94uJQLZyEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2F7aVEfG51-STqqQBiw" mediniIdentifier="_WuG2F7aVEfG51-STqqQBiw" id="T024" name="Denial of Service of detections_out" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_94uJQLZyEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2GLaVEfG51-STqqQBiw" mediniIdentifier="_WuG2GLaVEfG51-STqqQBiw" id="T025" name="Information Disclosure of detections_out ↔ detections_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_G1oH8LZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2GbaVEfG51-STqqQBiw" mediniIdentifier="_WuG2GbaVEfG51-STqqQBiw" id="T026" name="Tampering of detections_out ↔ detections_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_G1oH8LZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuG2GraVEfG51-STqqQBiw" mediniIdentifier="_WuG2GraVEfG51-STqqQBiw" id="T027" name="Denial of Service of detections_out ↔ detections_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_G1oH8LZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdE7aVEfG51-STqqQBiw" mediniIdentifier="_WuHdE7aVEfG51-STqqQBiw" id="T028" name="Information Disclosure of Agent 1, MLLM call" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gvhF0LZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdFLaVEfG51-STqqQBiw" mediniIdentifier="_WuHdFLaVEfG51-STqqQBiw" id="T029" name="Tampering of Agent 1, MLLM call" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gvhF0LZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdFbaVEfG51-STqqQBiw" mediniIdentifier="_WuHdFbaVEfG51-STqqQBiw" id="T030" name="Denial of Service of Agent 1, MLLM call" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gvhF0LZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdFraVEfG51-STqqQBiw" mediniIdentifier="_WuHdFraVEfG51-STqqQBiw" id="T031" name="Spoofing of Agent 1, MLLM call" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gvhF0LZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdF7aVEfG51-STqqQBiw" mediniIdentifier="_WuHdF7aVEfG51-STqqQBiw" id="T032" name="Elevation of Privilege of Agent 1, MLLM call" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gvhF0LZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdGLaVEfG51-STqqQBiw" mediniIdentifier="_WuHdGLaVEfG51-STqqQBiw" id="T033" name="Repudiation of Agent 1, MLLM call" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_gvhF0LZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdGbaVEfG51-STqqQBiw" mediniIdentifier="_WuHdGbaVEfG51-STqqQBiw" id="T034" name="Information Disclosure of detections_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_DilUwLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdGraVEfG51-STqqQBiw" mediniIdentifier="_WuHdGraVEfG51-STqqQBiw" id="T035" name="Tampering of detections_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_DilUwLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdG7aVEfG51-STqqQBiw" mediniIdentifier="_WuHdG7aVEfG51-STqqQBiw" id="T036" name="Denial of Service of detections_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_DilUwLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdHLaVEfG51-STqqQBiw" mediniIdentifier="_WuHdHLaVEfG51-STqqQBiw" id="T037" name="Information Disclosure of hazard_out" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_NOtb0LZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdHbaVEfG51-STqqQBiw" mediniIdentifier="_WuHdHbaVEfG51-STqqQBiw" id="T038" name="Tampering of hazard_out" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_NOtb0LZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdHraVEfG51-STqqQBiw" mediniIdentifier="_WuHdHraVEfG51-STqqQBiw" id="T039" name="Denial of Service of hazard_out" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_NOtb0LZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdH7aVEfG51-STqqQBiw" mediniIdentifier="_WuHdH7aVEfG51-STqqQBiw" id="T040" name="Information Disclosure of mllm_request" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_WqocULZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdILaVEfG51-STqqQBiw" mediniIdentifier="_WuHdILaVEfG51-STqqQBiw" id="T041" name="Tampering of mllm_request" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_WqocULZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdIbaVEfG51-STqqQBiw" mediniIdentifier="_WuHdIbaVEfG51-STqqQBiw" id="T042" name="Denial of Service of mllm_request" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_WqocULZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdIraVEfG51-STqqQBiw" mediniIdentifier="_WuHdIraVEfG51-STqqQBiw" id="T043" name="Information Disclosure of uu_mllm_link" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_aN6B4LaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuHdI7aVEfG51-STqqQBiw" mediniIdentifier="_WuHdI7aVEfG51-STqqQBiw" id="T044" name="Tampering of uu_mllm_link" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_aN6B4LaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIEILaVEfG51-STqqQBiw" mediniIdentifier="_WuIEILaVEfG51-STqqQBiw" id="T045" name="Denial of Service of uu_mllm_link" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_aN6B4LaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIEIbaVEfG51-STqqQBiw" mediniIdentifier="_WuIEIbaVEfG51-STqqQBiw" id="T046" name="Information Disclosure of hazard_out ↔ hazard_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_L2_wELZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIEIraVEfG51-STqqQBiw" mediniIdentifier="_WuIEIraVEfG51-STqqQBiw" id="T047" name="Tampering of hazard_out ↔ hazard_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_L2_wELZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIEI7aVEfG51-STqqQBiw" mediniIdentifier="_WuIEI7aVEfG51-STqqQBiw" id="T048" name="Denial of Service of hazard_out ↔ hazard_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_L2_wELZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIEJLaVEfG51-STqqQBiw" mediniIdentifier="_WuIEJLaVEfG51-STqqQBiw" id="T049" name="Information Disclosure of mllm_request ↔ mllm_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_9Yw6ALZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrMLaVEfG51-STqqQBiw" mediniIdentifier="_WuIrMLaVEfG51-STqqQBiw" id="T050" name="Tampering of mllm_request ↔ mllm_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_9Yw6ALZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrMbaVEfG51-STqqQBiw" mediniIdentifier="_WuIrMbaVEfG51-STqqQBiw" id="T051" name="Denial of Service of mllm_request ↔ mllm_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_9Yw6ALZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrMraVEfG51-STqqQBiw" mediniIdentifier="_WuIrMraVEfG51-STqqQBiw" id="T052" name="Information Disclosure of uu_mllm_link ↔ mllm_link_1" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_xi3WILaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrM7aVEfG51-STqqQBiw" mediniIdentifier="_WuIrM7aVEfG51-STqqQBiw" id="T053" name="Tampering of uu_mllm_link ↔ mllm_link_1" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_xi3WILaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrNLaVEfG51-STqqQBiw" mediniIdentifier="_WuIrNLaVEfG51-STqqQBiw" id="T054" name="Denial of Service of uu_mllm_link ↔ mllm_link_1" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_xi3WILaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrSraVEfG51-STqqQBiw" mediniIdentifier="_WuIrSraVEfG51-STqqQBiw" id="T055" name="Information Disclosure of Agent 2, Depth Pro" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hKjcALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrS7aVEfG51-STqqQBiw" mediniIdentifier="_WuIrS7aVEfG51-STqqQBiw" id="T056" name="Tampering of Agent 2, Depth Pro" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hKjcALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrTLaVEfG51-STqqQBiw" mediniIdentifier="_WuIrTLaVEfG51-STqqQBiw" id="T057" name="Denial of Service of Agent 2, Depth Pro" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hKjcALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrTbaVEfG51-STqqQBiw" mediniIdentifier="_WuIrTbaVEfG51-STqqQBiw" id="T058" name="Spoofing of Agent 2, Depth Pro" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hKjcALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrTraVEfG51-STqqQBiw" mediniIdentifier="_WuIrTraVEfG51-STqqQBiw" id="T059" name="Elevation of Privilege of Agent 2, Depth Pro" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hKjcALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrT7aVEfG51-STqqQBiw" mediniIdentifier="_WuIrT7aVEfG51-STqqQBiw" id="T060" name="Repudiation of Agent 2, Depth Pro" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hKjcALZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrULaVEfG51-STqqQBiw" mediniIdentifier="_WuIrULaVEfG51-STqqQBiw" id="T061" name="Information Disclosure of hazard_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_RsMTwLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrUbaVEfG51-STqqQBiw" mediniIdentifier="_WuIrUbaVEfG51-STqqQBiw" id="T062" name="Tampering of hazard_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_RsMTwLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuIrUraVEfG51-STqqQBiw" mediniIdentifier="_WuIrUraVEfG51-STqqQBiw" id="T063" name="Denial of Service of hazard_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_RsMTwLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSQLaVEfG51-STqqQBiw" mediniIdentifier="_WuJSQLaVEfG51-STqqQBiw" id="T064" name="Information Disclosure of distance_out" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_YA6aILZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSQbaVEfG51-STqqQBiw" mediniIdentifier="_WuJSQbaVEfG51-STqqQBiw" id="T065" name="Tampering of distance_out" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_YA6aILZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSQraVEfG51-STqqQBiw" mediniIdentifier="_WuJSQraVEfG51-STqqQBiw" id="T066" name="Denial of Service of distance_out" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_YA6aILZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSQ7aVEfG51-STqqQBiw" mediniIdentifier="_WuJSQ7aVEfG51-STqqQBiw" id="T067" name="Information Disclosure of distance_out ↔ distance_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_OE1goLZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSRLaVEfG51-STqqQBiw" mediniIdentifier="_WuJSRLaVEfG51-STqqQBiw" id="T068" name="Tampering of distance_out ↔ distance_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_OE1goLZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSRbaVEfG51-STqqQBiw" mediniIdentifier="_WuJSRbaVEfG51-STqqQBiw" id="T069" name="Denial of Service of distance_out ↔ distance_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_OE1goLZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJST7aVEfG51-STqqQBiw" mediniIdentifier="_WuJST7aVEfG51-STqqQBiw" id="T070" name="Information Disclosure of Agent 3, MLLM call" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hmMPILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSULaVEfG51-STqqQBiw" mediniIdentifier="_WuJSULaVEfG51-STqqQBiw" id="T071" name="Tampering of Agent 3, MLLM call" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hmMPILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSUbaVEfG51-STqqQBiw" mediniIdentifier="_WuJSUbaVEfG51-STqqQBiw" id="T072" name="Denial of Service of Agent 3, MLLM call" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hmMPILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSUraVEfG51-STqqQBiw" mediniIdentifier="_WuJSUraVEfG51-STqqQBiw" id="T073" name="Spoofing of Agent 3, MLLM call" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hmMPILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSU7aVEfG51-STqqQBiw" mediniIdentifier="_WuJSU7aVEfG51-STqqQBiw" id="T074" name="Elevation of Privilege of Agent 3, MLLM call" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hmMPILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSVLaVEfG51-STqqQBiw" mediniIdentifier="_WuJSVLaVEfG51-STqqQBiw" id="T075" name="Repudiation of Agent 3, MLLM call" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hmMPILZvEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSVbaVEfG51-STqqQBiw" mediniIdentifier="_WuJSVbaVEfG51-STqqQBiw" id="T076" name="Information Disclosure of distance_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_c_9HALZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSVraVEfG51-STqqQBiw" mediniIdentifier="_WuJSVraVEfG51-STqqQBiw" id="T077" name="Tampering of distance_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_c_9HALZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSV7aVEfG51-STqqQBiw" mediniIdentifier="_WuJSV7aVEfG51-STqqQBiw" id="T078" name="Denial of Service of distance_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_c_9HALZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSWLaVEfG51-STqqQBiw" mediniIdentifier="_WuJSWLaVEfG51-STqqQBiw" id="T079" name="Information Disclosure of content_out" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_k01YkLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSWbaVEfG51-STqqQBiw" mediniIdentifier="_WuJSWbaVEfG51-STqqQBiw" id="T080" name="Tampering of content_out" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_k01YkLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJSWraVEfG51-STqqQBiw" mediniIdentifier="_WuJSWraVEfG51-STqqQBiw" id="T081" name="Denial of Service of content_out" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_k01YkLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5ULaVEfG51-STqqQBiw" mediniIdentifier="_WuJ5ULaVEfG51-STqqQBiw" id="T082" name="Information Disclosure of mllm_request" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_evr34LZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5UbaVEfG51-STqqQBiw" mediniIdentifier="_WuJ5UbaVEfG51-STqqQBiw" id="T083" name="Tampering of mllm_request" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_evr34LZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5UraVEfG51-STqqQBiw" mediniIdentifier="_WuJ5UraVEfG51-STqqQBiw" id="T084" name="Denial of Service of mllm_request" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_evr34LZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5U7aVEfG51-STqqQBiw" mediniIdentifier="_WuJ5U7aVEfG51-STqqQBiw" id="T085" name="Information Disclosure of uu_mllm_link" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_8rTqMLaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5VLaVEfG51-STqqQBiw" mediniIdentifier="_WuJ5VLaVEfG51-STqqQBiw" id="T086" name="Tampering of uu_mllm_link" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_8rTqMLaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5VbaVEfG51-STqqQBiw" mediniIdentifier="_WuJ5VbaVEfG51-STqqQBiw" id="T087" name="Denial of Service of uu_mllm_link" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_8rTqMLaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5VraVEfG51-STqqQBiw" mediniIdentifier="_WuJ5VraVEfG51-STqqQBiw" id="T088" name="Information Disclosure of content_out ↔ content_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_PnYRcLZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5V7aVEfG51-STqqQBiw" mediniIdentifier="_WuJ5V7aVEfG51-STqqQBiw" id="T089" name="Tampering of content_out ↔ content_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_PnYRcLZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5WLaVEfG51-STqqQBiw" mediniIdentifier="_WuJ5WLaVEfG51-STqqQBiw" id="T090" name="Denial of Service of content_out ↔ content_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_PnYRcLZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5WbaVEfG51-STqqQBiw" mediniIdentifier="_WuJ5WbaVEfG51-STqqQBiw" id="T091" name="Information Disclosure of mllm_request ↔ mllm_in_2" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_thd0sLZ3EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5WraVEfG51-STqqQBiw" mediniIdentifier="_WuJ5WraVEfG51-STqqQBiw" id="T092" name="Tampering of mllm_request ↔ mllm_in_2" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_thd0sLZ3EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5W7aVEfG51-STqqQBiw" mediniIdentifier="_WuJ5W7aVEfG51-STqqQBiw" id="T093" name="Denial of Service of mllm_request ↔ mllm_in_2" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_thd0sLZ3EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuJ5XLaVEfG51-STqqQBiw" mediniIdentifier="_WuJ5XLaVEfG51-STqqQBiw" id="T094" name="Information Disclosure of uu_mllm_link ↔ mllm_link_2" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_aclPsLaREfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuKgYLaVEfG51-STqqQBiw" mediniIdentifier="_WuKgYLaVEfG51-STqqQBiw" id="T095" name="Tampering of uu_mllm_link ↔ mllm_link_2" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_aclPsLaREfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuKgYbaVEfG51-STqqQBiw" mediniIdentifier="_WuKgYbaVEfG51-STqqQBiw" id="T096" name="Denial of Service of uu_mllm_link ↔ mllm_link_2" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_aclPsLaREfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuKgd7aVEfG51-STqqQBiw" mediniIdentifier="_WuKgd7aVEfG51-STqqQBiw" id="T097" name="Information Disclosure of ASN.1 UPER payload" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_LSPPcLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuKgeLaVEfG51-STqqQBiw" mediniIdentifier="_WuKgeLaVEfG51-STqqQBiw" id="T098" name="Tampering of ASN.1 UPER payload" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_LSPPcLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuKgebaVEfG51-STqqQBiw" mediniIdentifier="_WuKgebaVEfG51-STqqQBiw" id="T099" name="Denial of Service of ASN.1 UPER payload" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_LSPPcLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuKgeraVEfG51-STqqQBiw" mediniIdentifier="_WuKgeraVEfG51-STqqQBiw" id="T100" name="Spoofing of ASN.1 UPER payload" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_LSPPcLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuKge7aVEfG51-STqqQBiw" mediniIdentifier="_WuKge7aVEfG51-STqqQBiw" id="T101" name="Elevation of Privilege of ASN.1 UPER payload" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_LSPPcLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuKgfLaVEfG51-STqqQBiw" mediniIdentifier="_WuKgfLaVEfG51-STqqQBiw" id="T102" name="Repudiation of ASN.1 UPER payload" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_LSPPcLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuKgfbaVEfG51-STqqQBiw" mediniIdentifier="_WuKgfbaVEfG51-STqqQBiw" id="T103" name="Information Disclosure of content_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_p-OUQLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHcLaVEfG51-STqqQBiw" mediniIdentifier="_WuLHcLaVEfG51-STqqQBiw" id="T104" name="Tampering of content_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_p-OUQLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHcbaVEfG51-STqqQBiw" mediniIdentifier="_WuLHcbaVEfG51-STqqQBiw" id="T105" name="Denial of Service of content_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_p-OUQLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHcraVEfG51-STqqQBiw" mediniIdentifier="_WuLHcraVEfG51-STqqQBiw" id="T106" name="Information Disclosure of denm_out" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_vhqHoLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHc7aVEfG51-STqqQBiw" mediniIdentifier="_WuLHc7aVEfG51-STqqQBiw" id="T107" name="Tampering of denm_out" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_vhqHoLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHdLaVEfG51-STqqQBiw" mediniIdentifier="_WuLHdLaVEfG51-STqqQBiw" id="T108" name="Denial of Service of denm_out" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_vhqHoLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHdbaVEfG51-STqqQBiw" mediniIdentifier="_WuLHdbaVEfG51-STqqQBiw" id="T109" name="Information Disclosure of denm_out ↔ denm_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_SzIbwLZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHdraVEfG51-STqqQBiw" mediniIdentifier="_WuLHdraVEfG51-STqqQBiw" id="T110" name="Tampering of denm_out ↔ denm_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_SzIbwLZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHd7aVEfG51-STqqQBiw" mediniIdentifier="_WuLHd7aVEfG51-STqqQBiw" id="T111" name="Denial of Service of denm_out ↔ denm_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_SzIbwLZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHgbaVEfG51-STqqQBiw" mediniIdentifier="_WuLHgbaVEfG51-STqqQBiw" id="T112" name="Information Disclosure of Signs, PC5, HSM" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_L8-1kLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHgraVEfG51-STqqQBiw" mediniIdentifier="_WuLHgraVEfG51-STqqQBiw" id="T113" name="Tampering of Signs, PC5, HSM" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_L8-1kLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHg7aVEfG51-STqqQBiw" mediniIdentifier="_WuLHg7aVEfG51-STqqQBiw" id="T114" name="Denial of Service of Signs, PC5, HSM" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_L8-1kLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHhLaVEfG51-STqqQBiw" mediniIdentifier="_WuLHhLaVEfG51-STqqQBiw" id="T115" name="Spoofing of Signs, PC5, HSM" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_L8-1kLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHhbaVEfG51-STqqQBiw" mediniIdentifier="_WuLHhbaVEfG51-STqqQBiw" id="T116" name="Elevation of Privilege of Signs, PC5, HSM" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_L8-1kLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHhraVEfG51-STqqQBiw" mediniIdentifier="_WuLHhraVEfG51-STqqQBiw" id="T117" name="Repudiation of Signs, PC5, HSM" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_L8-1kLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHh7aVEfG51-STqqQBiw" mediniIdentifier="_WuLHh7aVEfG51-STqqQBiw" id="T118" name="Information Disclosure of denm_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_z_K0wLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHiLaVEfG51-STqqQBiw" mediniIdentifier="_WuLHiLaVEfG51-STqqQBiw" id="T119" name="Tampering of denm_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_z_K0wLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHibaVEfG51-STqqQBiw" mediniIdentifier="_WuLHibaVEfG51-STqqQBiw" id="T120" name="Denial of Service of denm_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_z_K0wLZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHiraVEfG51-STqqQBiw" mediniIdentifier="_WuLHiraVEfG51-STqqQBiw" id="T121" name="Information Disclosure of pc5_out" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_64fdALZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHi7aVEfG51-STqqQBiw" mediniIdentifier="_WuLHi7aVEfG51-STqqQBiw" id="T122" name="Tampering of pc5_out" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_64fdALZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHjLaVEfG51-STqqQBiw" mediniIdentifier="_WuLHjLaVEfG51-STqqQBiw" id="T123" name="Denial of Service of pc5_out" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_64fdALZzEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHjbaVEfG51-STqqQBiw" mediniIdentifier="_WuLHjbaVEfG51-STqqQBiw" id="T124" name="Information Disclosure of uu_uplink" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_nRb2gLZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHjraVEfG51-STqqQBiw" mediniIdentifier="_WuLHjraVEfG51-STqqQBiw" id="T125" name="Tampering of uu_uplink" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_nRb2gLZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHj7aVEfG51-STqqQBiw" mediniIdentifier="_WuLHj7aVEfG51-STqqQBiw" id="T126" name="Denial of Service of uu_uplink" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_nRb2gLZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHkLaVEfG51-STqqQBiw" mediniIdentifier="_WuLHkLaVEfG51-STqqQBiw" id="T127" name="Information Disclosure of uu_link" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_QmKHsLaSEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHkbaVEfG51-STqqQBiw" mediniIdentifier="_WuLHkbaVEfG51-STqqQBiw" id="T128" name="Tampering of uu_link" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_QmKHsLaSEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLHkraVEfG51-STqqQBiw" mediniIdentifier="_WuLHkraVEfG51-STqqQBiw" id="T129" name="Denial of Service of uu_link" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_QmKHsLaSEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLugLaVEfG51-STqqQBiw" mediniIdentifier="_WuLugLaVEfG51-STqqQBiw" id="T130" name="Information Disclosure of pc5_out ↔ pc5_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_VK3IILZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLugbaVEfG51-STqqQBiw" mediniIdentifier="_WuLugbaVEfG51-STqqQBiw" id="T131" name="Tampering of pc5_out ↔ pc5_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_VK3IILZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLugraVEfG51-STqqQBiw" mediniIdentifier="_WuLugraVEfG51-STqqQBiw" id="T132" name="Denial of Service of pc5_out ↔ pc5_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_VK3IILZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLug7aVEfG51-STqqQBiw" mediniIdentifier="_WuLug7aVEfG51-STqqQBiw" id="T133" name="Information Disclosure of uu_uplink ↔ uu_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_KAezALZ4EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLuhLaVEfG51-STqqQBiw" mediniIdentifier="_WuLuhLaVEfG51-STqqQBiw" id="T134" name="Tampering of uu_uplink ↔ uu_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_KAezALZ4EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLuhbaVEfG51-STqqQBiw" mediniIdentifier="_WuLuhbaVEfG51-STqqQBiw" id="T135" name="Denial of Service of uu_uplink ↔ uu_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_KAezALZ4EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLuhraVEfG51-STqqQBiw" mediniIdentifier="_WuLuhraVEfG51-STqqQBiw" id="T136" name="Information Disclosure of uu_link ↔ uu_link_rsu" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_XwoxYLaSEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLuh7aVEfG51-STqqQBiw" mediniIdentifier="_WuLuh7aVEfG51-STqqQBiw" id="T137" name="Tampering of uu_link ↔ uu_link_rsu" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_XwoxYLaSEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuLuiLaVEfG51-STqqQBiw" mediniIdentifier="_WuLuiLaVEfG51-STqqQBiw" id="T138" name="Denial of Service of uu_link ↔ uu_link_rsu" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_XwoxYLaSEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVmbaVEfG51-STqqQBiw" mediniIdentifier="_WuMVmbaVEfG51-STqqQBiw" id="T139" name="Information Disclosure of PC5 + Uumodem" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_MZOFoLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVmraVEfG51-STqqQBiw" mediniIdentifier="_WuMVmraVEfG51-STqqQBiw" id="T140" name="Tampering of PC5 + Uumodem" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_MZOFoLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVm7aVEfG51-STqqQBiw" mediniIdentifier="_WuMVm7aVEfG51-STqqQBiw" id="T141" name="Denial of Service of PC5 + Uumodem" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_MZOFoLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVnLaVEfG51-STqqQBiw" mediniIdentifier="_WuMVnLaVEfG51-STqqQBiw" id="T142" name="Spoofing of PC5 + Uumodem" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_MZOFoLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVnbaVEfG51-STqqQBiw" mediniIdentifier="_WuMVnbaVEfG51-STqqQBiw" id="T143" name="Elevation of Privilege of PC5 + Uumodem" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_MZOFoLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVnraVEfG51-STqqQBiw" mediniIdentifier="_WuMVnraVEfG51-STqqQBiw" id="T144" name="Repudiation of PC5 + Uumodem" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_MZOFoLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVn7aVEfG51-STqqQBiw" mediniIdentifier="_WuMVn7aVEfG51-STqqQBiw" id="T145" name="Information Disclosure of pc5_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_JXNwYLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVoLaVEfG51-STqqQBiw" mediniIdentifier="_WuMVoLaVEfG51-STqqQBiw" id="T146" name="Tampering of pc5_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_JXNwYLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVobaVEfG51-STqqQBiw" mediniIdentifier="_WuMVobaVEfG51-STqqQBiw" id="T147" name="Denial of Service of pc5_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_JXNwYLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVoraVEfG51-STqqQBiw" mediniIdentifier="_WuMVoraVEfG51-STqqQBiw" id="T148" name="Information Disclosure of warning_out" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_N5lIULZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVo7aVEfG51-STqqQBiw" mediniIdentifier="_WuMVo7aVEfG51-STqqQBiw" id="T149" name="Tampering of warning_out" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_N5lIULZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVpLaVEfG51-STqqQBiw" mediniIdentifier="_WuMVpLaVEfG51-STqqQBiw" id="T150" name="Denial of Service of warning_out" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_N5lIULZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVpbaVEfG51-STqqQBiw" mediniIdentifier="_WuMVpbaVEfG51-STqqQBiw" id="T151" name="Information Disclosure of uu_modem" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_qsb9wLZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVpraVEfG51-STqqQBiw" mediniIdentifier="_WuMVpraVEfG51-STqqQBiw" id="T152" name="Tampering of uu_modem" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_qsb9wLZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVp7aVEfG51-STqqQBiw" mediniIdentifier="_WuMVp7aVEfG51-STqqQBiw" id="T153" name="Denial of Service of uu_modem" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_qsb9wLZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVqLaVEfG51-STqqQBiw" mediniIdentifier="_WuMVqLaVEfG51-STqqQBiw" id="T154" name="Information Disclosure of uu_modem" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Ai9UYLaTEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVqbaVEfG51-STqqQBiw" mediniIdentifier="_WuMVqbaVEfG51-STqqQBiw" id="T155" name="Tampering of uu_modem" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Ai9UYLaTEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVqraVEfG51-STqqQBiw" mediniIdentifier="_WuMVqraVEfG51-STqqQBiw" id="T156" name="Denial of Service of uu_modem" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Ai9UYLaTEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuMVq7aVEfG51-STqqQBiw" mediniIdentifier="_WuMVq7aVEfG51-STqqQBiw" id="T157" name="Information Disclosure of warning_out ↔ warning_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_XdnN4LZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuM8oLaVEfG51-STqqQBiw" mediniIdentifier="_WuM8oLaVEfG51-STqqQBiw" id="T158" name="Tampering of warning_out ↔ warning_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_XdnN4LZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuM8obaVEfG51-STqqQBiw" mediniIdentifier="_WuM8obaVEfG51-STqqQBiw" id="T159" name="Denial of Service of warning_out ↔ warning_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_XdnN4LZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuM8oraVEfG51-STqqQBiw" mediniIdentifier="_WuM8oraVEfG51-STqqQBiw" id="T160" name="Information Disclosure of uu_modem ↔ uu_in_2" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Ny24cLZ4EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuM8o7aVEfG51-STqqQBiw" mediniIdentifier="_WuM8o7aVEfG51-STqqQBiw" id="T161" name="Tampering of uu_modem ↔ uu_in_2" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Ny24cLZ4EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuM8pLaVEfG51-STqqQBiw" mediniIdentifier="_WuM8pLaVEfG51-STqqQBiw" id="T162" name="Denial of Service of uu_modem ↔ uu_in_2" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Ny24cLZ4EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjsLaVEfG51-STqqQBiw" mediniIdentifier="_WuNjsLaVEfG51-STqqQBiw" id="T163" name="Information Disclosure of Verify, warning logic" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_M0fFULZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjsbaVEfG51-STqqQBiw" mediniIdentifier="_WuNjsbaVEfG51-STqqQBiw" id="T164" name="Tampering of Verify, warning logic" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_M0fFULZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjsraVEfG51-STqqQBiw" mediniIdentifier="_WuNjsraVEfG51-STqqQBiw" id="T165" name="Denial of Service of Verify, warning logic" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_M0fFULZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjs7aVEfG51-STqqQBiw" mediniIdentifier="_WuNjs7aVEfG51-STqqQBiw" id="T166" name="Spoofing of Verify, warning logic" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_M0fFULZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjtLaVEfG51-STqqQBiw" mediniIdentifier="_WuNjtLaVEfG51-STqqQBiw" id="T167" name="Elevation of Privilege of Verify, warning logic" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_M0fFULZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjtbaVEfG51-STqqQBiw" mediniIdentifier="_WuNjtbaVEfG51-STqqQBiw" id="T168" name="Repudiation of Verify, warning logic" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_M0fFULZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjtraVEfG51-STqqQBiw" mediniIdentifier="_WuNjtraVEfG51-STqqQBiw" id="T169" name="Information Disclosure of warning_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_UK7KkLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjt7aVEfG51-STqqQBiw" mediniIdentifier="_WuNjt7aVEfG51-STqqQBiw" id="T170" name="Tampering of warning_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_UK7KkLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjuLaVEfG51-STqqQBiw" mediniIdentifier="_WuNjuLaVEfG51-STqqQBiw" id="T171" name="Denial of Service of warning_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_UK7KkLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjubaVEfG51-STqqQBiw" mediniIdentifier="_WuNjubaVEfG51-STqqQBiw" id="T172" name="Information Disclosure of alert_out" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Z02ngLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjuraVEfG51-STqqQBiw" mediniIdentifier="_WuNjuraVEfG51-STqqQBiw" id="T173" name="Tampering of alert_out" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Z02ngLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNju7aVEfG51-STqqQBiw" mediniIdentifier="_WuNju7aVEfG51-STqqQBiw" id="T174" name="Denial of Service of alert_out" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Z02ngLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjvLaVEfG51-STqqQBiw" mediniIdentifier="_WuNjvLaVEfG51-STqqQBiw" id="T175" name="Information Disclosure of alert_out ↔ alert_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hVAw0LZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjvbaVEfG51-STqqQBiw" mediniIdentifier="_WuNjvbaVEfG51-STqqQBiw" id="T176" name="Tampering of alert_out ↔ alert_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hVAw0LZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjvraVEfG51-STqqQBiw" mediniIdentifier="_WuNjvraVEfG51-STqqQBiw" id="T177" name="Denial of Service of alert_out ↔ alert_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_hVAw0LZ1EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjyLaVEfG51-STqqQBiw" mediniIdentifier="_WuNjyLaVEfG51-STqqQBiw" id="T178" name="Information Disclosure of Visual + audio alert" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_NyoIkLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjybaVEfG51-STqqQBiw" mediniIdentifier="_WuNjybaVEfG51-STqqQBiw" id="T179" name="Tampering of Visual + audio alert" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_NyoIkLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjyraVEfG51-STqqQBiw" mediniIdentifier="_WuNjyraVEfG51-STqqQBiw" id="T180" name="Denial of Service of Visual + audio alert" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_NyoIkLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjy7aVEfG51-STqqQBiw" mediniIdentifier="_WuNjy7aVEfG51-STqqQBiw" id="T181" name="Spoofing of Visual + audio alert" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_NyoIkLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjzLaVEfG51-STqqQBiw" mediniIdentifier="_WuNjzLaVEfG51-STqqQBiw" id="T182" name="Elevation of Privilege of Visual + audio alert" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_NyoIkLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjzbaVEfG51-STqqQBiw" mediniIdentifier="_WuNjzbaVEfG51-STqqQBiw" id="T183" name="Repudiation of Visual + audio alert" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_NyoIkLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjzraVEfG51-STqqQBiw" mediniIdentifier="_WuNjzraVEfG51-STqqQBiw" id="T184" name="Information Disclosure of alert_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_eUy9kLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNjz7aVEfG51-STqqQBiw" mediniIdentifier="_WuNjz7aVEfG51-STqqQBiw" id="T185" name="Tampering of alert_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_eUy9kLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj0LaVEfG51-STqqQBiw" mediniIdentifier="_WuNj0LaVEfG51-STqqQBiw" id="T186" name="Denial of Service of alert_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_eUy9kLZ0EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj1LaVEfG51-STqqQBiw" mediniIdentifier="_WuNj1LaVEfG51-STqqQBiw" id="T187" name="Information Disclosure of Gemini API" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_ONQ2ILZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj1baVEfG51-STqqQBiw" mediniIdentifier="_WuNj1baVEfG51-STqqQBiw" id="T188" name="Tampering of Gemini API" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_ONQ2ILZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj1raVEfG51-STqqQBiw" mediniIdentifier="_WuNj1raVEfG51-STqqQBiw" id="T189" name="Denial of Service of Gemini API" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_ONQ2ILZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj17aVEfG51-STqqQBiw" mediniIdentifier="_WuNj17aVEfG51-STqqQBiw" id="T190" name="Spoofing of Gemini API" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_ONQ2ILZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj2LaVEfG51-STqqQBiw" mediniIdentifier="_WuNj2LaVEfG51-STqqQBiw" id="T191" name="Elevation of Privilege of Gemini API" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_ONQ2ILZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj2baVEfG51-STqqQBiw" mediniIdentifier="_WuNj2baVEfG51-STqqQBiw" id="T192" name="Repudiation of Gemini API" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_ONQ2ILZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj2raVEfG51-STqqQBiw" mediniIdentifier="_WuNj2raVEfG51-STqqQBiw" id="T193" name="Information Disclosure of mllm_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_jMmIELZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj27aVEfG51-STqqQBiw" mediniIdentifier="_WuNj27aVEfG51-STqqQBiw" id="T194" name="Tampering of mllm_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_jMmIELZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj3LaVEfG51-STqqQBiw" mediniIdentifier="_WuNj3LaVEfG51-STqqQBiw" id="T195" name="Denial of Service of mllm_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_jMmIELZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuNj3baVEfG51-STqqQBiw" mediniIdentifier="_WuNj3baVEfG51-STqqQBiw" id="T196" name="Information Disclosure of mllm_in_2" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_k1KL4LZ3EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOKwLaVEfG51-STqqQBiw" mediniIdentifier="_WuOKwLaVEfG51-STqqQBiw" id="T197" name="Tampering of mllm_in_2" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_k1KL4LZ3EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOKwbaVEfG51-STqqQBiw" mediniIdentifier="_WuOKwbaVEfG51-STqqQBiw" id="T198" name="Denial of Service of mllm_in_2" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_k1KL4LZ3EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOKwraVEfG51-STqqQBiw" mediniIdentifier="_WuOKwraVEfG51-STqqQBiw" id="T199" name="Information Disclosure of mllm_link_1" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_t0iDMLaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOKw7aVEfG51-STqqQBiw" mediniIdentifier="_WuOKw7aVEfG51-STqqQBiw" id="T200" name="Tampering of mllm_link_1" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_t0iDMLaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOKxLaVEfG51-STqqQBiw" mediniIdentifier="_WuOKxLaVEfG51-STqqQBiw" id="T201" name="Denial of Service of mllm_link_1" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_t0iDMLaOEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOKxbaVEfG51-STqqQBiw" mediniIdentifier="_WuOKxbaVEfG51-STqqQBiw" id="T202" name="Information Disclosure of mllm_link_2" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_BsqrQLaPEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOKxraVEfG51-STqqQBiw" mediniIdentifier="_WuOKxraVEfG51-STqqQBiw" id="T203" name="Tampering of mllm_link_2" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_BsqrQLaPEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOKx7aVEfG51-STqqQBiw" mediniIdentifier="_WuOKx7aVEfG51-STqqQBiw" id="T204" name="Denial of Service of mllm_link_2" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_BsqrQLaPEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK1LaVEfG51-STqqQBiw" mediniIdentifier="_WuOK1LaVEfG51-STqqQBiw" id="T205" name="Information Disclosure of PKI, operator" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_OoD7wLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK1baVEfG51-STqqQBiw" mediniIdentifier="_WuOK1baVEfG51-STqqQBiw" id="T206" name="Tampering of PKI, operator" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_OoD7wLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK1raVEfG51-STqqQBiw" mediniIdentifier="_WuOK1raVEfG51-STqqQBiw" id="T207" name="Denial of Service of PKI, operator" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_OoD7wLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK17aVEfG51-STqqQBiw" mediniIdentifier="_WuOK17aVEfG51-STqqQBiw" id="T208" name="Spoofing of PKI, operator" kind="Spoofing">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_OoD7wLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK2LaVEfG51-STqqQBiw" mediniIdentifier="_WuOK2LaVEfG51-STqqQBiw" id="T209" name="Elevation of Privilege of PKI, operator" kind="Elevation of Privilege">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_OoD7wLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK2baVEfG51-STqqQBiw" mediniIdentifier="_WuOK2baVEfG51-STqqQBiw" id="T210" name="Repudiation of PKI, operator" kind="Repudiation">
+    <assets xsi:type="sysml:SysMLPart" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_OoD7wLZwEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK2raVEfG51-STqqQBiw" mediniIdentifier="_WuOK2raVEfG51-STqqQBiw" id="T211" name="Information Disclosure of uu_in" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_uHDDcLZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK27aVEfG51-STqqQBiw" mediniIdentifier="_WuOK27aVEfG51-STqqQBiw" id="T212" name="Tampering of uu_in" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_uHDDcLZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK3LaVEfG51-STqqQBiw" mediniIdentifier="_WuOK3LaVEfG51-STqqQBiw" id="T213" name="Denial of Service of uu_in" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_uHDDcLZ2EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK3baVEfG51-STqqQBiw" mediniIdentifier="_WuOK3baVEfG51-STqqQBiw" id="T214" name="Information Disclosure of uu_in_2" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_9px8ELZ3EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK3raVEfG51-STqqQBiw" mediniIdentifier="_WuOK3raVEfG51-STqqQBiw" id="T215" name="Tampering of uu_in_2" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_9px8ELZ3EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOK37aVEfG51-STqqQBiw" mediniIdentifier="_WuOK37aVEfG51-STqqQBiw" id="T216" name="Denial of Service of uu_in_2" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_9px8ELZ3EfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOx0LaVEfG51-STqqQBiw" mediniIdentifier="_WuOx0LaVEfG51-STqqQBiw" id="T217" name="Information Disclosure of uu_link_rsu" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_SLmbgLaSEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOx0baVEfG51-STqqQBiw" mediniIdentifier="_WuOx0baVEfG51-STqqQBiw" id="T218" name="Tampering of uu_link_rsu" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_SLmbgLaSEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOx0raVEfG51-STqqQBiw" mediniIdentifier="_WuOx0raVEfG51-STqqQBiw" id="T219" name="Denial of Service of uu_link_rsu" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_SLmbgLaSEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOx07aVEfG51-STqqQBiw" mediniIdentifier="_WuOx07aVEfG51-STqqQBiw" id="T220" name="Information Disclosure of uu_modem_out" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Y-JQ4LaTEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOx1LaVEfG51-STqqQBiw" mediniIdentifier="_WuOx1LaVEfG51-STqqQBiw" id="T221" name="Tampering of uu_modem_out" kind="Tampering">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Y-JQ4LaTEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOx1baVEfG51-STqqQBiw" mediniIdentifier="_WuOx1baVEfG51-STqqQBiw" id="T222" name="Denial of Service of uu_modem_out" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLPortUsage" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_Y-JQ4LaTEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOx1raVEfG51-STqqQBiw" mediniIdentifier="_WuOx1raVEfG51-STqqQBiw" id="T223" name="Information Disclosure of uu_modem_out ↔ uu_modem" kind="Information Disclosure">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_cdDnwLaTEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOx17aVEfG51-STqqQBiw" mediniIdentifier="_WuOx17aVEfG51-STqqQBiw" id="T224" name="Tampering of uu_modem_out ↔ uu_modem" kind="Tampering">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_cdDnwLaTEfG51-STqqQBiw"/>
+  </weaknesses>
+  <weaknesses xsi:type="security:Threat" xmi:id="_WuOx2LaVEfG51-STqqQBiw" mediniIdentifier="_WuOx2LaVEfG51-STqqQBiw" id="T225" name="Denial of Service of uu_modem_out ↔ uu_modem" kind="Denial of Service">
+    <assets xsi:type="sysml:SysMLConnector" href="../sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_cdDnwLaTEfG51-STqqQBiw"/>
+  </weaknesses>
+</safety:WeaknessCollection>

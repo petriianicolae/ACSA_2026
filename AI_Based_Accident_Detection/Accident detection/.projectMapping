@@ -1,0 +1,6 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<model:ProjectMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http://medini.ikv.de/model" xmi:id="_b-tHoLW-EfGpj828tN4UIA">
+  <modelMappings xmi:id="_b-u80LW-EfGpj828tN4UIA" modelUri=".project.medini"/>
+  <properties>modelFactoryWrapperClass=de.ikv.analyze.domain.ui.iso21434.ISO21434ModelFactory</properties>
+  <properties>modelVersion=25.1.1.250228184338-79474c9</properties>
+</model:ProjectMapping>
