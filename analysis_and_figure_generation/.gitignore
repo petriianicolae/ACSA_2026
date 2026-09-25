@@ -1,0 +1,19 @@
+# Local/source material not needed by analysis.py
+*.xlsx
+data/rows2.json
+
+# Python and editor artifacts
+__pycache__/
+*.py[cod]
+.vscode/
+
+# Local secrets and environment files
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+data/processing_of_the_LLM_JSON_Threads_analysis.md
+files/combined_scenarios.csv
+files/medini_assets.csv

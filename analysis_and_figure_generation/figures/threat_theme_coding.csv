@@ -1,0 +1,36 @@
+Threat theme,ChatGPT,Gemini,Sonnet,Opus,Copilot,DeepSeek,Medini,Models (n/7)
+Forged DENM,1,1,1,1,1,1,1,7
+Rogue RSU broadcast,1,1,1,1,1,1,1,7
+Camera feed injection,1,1,1,1,1,1,1,7
+RF jamming of PC5 links,1,1,1,1,1,1,1,7
+RF jamming of 5G links,1,1,1,1,1,1,1,7
+Adversarial examples vs. perception models,1,1,1,1,1,1,1,7
+MitM on cloud MLLM link,1,1,1,1,1,1,1,7
+Privacy leakage of camera imagery,1,1,1,1,1,1,1,7
+"Signing-key theft (HSM, PKI)",1,1,1,1,1,1,1,7
+"Credential theft (HSM, PKI)",1,1,1,1,1,1,1,7
+PKI (CA) compromise,1,1,1,1,1,1,1,7
+Rogue certificates,1,1,1,1,1,1,1,7
+Camera blinding,1,1,1,1,1,1,1,7
+Physical camera sabotage,1,1,1,1,1,1,1,7
+In-vehicle warning-logic tampering,1,1,1,1,1,1,1,7
+Camera feed replay,1,1,0,1,1,1,1,6
+In-vehicle verification tampering,1,0,1,1,1,0,1,5
+Cloud MLLM endpoint spoofing,1,0,1,1,1,1,1,6
+Prompt injection vs. MLLM agents,1,0,1,1,1,1,1,6
+Cloud API quota exhaustion,1,0,1,1,1,1,1,6
+Cloud API outage,1,0,1,1,1,1,1,6
+Missing audit trail for AI decisions,1,0,1,1,1,1,1,6
+Privilege pivot into vehicle networks,1,0,1,1,1,1,1,6
+ASN.1 DENM parser exploitation,1,1,1,1,1,0,1,6
+AI model weight tampering,1,0,0,1,1,1,1,5
+API credential (key) compromise,1,0,1,1,1,0,1,5
+Driver alert flooding,1,1,1,1,0,0,1,5
+Driver alert fatigue,1,1,1,1,0,0,1,5
+DENM replay,1,0,1,1,0,0,1,4
+GNSS spoofing,0,0,1,1,0,0,0,2
+GNSS jamming,0,0,0,1,0,0,0,1
+Sybil attack (multiple forged identities),0,1,0,0,0,0,1,2
+Signal overshadowing on PC5,0,0,0,1,0,0,1,2
+Unsigned software update (supply chain),0,0,0,1,0,0,0,1
+Camera re-aiming shifts reported location,0,0,0,1,0,0,1,2

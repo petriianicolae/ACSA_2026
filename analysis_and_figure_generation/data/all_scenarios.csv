@@ -1,0 +1,602 @@
+model_short,model_full,asset,stride_letter,stride_label,scenario,scenario_id
+ChatGPT,ChatGPT GPT-5.6 Luna,1. Cameras (Mono + Stereo),S,Spoofing,An attacker injects a forged camera stream or replays previously recorded road images so that the accident-detection system perceives a false traffic situation.,
+ChatGPT,ChatGPT GPT-5.6 Luna,1. Cameras (Mono + Stereo),T,Tampering,"Camera firmware, calibration parameters, timestamps, or image frames are modified in transit or at the roadside ITS station, causing incorrect object detection or distance estimation.",
+ChatGPT,ChatGPT GPT-5.6 Luna,1. Cameras (Mono + Stereo),I,Information Disclosure,"Unauthorized access to live or stored camera imagery exposes vehicle occupants, license plates, road users, or other potentially sensitive visual information.",
+ChatGPT,ChatGPT GPT-5.6 Luna,1. Cameras (Mono + Stereo),D,Denial of Service,"An attacker jams, floods, disconnects, or disables the camera interface, preventing the system from detecting accidents.",
+ChatGPT,ChatGPT GPT-5.6 Luna,2. Edge Detector (YOLOv5 fast path),S,Spoofing,"Adversarial or fabricated images are supplied to the detector so that nonexistent vehicles, pedestrians, or hazards are detected.",
+ChatGPT,ChatGPT GPT-5.6 Luna,2. Edge Detector (YOLOv5 fast path),T,Tampering,"The YOLOv5 model, weights, configuration, preprocessing pipeline, or confidence thresholds are modified to suppress or create detections.",
+ChatGPT,ChatGPT GPT-5.6 Luna,2. Edge Detector (YOLOv5 fast path),I,Information Disclosure,"Intermediate detections, image buffers, or debug interfaces are exposed to an unauthorized party.",
+ChatGPT,ChatGPT GPT-5.6 Luna,2. Edge Detector (YOLOv5 fast path),D,Denial of Service,Malformed inputs or excessive image frames exhaust CPU/GPU resources and prevent real-time detection.,
+ChatGPT,ChatGPT GPT-5.6 Luna,2. Edge Detector (YOLOv5 fast path),E,Elevation of Privilege,A vulnerability in the detector runtime or inference service is exploited to obtain operating-system privileges on the roadside station.,
+ChatGPT,ChatGPT GPT-5.6 Luna,3. Situation Detection Agent 1 / MLLM call,S,Spoofing,An attacker impersonates the trusted MLLM service or injects fabricated scene descriptions into the agent's input.,
+ChatGPT,ChatGPT GPT-5.6 Luna,3. Situation Detection Agent 1 / MLLM call,T,Tampering,"Prompts, agent context, system instructions, tool parameters, or detected-object data are modified so the agent incorrectly classifies a non-accident as an accident or misses a real accident.",
+ChatGPT,ChatGPT GPT-5.6 Luna,3. Situation Detection Agent 1 / MLLM call,I,Information Disclosure,"Camera-derived scene descriptions, location information, or accident context are disclosed to an unauthorized cloud service, API consumer, or attacker.",
+ChatGPT,ChatGPT GPT-5.6 Luna,3. Situation Detection Agent 1 / MLLM call,D,Denial of Service,Repeated or oversized MLLM requests consume API quotas or network resources and delay situation classification.,
+ChatGPT,ChatGPT GPT-5.6 Luna,3. Situation Detection Agent 1 / MLLM call,E,Elevation of Privilege,"Prompt injection or agent-service vulnerabilities cause the agent to invoke unauthorized tools, APIs, or local system functions.",
+ChatGPT,ChatGPT GPT-5.6 Luna,4 & 7. Cloud MLLM / Gemini API,S,Spoofing,"A rogue endpoint impersonates the cloud MLLM API, causing the roadside system to send accident data to an attacker-controlled service.",
+ChatGPT,ChatGPT GPT-5.6 Luna,4 & 7. Cloud MLLM / Gemini API,T,Tampering,"Requests or responses between the roadside station and cloud MLLM are modified, potentially changing accident classification or generated content.",
+ChatGPT,ChatGPT GPT-5.6 Luna,4 & 7. Cloud MLLM / Gemini API,R,Repudiation,"A lack of reliable request, response, and identity logging makes it difficult to determine which API account generated a critical accident-analysis result.",
+ChatGPT,ChatGPT GPT-5.6 Luna,4 & 7. Cloud MLLM / Gemini API,I,Information Disclosure,"Images, scene descriptions, location, or vehicle-related information sent to the cloud are exposed through compromised credentials, insecure API configuration, or unauthorized access.",
+ChatGPT,ChatGPT GPT-5.6 Luna,4 & 7. Cloud MLLM / Gemini API,D,Denial of Service,"API quota exhaustion, credential abuse, network disruption, or provider unavailability prevents timely MLLM analysis.",
+ChatGPT,ChatGPT GPT-5.6 Luna,4 & 7. Cloud MLLM / Gemini API,E,Elevation of Privilege,"Compromised API credentials are reused to obtain access to additional cloud resources, data, or administrative functions.",
+ChatGPT,ChatGPT GPT-5.6 Luna,5. Distance Estimate Agent 2 / Depth Pro,S,Spoofing,"A manipulated stereo/depth input causes the component to estimate a false distance to a vehicle, pedestrian, or obstacle.",
+ChatGPT,ChatGPT GPT-5.6 Luna,5. Distance Estimate Agent 2 / Depth Pro,T,Tampering,"Depth-model weights, calibration data, or processing parameters are altered so that estimated distances are systematically incorrect.",
+ChatGPT,ChatGPT GPT-5.6 Luna,5. Distance Estimate Agent 2 / Depth Pro,I,Information Disclosure,"Depth maps or intermediate spatial data are exposed, revealing the structure of scenes captured by roadside cameras.",
+ChatGPT,ChatGPT GPT-5.6 Luna,5. Distance Estimate Agent 2 / Depth Pro,D,Denial of Service,Excessive inference requests or malformed depth inputs cause the distance-estimation service to become unavailable.,
+ChatGPT,ChatGPT GPT-5.6 Luna,6. Message Generation Agent 3 / MLLM call,S,Spoofing,An attacker impersonates the message-generation service and generates a fraudulent safety warning or DENM message.,
+ChatGPT,ChatGPT GPT-5.6 Luna,6. Message Generation Agent 3 / MLLM call,T,Tampering,"Accident context, distance information, warning text, severity, location, or message parameters are changed before DENM encoding.",
+ChatGPT,ChatGPT GPT-5.6 Luna,6. Message Generation Agent 3 / MLLM call,R,Repudiation,"Insufficient provenance information prevents tracing a transmitted warning back to the specific agent, input event, and model response.",
+ChatGPT,ChatGPT GPT-5.6 Luna,6. Message Generation Agent 3 / MLLM call,I,Information Disclosure,The generated message or its underlying accident context reveals sensitive location or vehicle information.,
+ChatGPT,ChatGPT GPT-5.6 Luna,6. Message Generation Agent 3 / MLLM call,D,Denial of Service,"The message-generation agent is overwhelmed, causing safety messages to be delayed beyond their useful lifetime.",
+ChatGPT,ChatGPT GPT-5.6 Luna,6. Message Generation Agent 3 / MLLM call,E,Elevation of Privilege,Prompt injection or compromised agent credentials allow unauthorized access to message-generation APIs or downstream ITS functions.,
+ChatGPT,ChatGPT GPT-5.6 Luna,8. DENM Encoder / ASN.1 UPER Payload,S,Spoofing,An attacker constructs a valid-looking DENM payload and injects it into the communication path while pretending to be the roadside ITS station.,
+ChatGPT,ChatGPT GPT-5.6 Luna,8. DENM Encoder / ASN.1 UPER Payload,T,Tampering,"DENM fields such as event type, coordinates, severity, timestamp, validity period, or relevance area are modified before transmission.",
+ChatGPT,ChatGPT GPT-5.6 Luna,8. DENM Encoder / ASN.1 UPER Payload,R,Repudiation,"Without end-to-end message identifiers and audit records, the sender may later deny having generated a particular DENM event.",
+ChatGPT,ChatGPT GPT-5.6 Luna,8. DENM Encoder / ASN.1 UPER Payload,I,Information Disclosure,"Unprotected DENM payloads expose accident location, event details, timestamps, or other contextual information to passive observers.",
+ChatGPT,ChatGPT GPT-5.6 Luna,8. DENM Encoder / ASN.1 UPER Payload,D,Denial of Service,"Malformed ASN.1/UPER payloads trigger parser failures, excessive processing, or rejection of legitimate safety messages.",
+ChatGPT,ChatGPT GPT-5.6 Luna,"9. RSU (Signs, PC5, HSM)",S,Spoofing,An attacker impersonates the RSU and broadcasts forged accident or road-hazard notifications to nearby vehicles.,
+ChatGPT,ChatGPT GPT-5.6 Luna,"9. RSU (Signs, PC5, HSM)",T,Tampering,"RSU configuration, firmware, signed-message handling, or radio parameters are modified to alter transmitted safety information.",
+ChatGPT,ChatGPT GPT-5.6 Luna,"9. RSU (Signs, PC5, HSM)",R,Repudiation,Insufficient security logging prevents attribution of signed or transmitted messages to a particular RSU instance or administrative operator.,
+ChatGPT,ChatGPT GPT-5.6 Luna,"9. RSU (Signs, PC5, HSM)",I,Information Disclosure,"RSU management interfaces, PC5 traffic, or stored event information are accessed by an unauthorized party.",
+ChatGPT,ChatGPT GPT-5.6 Luna,"9. RSU (Signs, PC5, HSM)",D,Denial of Service,"RF jamming, flooding, repeated invalid messages, or exploitation of RSU services prevents timely safety-message broadcasting.",
+ChatGPT,ChatGPT GPT-5.6 Luna,"9. RSU (Signs, PC5, HSM)",E,Elevation of Privilege,"A compromised RSU service account is used to gain administrative control over signing functions, radio configuration, or HSM operations.",
+ChatGPT,ChatGPT GPT-5.6 Luna,10. Central ITS-S PKI / Operator,S,Spoofing,"An attacker steals or forges ITS credentials or certificates and impersonates a legitimate RSU, vehicle, or backend identity.",
+ChatGPT,ChatGPT GPT-5.6 Luna,10. Central ITS-S PKI / Operator,T,Tampering,"Certificate status, trust relationships, revocation information, or operator-controlled PKI configuration are modified.",
+ChatGPT,ChatGPT GPT-5.6 Luna,10. Central ITS-S PKI / Operator,R,Repudiation,"Weak PKI audit trails make it difficult to prove which operator or process issued, revoked, or renewed a credential.",
+ChatGPT,ChatGPT GPT-5.6 Luna,10. Central ITS-S PKI / Operator,I,Information Disclosure,"Private keys, certificate metadata, enrollment information, or operator records are disclosed to unauthorized parties.",
+ChatGPT,ChatGPT GPT-5.6 Luna,10. Central ITS-S PKI / Operator,D,Denial of Service,"The PKI, certificate-status service, or enrollment service is made unavailable, causing legitimate ITS entities to lose the ability to authenticate or validate messages.",
+ChatGPT,ChatGPT GPT-5.6 Luna,10. Central ITS-S PKI / Operator,E,Elevation of Privilege,Compromise of a PKI administrator account allows an attacker to issue trusted certificates for unauthorized systems.,
+ChatGPT,ChatGPT GPT-5.6 Luna,0. Certificates and Event Reports,S,Spoofing,Forged certificates or fabricated event reports are presented as being generated by legitimate ITS entities.,
+ChatGPT,ChatGPT GPT-5.6 Luna,0. Certificates and Event Reports,T,Tampering,"Event reports are modified after generation, including accident time, location, severity, sensor evidence, or responsible system identity.",
+ChatGPT,ChatGPT GPT-5.6 Luna,0. Certificates and Event Reports,R,Repudiation,"Missing timestamps, signatures, hash chains, or audit records prevent forensic attribution of accident reports and certificate operations.",
+ChatGPT,ChatGPT GPT-5.6 Luna,0. Certificates and Event Reports,I,Information Disclosure,"Event reports expose vehicle identifiers, road locations, camera-derived information, or operational metadata to unauthorized users.",
+ChatGPT,ChatGPT GPT-5.6 Luna,0. Certificates and Event Reports,D,Denial of Service,"Attackers delete, corrupt, or flood the event-reporting store, preventing investigation and operational monitoring.",
+ChatGPT,ChatGPT GPT-5.6 Luna,11. OBU / PC5 + Uu Modem,S,Spoofing,A rogue device impersonates a legitimate vehicle OBU or roadside node and sends forged safety messages.,
+ChatGPT,ChatGPT GPT-5.6 Luna,11. OBU / PC5 + Uu Modem,T,Tampering,"PC5 or Uu messages are modified, replayed, or reordered so that the vehicle receives an incorrect accident warning.",
+ChatGPT,ChatGPT GPT-5.6 Luna,11. OBU / PC5 + Uu Modem,R,Repudiation,Inadequate message-level evidence prevents proving which OBU transmitted or received a particular safety event.,
+ChatGPT,ChatGPT GPT-5.6 Luna,11. OBU / PC5 + Uu Modem,I,Information Disclosure,"Unauthorized listeners infer vehicle identity, trajectory, location, or nearby accident information from wireless traffic.",
+ChatGPT,ChatGPT GPT-5.6 Luna,11. OBU / PC5 + Uu Modem,D,Denial of Service,"PC5/Uu jamming, signaling floods, malformed packets, or modem resource exhaustion prevent reception of urgent safety messages.",
+ChatGPT,ChatGPT GPT-5.6 Luna,11. OBU / PC5 + Uu Modem,E,Elevation of Privilege,A modem or OBU vulnerability is exploited to gain privileged access to vehicle-network interfaces.,
+ChatGPT,ChatGPT GPT-5.6 Luna,12. Vehicle Computer / Verification and Warning Logic,S,Spoofing,Forged but apparently valid messages are presented to the vehicle computer as originating from a trusted RSU or authorized ITS entity.,
+ChatGPT,ChatGPT GPT-5.6 Luna,12. Vehicle Computer / Verification and Warning Logic,T,Tampering,"Verification logic, certificate validation, warning thresholds, software binaries, or configuration parameters are modified to suppress or alter alerts.",
+ChatGPT,ChatGPT GPT-5.6 Luna,12. Vehicle Computer / Verification and Warning Logic,R,Repudiation,"Lack of secure logs prevents forensic determination of which warning was received, verified, rejected, or presented.",
+ChatGPT,ChatGPT GPT-5.6 Luna,12. Vehicle Computer / Verification and Warning Logic,I,Information Disclosure,"Vehicle computer logs or message buffers expose trip, location, accident, or communication information.",
+ChatGPT,ChatGPT GPT-5.6 Luna,12. Vehicle Computer / Verification and Warning Logic,D,Denial of Service,A flood of invalid or computationally expensive messages exhausts verification resources and delays processing of genuine safety events.,
+ChatGPT,ChatGPT GPT-5.6 Luna,12. Vehicle Computer / Verification and Warning Logic,E,Elevation of Privilege,Exploitation of the warning-processing software provides unauthorized access to privileged vehicle-network functions.,
+ChatGPT,ChatGPT GPT-5.6 Luna,13. Driver HMI (Visual + Audio Alert),S,Spoofing,A malicious component generates a false safety alert that appears to originate from the trusted accident-detection system.,
+ChatGPT,ChatGPT GPT-5.6 Luna,13. Driver HMI (Visual + Audio Alert),T,Tampering,"Alert severity, visual content, audio content, timing, or suppression settings are modified so the driver does not receive the correct warning.",
+ChatGPT,ChatGPT GPT-5.6 Luna,13. Driver HMI (Visual + Audio Alert),R,Repudiation,The system cannot establish whether a warning was actually displayed or audibly presented to the driver because HMI events were not securely logged.,
+ChatGPT,ChatGPT GPT-5.6 Luna,13. Driver HMI (Visual + Audio Alert),I,Information Disclosure,"HMI diagnostic interfaces expose accident notifications, vehicle location, or system-state information to unauthorized users.",
+ChatGPT,ChatGPT GPT-5.6 Luna,13. Driver HMI (Visual + Audio Alert),D,Denial of Service,"The display/audio subsystem is disabled, overloaded, or flooded with alerts, causing a genuine warning to be missed.",
+ChatGPT,ChatGPT GPT-5.6 Luna,13. Driver HMI (Visual + Audio Alert),E,Elevation of Privilege,A compromised HMI interface is used as a path to obtain higher privileges on the vehicle computer or other in-vehicle systems.,
+ChatGPT,ChatGPT GPT-5.6 Luna,5G Uu / Cloud Communication Links,S,Spoofing,A malicious endpoint impersonates the intended cloud or roadside service using stolen credentials or compromised network identities.,
+ChatGPT,ChatGPT GPT-5.6 Luna,5G Uu / Cloud Communication Links,T,Tampering,"Requests, MLLM responses, certificates, or event data are altered while traversing the cellular network.",
+ChatGPT,ChatGPT GPT-5.6 Luna,5G Uu / Cloud Communication Links,I,Information Disclosure,"Unprotected or improperly authenticated traffic reveals accident imagery, event metadata, location, or API credentials.",
+ChatGPT,ChatGPT GPT-5.6 Luna,5G Uu / Cloud Communication Links,D,Denial of Service,"Cellular jamming, signaling attacks, traffic flooding, or carrier-side disruption prevents cloud interaction during an accident.",
+ChatGPT,ChatGPT GPT-5.6 Luna,PC5 Sidelink Communications,S,Spoofing,A malicious transmitter sends forged vehicle or RSU safety messages over PC5.,
+ChatGPT,ChatGPT GPT-5.6 Luna,PC5 Sidelink Communications,T,Tampering,"Wireless messages are altered, replayed, delayed, or reordered so that vehicles receive inaccurate accident information.",
+ChatGPT,ChatGPT GPT-5.6 Luna,PC5 Sidelink Communications,I,Information Disclosure,"Passive radio monitoring reveals safety-event details, device identifiers, or movement-related information.",
+ChatGPT,ChatGPT GPT-5.6 Luna,PC5 Sidelink Communications,D,Denial of Service,"RF interference, protocol flooding, or repeated malformed packets prevent delivery of legitimate PC5 safety messages.",
+ChatGPT,ChatGPT GPT-5.6 Luna,"AI Models, Prompts, Agent Policies and Model Configuration",S,Spoofing,An unauthorized model or agent presents itself as an approved accident-detection component.,
+ChatGPT,ChatGPT GPT-5.6 Luna,"AI Models, Prompts, Agent Policies and Model Configuration",T,Tampering,"Model files, prompts, system instructions, agent policies, safety rules, or threshold parameters are altered to induce unsafe decisions.",
+ChatGPT,ChatGPT GPT-5.6 Luna,"AI Models, Prompts, Agent Policies and Model Configuration",R,Repudiation,Absence of model/version and prompt provenance makes it impossible to determine which AI configuration produced a safety-critical decision.,
+ChatGPT,ChatGPT GPT-5.6 Luna,"AI Models, Prompts, Agent Policies and Model Configuration",I,Information Disclosure,"Proprietary prompts, model outputs, inference data, or training-related information are exposed through debugging or service interfaces.",
+ChatGPT,ChatGPT GPT-5.6 Luna,"AI Models, Prompts, Agent Policies and Model Configuration",D,Denial of Service,Resource-intensive or adversarial inputs force AI inference components beyond their real-time processing capacity.,
+ChatGPT,ChatGPT GPT-5.6 Luna,"AI Models, Prompts, Agent Policies and Model Configuration",E,Elevation of Privilege,"An AI agent is manipulated through prompt injection into accessing tools, files, APIs, or operating-system resources outside its intended authority.",
+ChatGPT,ChatGPT GPT-5.6 Luna,End-to-End Accident Detection Data Flow,S,Spoofing,An attacker inserts a false accident event into the pipeline so that downstream components treat it as a trusted detection.,
+ChatGPT,ChatGPT GPT-5.6 Luna,End-to-End Accident Detection Data Flow,T,Tampering,"Event state, timestamps, location, distance, severity, or identity are modified between detection, AI analysis, DENM generation, RSU transmission, and vehicle verification.",
+ChatGPT,ChatGPT GPT-5.6 Luna,End-to-End Accident Detection Data Flow,R,Repudiation,"Missing end-to-end correlation identifiers, signatures, synchronized timestamps, and audit logs prevent reconstruction of the complete accident-detection chain.",
+ChatGPT,ChatGPT GPT-5.6 Luna,End-to-End Accident Detection Data Flow,I,Information Disclosure,"Sensitive event data is exposed at intermediate processing stages, including camera images, AI prompts, model responses, and vehicle communication metadata.",
+ChatGPT,ChatGPT GPT-5.6 Luna,End-to-End Accident Detection Data Flow,D,Denial of Service,"An attacker disrupts one or more pipeline stages so that a valid accident is not detected, analyzed, transmitted, verified, or presented to the driver in time.",
+ChatGPT,ChatGPT GPT-5.6 Luna,End-to-End Accident Detection Data Flow,E,Elevation of Privilege,"Compromise of a low-trust component, such as a camera or exposed API, is used as a pivot to reach privileged AI, PKI, RSU, OBU, or vehicle-control functions.",
+Gemini,Gemini 3.1 Pro extended thinking,1. Cameras (Mono + stereo),S,Spoofing,An attacker feeds a pre-recorded or manipulated video stream into the camera interface to simulate a false traffic accident.,
+Gemini,Gemini 3.1 Pro extended thinking,1. Cameras (Mono + stereo),T,Tampering,"Physically altering, blinding with lasers, or damaging the camera sensors to disrupt visual input to the Roadside ITS station.",
+Gemini,Gemini 3.1 Pro extended thinking,1. Cameras (Mono + stereo),D,Denial of Service,Physically covering the camera lens or overwhelming the sensor with intense light to prevent image capture.,
+Gemini,Gemini 3.1 Pro extended thinking,"2. Edge detector (YOLOv5 fast path) and AI Agents (3. Situation detection, 5. Distance estimate, 6. Message generation)",T,Tampering,"Adversarial machine learning attacks via slight physical alterations to the environment causing YOLOv5 or the MLLM agents to misclassify objects, accident severity, or distance estimates.",
+Gemini,Gemini 3.1 Pro extended thinking,"2. Edge detector (YOLOv5 fast path) and AI Agents (3. Situation detection, 5. Distance estimate, 6. Message generation)",E,Elevation of Privilege,Exploiting software vulnerabilities in the local AI agents or underlying OS to execute arbitrary code and gain unauthorized control over the Roadside ITS station.,
+Gemini,Gemini 3.1 Pro extended thinking,4 & 7. Cloud MLLM (Gemini API) and 5G Uu cellular links,I,Information Disclosure,"Interception of unencrypted or weakly encrypted 5G traffic, exposing sensitive visual data sent to the Cloud MLLM.",
+Gemini,Gemini 3.1 Pro extended thinking,4 & 7. Cloud MLLM (Gemini API) and 5G Uu cellular links,D,Denial of Service,"RF jamming of the 5G Uu cellular link, preventing the Roadside ITS station from communicating with the Cloud MLLM for situation detection and message generation.",
+Gemini,Gemini 3.1 Pro extended thinking,4 & 7. Cloud MLLM (Gemini API) and 5G Uu cellular links,T,Tampering,"Man-in-the-Middle (MitM) attacks altering the prompt sent to the Gemini API or the returning hazard classification, assuming TLS is bypassed or improperly validated.",
+Gemini,Gemini 3.1 Pro extended thinking,"8. DENM encoder (ASN.1 UPER payload) and 9. RSU (Signs, PC5, HSM)",T,Tampering,Exploiting parsing vulnerabilities such as buffer overflows in the ASN.1 UPER encoder to crash the RSU or execute arbitrary code.,
+Gemini,Gemini 3.1 Pro extended thinking,"8. DENM encoder (ASN.1 UPER payload) and 9. RSU (Signs, PC5, HSM)",S,Spoofing,A compromised device impersonates the legitimate RSU by extracting keys from a vulnerable HSM to broadcast fake hazard warnings.,
+Gemini,Gemini 3.1 Pro extended thinking,"8. DENM encoder (ASN.1 UPER payload) and 9. RSU (Signs, PC5, HSM)",I,Information Disclosure,Extracting private signing keys or certificates stored improperly within the RSU's Hardware Security Module (HSM).,
+Gemini,Gemini 3.1 Pro extended thinking,"10. Central ITS-S (PKI, operator) and 0. Certificates, event reports",S,Spoofing,"Compromise of the Root or Subordinate CA within the PKI, allowing an attacker to issue fraudulent certificates for rogue RSUs or OBUs.",
+Gemini,Gemini 3.1 Pro extended thinking,"10. Central ITS-S (PKI, operator) and 0. Certificates, event reports",E,Elevation of Privilege,"An attacker gains unauthorized access to the operator console, allowing them to revoke legitimate certificates or issue false network-wide event reports.",
+Gemini,Gemini 3.1 Pro extended thinking,"10. Central ITS-S (PKI, operator) and 0. Certificates, event reports",R,Repudiation,Insufficient logging mechanisms at the Central ITS-S allow a malicious insider or compromised node to delete traces of fraudulent certificate issuance or false event reporting.,
+Gemini,Gemini 3.1 Pro extended thinking,11. OBU (PC5 + Uu modem) and PC5 sidelink,D,Denial of Service,"RF jamming of the PC5 sidelink frequency, preventing the OBU from receiving critical DENM alerts from the RSU.",
+Gemini,Gemini 3.1 Pro extended thinking,11. OBU (PC5 + Uu modem) and PC5 sidelink,S,Spoofing,Sybil attack where an attacker broadcasts false vehicle telemetry over the PC5 interface using multiple forged OBU identities to trigger false collision warnings.,
+Gemini,Gemini 3.1 Pro extended thinking,"12. Vehicle computer (Verify, warning logic) and 13. Driver HMI (Visual + audio alert)",T,Tampering,Malware infection on the vehicle computer altering the warning logic to suppress legitimate collision alerts or trigger continuous false alarms on the Driver HMI.,
+Gemini,Gemini 3.1 Pro extended thinking,"12. Vehicle computer (Verify, warning logic) and 13. Driver HMI (Visual + audio alert)",I,Information Disclosure,Exploiting the OBU-to-Vehicle computer interface to extract sensitive vehicle telemetry and driver behavior data.,
+Sonnet,Claude Sonnet 5 Medium,"Cameras (Mono + Stereo, Edge)",S,Spoofing,"Attacker replaces or spoofs the camera feed (e.g., video injection) to feed fabricated scenes into the pipeline.",
+Sonnet,Claude Sonnet 5 Medium,"Cameras (Mono + Stereo, Edge)",T,Tampering,"Physical tampering with camera lens/position, or manipulation of the raw video stream in transit to the edge detector.",
+Sonnet,Claude Sonnet 5 Medium,"Cameras (Mono + Stereo, Edge)",D,Denial of Service,"Camera blinded/jammed (laser, IR, physical obstruction) or feed flooded to prevent hazard detection.",
+Sonnet,Claude Sonnet 5 Medium,"Cameras (Mono + Stereo, Edge)",I,Information Disclosure,"Unauthorized interception of raw video stream exposing personal data (license plates, pedestrian faces).",
+Sonnet,Claude Sonnet 5 Medium,Edge Detector (YOLOv5 fast path),T,Tampering,Adversarial perturbation/patch attacks on input images causing misclassification of hazards (evasion attack).,
+Sonnet,Claude Sonnet 5 Medium,Edge Detector (YOLOv5 fast path),E,Elevation of Privilege,Exploiting a vulnerability in the inference runtime to gain code execution on the roadside edge device.,
+Sonnet,Claude Sonnet 5 Medium,Edge Detector (YOLOv5 fast path),D,Denial of Service,Resource exhaustion via crafted high-complexity frames causing inference latency spikes or crashes.,
+Sonnet,Claude Sonnet 5 Medium,Edge Detector (YOLOv5 fast path),R,Repudiation,"Lack of logging/integrity on model version used, allowing denial that a faulty/outdated model produced a missed detection.",
+Sonnet,Claude Sonnet 5 Medium,AI Agents: Situation Detection (Agent 1),T,Tampering,Prompt injection via manipulated image/metadata causing the MLLM call to misclassify or ignore a real hazard.,
+Sonnet,Claude Sonnet 5 Medium,AI Agents: Situation Detection (Agent 1),S,Spoofing,"Malicious actor spoofs the agent's request to the cloud MLLM, injecting a fabricated scene description.",
+Sonnet,Claude Sonnet 5 Medium,AI Agents: Situation Detection (Agent 1),D,Denial of Service,"Flooding Agent 1 with requests to exhaust cloud MLLM API quota/rate limits, delaying real hazard detection.",
+Sonnet,Claude Sonnet 5 Medium,AI Agents: Situation Detection (Agent 1),I,Information Disclosure,Sensitive roadside imagery sent to external Cloud MLLM (Gemini API) is exposed via API logging or third-party breach.,
+Sonnet,Claude Sonnet 5 Medium,Cloud MLLM (Gemini API) - Agents 1 & 3,S,Spoofing,Man-in-the-middle attack impersonating the Cloud MLLM endpoint to return falsified hazard/message data.,
+Sonnet,Claude Sonnet 5 Medium,Cloud MLLM (Gemini API) - Agents 1 & 3,T,Tampering,"API response tampered in transit, altering severity classification or generated DENM message content.",
+Sonnet,Claude Sonnet 5 Medium,Cloud MLLM (Gemini API) - Agents 1 & 3,D,Denial of Service,"Cloud API outage, throttling, or targeted DDoS on the API endpoint disrupts situation detection and message generation.",
+Sonnet,Claude Sonnet 5 Medium,Cloud MLLM (Gemini API) - Agents 1 & 3,I,Information Disclosure,Third-party cloud provider retains/logs sensitive roadside imagery or location data beyond intended use.,
+Sonnet,Claude Sonnet 5 Medium,Cloud MLLM (Gemini API) - Agents 1 & 3,E,Elevation of Privilege,Compromised API credentials/key allow attacker to submit arbitrary requests or exfiltrate historical query data.,
+Sonnet,Claude Sonnet 5 Medium,"Distance Estimate (Agent 2, Depth Pro)",T,Tampering,"Manipulation of depth estimation inputs/outputs to under- or over-report hazard distance, causing incorrect warning timing.",
+Sonnet,Claude Sonnet 5 Medium,"Distance Estimate (Agent 2, Depth Pro)",D,Denial of Service,"Malformed stereo input causes depth model to hang or crash, stalling the pipeline before message generation.",
+Sonnet,Claude Sonnet 5 Medium,"Message Generation (Agent 3, MLLM call)",T,Tampering,Injection attack alters generated hazard message content/severity before DENM encoding.,
+Sonnet,Claude Sonnet 5 Medium,"Message Generation (Agent 3, MLLM call)",R,Repudiation,"No cryptographic binding between agent output and final DENM payload, allowing denial of message origin/authorship.",
+Sonnet,Claude Sonnet 5 Medium,"Message Generation (Agent 3, MLLM call)",D,Denial of Service,Malformed or oversized MLLM output causes downstream DENM encoder to fail or drop messages.,
+Sonnet,Claude Sonnet 5 Medium,DENM Encoder (ASN.1 UPER payload),T,Tampering,Malformed or crafted input triggers ASN.1 parser vulnerabilities (buffer overflow) enabling payload corruption or code execution.,
+Sonnet,Claude Sonnet 5 Medium,DENM Encoder (ASN.1 UPER payload),S,Spoofing,Injection of a fraudulent DENM message without going through legitimate detection pipeline (bypassing Agents 1-3).,
+Sonnet,Claude Sonnet 5 Medium,DENM Encoder (ASN.1 UPER payload),R,Repudiation,Absence of signed audit trail linking each DENM message to the specific detection event that generated it.,
+Sonnet,Claude Sonnet 5 Medium,"RSU (Roadside Unit - Signs, PC5, HSM)",S,Spoofing,Rogue RSU impersonation broadcasting false DENM messages to nearby vehicles (fake hazard alerts).,
+Sonnet,Claude Sonnet 5 Medium,"RSU (Roadside Unit - Signs, PC5, HSM)",T,Tampering,Physical/firmware tampering with the RSU to alter broadcast messages or extract HSM key material.,
+Sonnet,Claude Sonnet 5 Medium,"RSU (Roadside Unit - Signs, PC5, HSM)",D,Denial of Service,"RF jamming of PC5 sidelink or flooding RSU with bogus messages, preventing legitimate DENM broadcast.",
+Sonnet,Claude Sonnet 5 Medium,"RSU (Roadside Unit - Signs, PC5, HSM)",E,Elevation of Privilege,Exploitation of RSU management interface to gain administrative control and reconfigure signage/broadcast behavior.,
+Sonnet,Claude Sonnet 5 Medium,"RSU (Roadside Unit - Signs, PC5, HSM)",I,Information Disclosure,Side-channel or physical attack on HSM leaks private signing keys used for message authentication.,
+Sonnet,Claude Sonnet 5 Medium,"Central ITS-S (PKI, Operator)",S,Spoofing,Attacker impersonates the Central ITS-S to issue fraudulent certificates to rogue RSUs/OBUs.,
+Sonnet,Claude Sonnet 5 Medium,"Central ITS-S (PKI, Operator)",T,Tampering,Compromise of the PKI root/intermediate CA allowing forged or revoked certificates to remain trusted.,
+Sonnet,Claude Sonnet 5 Medium,"Central ITS-S (PKI, Operator)",E,Elevation of Privilege,Insider or compromised operator account used to issue unauthorized certificates or push malicious configuration.,
+Sonnet,Claude Sonnet 5 Medium,"Central ITS-S (PKI, Operator)",D,Denial of Service,Attack on certificate revocation/issuance services disrupts trust chain validation across the fleet.,
+Sonnet,Claude Sonnet 5 Medium,"Central ITS-S (PKI, Operator)",R,Repudiation,Insufficient logging of certificate issuance/revocation events prevents accountability for a rogue trust decision.,
+Sonnet,Claude Sonnet 5 Medium,"OBU (On-Board Unit, PC5 + Uu modem)",S,Spoofing,Attacker spoofs a legitimate RSU/vehicle identity over PC5 to inject false DENM messages directly to the OBU.,
+Sonnet,Claude Sonnet 5 Medium,"OBU (On-Board Unit, PC5 + Uu modem)",T,Tampering,Firmware tampering or malware installed on the OBU to alter received message handling or relay falsified data.,
+Sonnet,Claude Sonnet 5 Medium,"OBU (On-Board Unit, PC5 + Uu modem)",D,Denial of Service,"Jamming of PC5/Uu radio interfaces or message flooding overwhelms OBU processing, dropping legitimate alerts.",
+Sonnet,Claude Sonnet 5 Medium,"OBU (On-Board Unit, PC5 + Uu modem)",I,Information Disclosure,Eavesdropping on Uu cellular link exposes vehicle location and event report data.,
+Sonnet,Claude Sonnet 5 Medium,"Vehicle Computer (Verify, warning logic)",T,Tampering,"Bypass or disabling of DENM signature verification logic, allowing unauthenticated messages to trigger driver warnings.",
+Sonnet,Claude Sonnet 5 Medium,"Vehicle Computer (Verify, warning logic)",D,Denial of Service,"Flooding with valid-looking DENM messages causes alert fatigue or processing overload, suppressing real warnings.",
+Sonnet,Claude Sonnet 5 Medium,"Vehicle Computer (Verify, warning logic)",E,Elevation of Privilege,Exploit in warning-logic software grants attacker control over in-vehicle systems beyond the HMI (lateral movement).,
+Sonnet,Claude Sonnet 5 Medium,"Vehicle Computer (Verify, warning logic)",R,Repudiation,"No secure logging of received/verified messages, preventing forensic reconstruction of a false-alarm or missed-alarm incident.",
+Sonnet,Claude Sonnet 5 Medium,Driver HMI (Visual + audio alert),T,Tampering,Manipulation of alert content/timing to desensitize driver (suppressed alert) or cause distraction (false repeated alerts).,
+Sonnet,Claude Sonnet 5 Medium,Driver HMI (Visual + audio alert),D,Denial of Service,Overloading the HMI with spurious alerts to mask a genuine hazard warning.,
+Sonnet,Claude Sonnet 5 Medium,PC5 Sidelink / 5G Uu Communication Channels,S,Spoofing,GNSS/location spoofing combined with message replay to simulate a hazard at a false location.,
+Sonnet,Claude Sonnet 5 Medium,PC5 Sidelink / 5G Uu Communication Channels,T,Tampering,Message replay attack retransmitting old valid DENM messages to trigger outdated or irrelevant warnings.,
+Sonnet,Claude Sonnet 5 Medium,PC5 Sidelink / 5G Uu Communication Channels,D,Denial of Service,RF jamming or protocol-level flooding disrupts V2X communication between RSU and OBU.,
+Sonnet,Claude Sonnet 5 Medium,PC5 Sidelink / 5G Uu Communication Channels,I,Information Disclosure,Passive sniffing of unencrypted sidelink traffic reveals vehicle movement patterns (privacy/tracking risk).,
+Sonnet,Claude Sonnet 5 Medium,Certificates & Event Reports (0. Certificate/report channel),S,Spoofing,Forged or stolen certificate used to authenticate a malicious RSU/OBU to the Central ITS-S.,
+Sonnet,Claude Sonnet 5 Medium,Certificates & Event Reports (0. Certificate/report channel),T,Tampering,Event reports altered in transit to hide malicious activity or misreport hazard statistics to the operator.,
+Sonnet,Claude Sonnet 5 Medium,Certificates & Event Reports (0. Certificate/report channel),R,Repudiation,Weak non-repudiation controls allow an entity to deny having sent a fraudulent or malformed event report.,
+Opus,Claude Claude-Opus-5\_with-context,"Cameras, mono + stereo (Step 1)",S,Spoofing,"An attacker stages a fake scene in the camera view (e.g., a mannequin on the carriageway, a printed image of an overturned vehicle, or a display placed in front of the lens), so the system reports a non-existent accident and a false DENM is broadcast.",TS01
+Opus,Claude Claude-Opus-5\_with-context,"Cameras, mono + stereo (Step 1)",T,Tampering,"An attacker with physical access to the pole re-aims or moves the camera, so the stored camera position no longer matches the scene and every reported event location is wrong.",TS02
+Opus,Claude Claude-Opus-5\_with-context,"Cameras, mono + stereo (Step 1)",I,Information disclosure,"Unauthorized access to the camera or its management interface exposes live images of road users, including faces and licence plates (personal data under GDPR).",TS03
+Opus,Claude Claude-Opus-5\_with-context,"Cameras, mono + stereo (Step 1)",D,Denial of service,"The camera is blinded (laser or strong light), covered, painted over or disconnected from power, so real accidents in its field of view are not detected and no warning is issued.",TS04
+Opus,Claude Claude-Opus-5\_with-context,"Cameras, mono + stereo (Step 1)",E,Elevation of privilege,"Default credentials or vulnerable firmware on the IP infrastructure camera are exploited to gain a foothold on the roadside network, from which the computing unit and the RSU can be attacked.",TS05
+Opus,Claude Claude-Opus-5\_with-context,Video link camera -> roadside computing unit (Step 1 -> 2),T,Tampering,"A man-in-the-middle on the camera link replaces the live stream with recorded footage: an old accident video to trigger false warnings, or an empty road to hide a real accident.",TS06
+Opus,Claude Claude-Opus-5\_with-context,Video link camera -> roadside computing unit (Step 1 -> 2),I,Information disclosure,"The video stream is sent without encryption on the roadside network and is captured by an attacker, disclosing images of road users.",TS07
+Opus,Claude Claude-Opus-5\_with-context,Video link camera -> roadside computing unit (Step 1 -> 2),D,Denial of service,"The camera link is cut or flooded with traffic, so no frames reach the detector.",TS08
+Opus,Claude Claude-Opus-5\_with-context,"Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",T,Tampering,"An attacker with access to the roadside cabinet or to an exposed remote service (e.g., SSH) replaces software, container images or configuration on the unit, altering the detector, the prompts or the DENM encoder.",TS09
+Opus,Claude Claude-Opus-5\_with-context,"Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",T,Tampering,"A malicious or unsigned software update (operating system, Python packages, agent framework components) is installed on the unit, introducing hidden logic that manipulates detections or messages.",TS10
+Opus,Claude Claude-Opus-5\_with-context,"Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",R,Repudiation,"Changes to software, prompts or configuration on the unit are not recorded in tamper-evident logs, so a manipulation cannot be traced to an actor or a point in time.",TS11
+Opus,Claude Claude-Opus-5\_with-context,"Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",I,Information disclosure,"Secrets stored on the unit (Gemini API key, network credentials, camera position data) are extracted after physical theft of the unit or a remote compromise.",TS12
+Opus,Claude Claude-Opus-5\_with-context,"Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",D,Denial of service,"Malware or crafted inputs exhaust the CPU, GPU or memory of the unit, stopping real-time processing of frames.",TS13
+Opus,Claude Claude-Opus-5\_with-context,"Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",E,Elevation of privilege,"A vulnerability in the operating system or in an agent framework dependency is exploited to obtain root access, giving the attacker full control over detection and message generation.",TS14
+Opus,Claude Claude-Opus-5\_with-context,YOLOv5 edge detector and trigger rule (Step 2),S,Spoofing,"Adversarial patches (printed patterns on vehicles, signs or clothing) make YOLOv5 report stopped vehicles or pedestrians that do not exist, sending fabricated candidate events to the MLLM agents.",TS15
+Opus,Claude Claude-Opus-5\_with-context,YOLOv5 edge detector and trigger rule (Step 2),T,Tampering,"The YOLOv5 weights or the trigger rule are replaced or poisoned so that selected event types (e.g., overturned vehicles) are never forwarded, silently suppressing warnings.",TS16
+Opus,Claude Claude-Opus-5\_with-context,YOLOv5 edge detector and trigger rule (Step 2),D,Denial of service,"Adversarial patterns hide real objects from the detector (evasion), so frames containing a real accident are filtered out before they reach the agents.",TS17
+Opus,Claude Claude-Opus-5\_with-context,YOLOv5 edge detector and trigger rule (Step 2),D,Denial of service,"An attacker repeatedly creates trigger conditions (e.g., objects placed on the road edge) to flood the agents with MLLM requests, exhausting the API quota or budget and delaying genuine events.",TS18
+Opus,Claude Claude-Opus-5\_with-context,Situation detection agent and prompt 1 (Steps 3-4),S,Spoofing,"Text visible in the camera image (on a sign, sticker or vehicle wrap) acts as a prompt injection that instructs the MLLM to report an incident, producing a spoofed hazard.",TS19
+Opus,Claude Claude-Opus-5\_with-context,Situation detection agent and prompt 1 (Steps 3-4),T,Tampering,"Prompt 1 stored on the computing unit is modified so that the agent applies different detection criteria (e.g., always returning no incident).",TS20
+Opus,Claude Claude-Opus-5\_with-context,Situation detection agent and prompt 1 (Steps 3-4),T,Tampering,"A prompt injection in the image makes the MLLM return a manipulated bounding box or situation type, shifting the reported hazard position or changing its classification.",TS21
+Opus,Claude Claude-Opus-5\_with-context,Situation detection agent and prompt 1 (Steps 3-4),R,Repudiation,"The prompt, model version, input frame and response behind each detection decision are not logged, so a false or missed detection cannot be attributed to the model, the input or an attacker.",TS22
+Opus,Claude Claude-Opus-5\_with-context,Situation detection agent and prompt 1 (Steps 3-4),D,Denial of service,"Crafted images or injected text cause malformed (non-JSON) output, refusals or excessive response times, stalling the pipeline for real events.",TS23
+Opus,Claude Claude-Opus-5\_with-context,Situation detection agent and prompt 1 (Steps 3-4),E,Elevation of privilege,"Injected instructions make the agent framework perform actions beyond its role (e.g., invoking the message generation agent without a confirmed hazard, or calling other tools configured in the framework).",TS24
+Opus,Claude Claude-Opus-5\_with-context,"Cloud MLLM, Gemini API (Steps 4 and 7)",S,Spoofing,A spoofed API endpoint (via DNS manipulation on the roadside network or a compromised proxy) answers in place of the Gemini API with forged detection results and DENM parameters.,TS25
+Opus,Claude Claude-Opus-5\_with-context,"Cloud MLLM, Gemini API (Steps 4 and 7)",T,Tampering,"A compromise or malicious insider at the provider, or an unannounced model update, changes the model's behaviour and alters detection results and DENM field values without the operator's knowledge.",TS26
+Opus,Claude Claude-Opus-5\_with-context,"Cloud MLLM, Gemini API (Steps 4 and 7)",R,Repudiation,"Processing at the provider cannot be audited by the operator, so it cannot be shown whether an incorrect output originated in the model or in manipulated input.",TS27
+Opus,Claude Claude-Opus-5\_with-context,"Cloud MLLM, Gemini API (Steps 4 and 7)",I,Information disclosure,"Frames sent to the third-party cloud, containing faces, licence plates and the camera location, are retained, logged or reused by the provider, disclosing personal data outside the operator's control.",TS28
+Opus,Claude Claude-Opus-5\_with-context,"Cloud MLLM, Gemini API (Steps 4 and 7)",D,Denial of service,"Provider outage, rate limiting, quota exhaustion or account suspension stops Steps 4 and 7, so no DENM can be generated.",TS29
+Opus,Claude Claude-Opus-5\_with-context,Gemini API key and cloud account,S,Spoofing,"A stolen API key lets an attacker impersonate the system towards the provider, consuming quota and incurring costs until the legitimate requests are rate-limited.",TS30
+Opus,Claude Claude-Opus-5\_with-context,Gemini API key and cloud account,I,Information disclosure,"The key leaks through source code repositories, configuration backups, logs or monitoring traces.",TS31
+Opus,Claude Claude-Opus-5\_with-context,Gemini API key and cloud account,D,Denial of service,Revocation of a leaked key or suspension of the cloud account interrupts the service until new credentials are deployed.,TS32
+Opus,Claude Claude-Opus-5\_with-context,Gemini API key and cloud account,E,Elevation of privilege,"If the key belongs to a cloud project with broader permissions, its compromise gives access to other cloud resources of the operator.",TS33
+Opus,Claude Claude-Opus-5\_with-context,Link roadside computing unit <-> Gemini API over 5G Uu (Steps 3-4 and 6-7),T,Tampering,"A man-in-the-middle (rogue base station, compromised gateway, or a client that does not validate TLS certificates) modifies requests or responses, e.g., changing the incident flag or the cause code.",TS34
+Opus,Claude Claude-Opus-5\_with-context,Link roadside computing unit <-> Gemini API over 5G Uu (Steps 3-4 and 6-7),I,Information disclosure,Missing or weak TLS exposes the images and prompts in transit.,TS35
+Opus,Claude Claude-Opus-5\_with-context,Link roadside computing unit <-> Gemini API over 5G Uu (Steps 3-4 and 6-7),D,Denial of service,"Cellular jamming, a forced downgrade by a rogue base station, or blocking of the SIM subscription cuts the connection to the MLLM.",TS36
+Opus,Claude Claude-Opus-5\_with-context,Distance estimate agent (Depth Pro) and stored camera position data (Step 5),T,Tampering,"Adversarial or deliberately unusual scene content (e.g., reflective surfaces or projected patterns) makes Depth Pro produce a wrong distance, placing the hazard at the wrong position in the DENM.",TS37
+Opus,Claude Claude-Opus-5\_with-context,Distance estimate agent (Depth Pro) and stored camera position data (Step 5),T,Tampering,"The stored camera position and orientation parameters are altered, shifting every computed event location so that warnings refer to the wrong road section.",TS38
+Opus,Claude Claude-Opus-5\_with-context,Distance estimate agent (Depth Pro) and stored camera position data (Step 5),T,Tampering,The Depth Pro model file is replaced with a manipulated version that returns systematically biased distances.,TS39
+Opus,Claude Claude-Opus-5\_with-context,Distance estimate agent (Depth Pro) and stored camera position data (Step 5),D,Denial of service,Inputs that make the depth model fail or run slowly delay or block message generation.,TS40
+Opus,Claude Claude-Opus-5\_with-context,Message generation agent and prompt 2 (Steps 6-7),T,Tampering,"A prompt injection through scene text or manipulated inputs makes the MLLM return wrong DENM fields (e.g., wrong cause code, open lanes reported as closed, a lower speed limit), so drivers receive misleading instructions.",TS41
+Opus,Claude Claude-Opus-5\_with-context,Message generation agent and prompt 2 (Steps 6-7),T,Tampering,"Prompt 2 or the list of allowed field values is modified on the computing unit, producing systematically wrong or attacker-chosen message content.",TS42
+Opus,Claude Claude-Opus-5\_with-context,Message generation agent and prompt 2 (Steps 6-7),S,Spoofing,An attacker who controls the MLLM response (see TS25 and TS34) sets the event position fields so that the DENM describes a hazard at a location the camera does not cover.,TS43
+Opus,Claude Claude-Opus-5\_with-context,Message generation agent and prompt 2 (Steps 6-7),R,Repudiation,"Generated DENMs are not linked to their input frame, prompt, model version and model response, preventing post-incident investigation of a harmful message.",TS44
+Opus,Claude Claude-Opus-5\_with-context,Message generation agent and prompt 2 (Steps 6-7),D,Denial of service,Prompt-induced oversized or malformed model output exceeds processing limits and blocks message generation.,TS45
+Opus,Claude Claude-Opus-5\_with-context,"DENM encoder and DENM payload, ASN.1 UPER (Step 8)",T,Tampering,"Model output that bypasses schema and plausibility validation yields a DENM with out-of-range or inconsistent fields, which receiving V2X stacks may misinterpret or crash on.",TS46
+Opus,Claude Claude-Opus-5\_with-context,"DENM encoder and DENM payload, ASN.1 UPER (Step 8)",T,Tampering,The encoder code or its ASN.1 definitions are modified to produce syntactically valid but semantically altered messages.,TS47
+Opus,Claude Claude-Opus-5\_with-context,"DENM encoder and DENM payload, ASN.1 UPER (Step 8)",D,Denial of service,"Crafted field values trigger encoding errors or exceptions, stopping DENM generation.",TS48
+Opus,Claude Claude-Opus-5\_with-context,"Link roadside computing unit -> RSU, Ethernet/UDP (Step 8 -> 9)",S,Spoofing,A device on the roadside network (including a compromised camera) sends forged UDP packets to the RSU input port; the RSU signs and broadcasts them as legitimate DENMs.,TS49
+Opus,Claude Claude-Opus-5\_with-context,"Link roadside computing unit -> RSU, Ethernet/UDP (Step 8 -> 9)",T,Tampering,"An attacker on the local network (e.g., by ARP spoofing) modifies the DENM payload before it reaches the RSU and is signed.",TS50
+Opus,Claude Claude-Opus-5\_with-context,"Link roadside computing unit -> RSU, Ethernet/UDP (Step 8 -> 9)",I,Information disclosure,"Unencrypted UDP traffic is captured, revealing message content and the internal addressing of the roadside station.",TS51
+Opus,Claude Claude-Opus-5\_with-context,"Link roadside computing unit -> RSU, Ethernet/UDP (Step 8 -> 9)",D,Denial of service,Flooding the RSU input port or the roadside switch prevents payloads from reaching the RSU.,TS52
+Opus,Claude Claude-Opus-5\_with-context,RSU with hardware security module and signing keys (Step 9),S,Spoofing,A rogue roadside device broadcasts DENMs claiming to be the RSU; the forgery succeeds if valid credentials were stolen or if receivers do not verify signatures.,TS53
+Opus,Claude Claude-Opus-5\_with-context,RSU with hardware security module and signing keys (Step 9),T,Tampering,"The RSU firmware or configuration is modified through its management interface (e.g., default or weak credentials), changing its signing or forwarding behaviour.",TS54
+Opus,Claude Claude-Opus-5\_with-context,RSU with hardware security module and signing keys (Step 9),R,Repudiation,"The RSU signs every payload received on its UDP input without authenticating or logging its origin, so it cannot be established which component produced a harmful message.",TS55
+Opus,Claude Claude-Opus-5\_with-context,RSU with hardware security module and signing keys (Step 9),I,Information disclosure,"Because of misconfiguration, signing keys are generated or stored outside the hardware security module, allowing their extraction.",TS56
+Opus,Claude Claude-Opus-5\_with-context,RSU with hardware security module and signing keys (Step 9),D,Denial of service,"Network flooding, a firmware crash, power loss or physical destruction of the pole-mounted RSU stops all broadcasts.",TS57
+Opus,Claude Claude-Opus-5\_with-context,RSU with hardware security module and signing keys (Step 9),E,Elevation of privilege,"Exploiting a vulnerability in the RSU management services gives root access, letting the attacker use the hardware security module as a signing oracle for arbitrary messages.",TS58
+Opus,Claude Claude-Opus-5\_with-context,PC5 sidelink RSU -> OBU (Step 9 -> 11),S,Spoofing,An attacker with a C-V2X radio transmits forged DENMs on PC5; they are accepted if OBUs do not verify signatures or if the attacker holds valid credentials.,TS59
+Opus,Claude Claude-Opus-5\_with-context,PC5 sidelink RSU -> OBU (Step 9 -> 11),S,Spoofing,Valid signed DENMs are recorded and replayed at another time or place; they are accepted if freshness and location checks are missing.,TS60
+Opus,Claude Claude-Opus-5\_with-context,PC5 sidelink RSU -> OBU (Step 9 -> 11),T,Tampering,"Signal overshadowing: the attacker transmits a stronger, modified copy of a legitimate message so that nearby OBUs receive the altered version.",TS61
+Opus,Claude Claude-Opus-5\_with-context,PC5 sidelink RSU -> OBU (Step 9 -> 11),D,Denial of service,"Jamming the 5.9 GHz channel, or flooding it with valid-format messages to congest it, prevents OBUs from receiving warnings.",TS62
+Opus,Claude Claude-Opus-5\_with-context,Security credentials and PKI enrolment (Step 0),S,Spoofing,Stolen enrolment credentials or authorization tickets let an attacker obtain or use valid certificates and sign forged DENMs that receivers accept.,TS63
+Opus,Claude Claude-Opus-5\_with-context,Security credentials and PKI enrolment (Step 0),T,Tampering,The trust store (root certificates or trust list) on the RSU or OBU is modified so that it trusts an attacker-controlled certificate authority.,TS64
+Opus,Claude Claude-Opus-5\_with-context,Security credentials and PKI enrolment (Step 0),R,Repudiation,"Certificates are not traceable to an accountable station in the PKI, so a misbehaving station cannot be identified and revoked.",TS65
+Opus,Claude Claude-Opus-5\_with-context,Security credentials and PKI enrolment (Step 0),D,Denial of service,"Expired certificates, or a PKI that is unreachable during renewal, cause the RSU's messages to be rejected by OBUs, silencing warnings.",TS66
+Opus,Claude Claude-Opus-5\_with-context,Security credentials and PKI enrolment (Step 0),E,Elevation of privilege,"Compromise of the authorization authority allows certificates with broader permissions to be issued (e.g., for any DENM cause code), which receivers then trust.",TS67
+Opus,Claude Claude-Opus-5\_with-context,"Central ITS-S, operator back-end (Step 10)",S,Spoofing,"An attacker impersonates an RSU towards the central ITS-S and injects fake event reports, which are redistributed over V2N to many vehicles.",TS68
+Opus,Claude Claude-Opus-5\_with-context,"Central ITS-S, operator back-end (Step 10)",S,Spoofing,"Phishing or credential theft gives an attacker access to an operator account, from which warnings can be published or cancelled.",TS69
+Opus,Claude Claude-Opus-5\_with-context,"Central ITS-S, operator back-end (Step 10)",T,Tampering,"A compromised operator account or back-end component modifies or cancels real events, suppressing warnings for vehicles outside RSU range.",TS70
+Opus,Claude Claude-Opus-5\_with-context,"Central ITS-S, operator back-end (Step 10)",R,Repudiation,Missing audit logs allow an operator to deny having published or cancelled a warning.,TS71
+Opus,Claude Claude-Opus-5\_with-context,"Central ITS-S, operator back-end (Step 10)",I,Information disclosure,Event logs and camera snapshots stored at the back-end disclose personal data and details of the roadside infrastructure.,TS72
+Opus,Claude Claude-Opus-5\_with-context,"Central ITS-S, operator back-end (Step 10)",D,Denial of service,A DDoS attack on the back-end prevents V2N redistribution and certificate renewal.,TS73
+Opus,Claude Claude-Opus-5\_with-context,"Central ITS-S, operator back-end (Step 10)",E,Elevation of privilege,"A vulnerability in the back-end grants administrative control over all connected RSUs (remote configuration and firmware updates), enabling a fleet-wide compromise.",TS74
+Opus,Claude Claude-Opus-5\_with-context,Link RSU <-> central ITS-S over 5G Uu (Step 0 and Step 9 -> 10),T,Tampering,A man-in-the-middle modifies event reports or certificate responses in transit.,TS75
+Opus,Claude Claude-Opus-5\_with-context,Link RSU <-> central ITS-S over 5G Uu (Step 0 and Step 9 -> 10),I,Information disclosure,Interception of unprotected management traffic exposes credentials and configuration of the RSU.,TS76
+Opus,Claude Claude-Opus-5\_with-context,Link RSU <-> central ITS-S over 5G Uu (Step 0 and Step 9 -> 10),D,Denial of service,Cellular jamming or a network outage blocks event reports and certificate renewal.,TS77
+Opus,Claude Claude-Opus-5\_with-context,V2N link central ITS-S -> OBU over 5G Uu (Step 10 -> 11),S,Spoofing,A fake V2N server or a compromised cellular path delivers forged DENMs to OBUs; they are accepted if the OBU relies on transport security instead of verifying message signatures.,TS78
+Opus,Claude Claude-Opus-5\_with-context,V2N link central ITS-S -> OBU over 5G Uu (Step 10 -> 11),I,Information disclosure,Area-based subscriptions to warnings reveal vehicle locations to the back-end or to an attacker observing the traffic.,TS79
+Opus,Claude Claude-Opus-5\_with-context,V2N link central ITS-S -> OBU over 5G Uu (Step 10 -> 11),D,Denial of service,Congestion or outage of the cellular network prevents warnings from reaching vehicles outside RSU range.,TS80
+Opus,Claude Claude-Opus-5\_with-context,"GNSS position and time (RSU and OBU, Steps 9 and 11)",S,Spoofing,"GNSS spoofing gives the OBU a false position, so its relevance check discards genuine warnings or accepts irrelevant ones; at the RSU it corrupts the position and time used in signed messages.",TS81
+Opus,Claude Claude-Opus-5\_with-context,"GNSS position and time (RSU and OBU, Steps 9 and 11)",T,Tampering,Manipulated GNSS time makes receivers reject valid messages as expired or accept replayed ones.,TS82
+Opus,Claude Claude-Opus-5\_with-context,"GNSS position and time (RSU and OBU, Steps 9 and 11)",D,Denial of service,GNSS jamming disrupts the time synchronization needed by LTE-V2X PC5 and the position-based relevance filtering.,TS83
+Opus,Claude Claude-Opus-5\_with-context,OBU (Step 11),T,Tampering,"Firmware tampering through physical access in the vehicle (e.g., debug ports) disables signature verification, so forged DENMs are accepted.",TS84
+Opus,Claude Claude-Opus-5\_with-context,OBU (Step 11),I,Information disclosure,Credentials are extracted from the OBU and used to sign forged messages elsewhere.,TS85
+Opus,Claude Claude-Opus-5\_with-context,OBU (Step 11),D,Denial of service,"Malformed DENMs (fuzzing) crash the OBU's V2X stack, stopping reception.",TS86
+Opus,Claude Claude-Opus-5\_with-context,OBU (Step 11),E,Elevation of privilege,"A vulnerability in the OBU's cellular (Uu) interface or management service is exploited remotely, giving code execution inside the vehicle.",TS87
+Opus,Claude Claude-Opus-5\_with-context,"Link OBU -> vehicle computer, Ethernet/UDP (Step 11 -> 12)",S,Spoofing,A device connected to the in-vehicle Ethernet injects forged UDP messages that the vehicle computer treats as received DENMs.,TS88
+Opus,Claude Claude-Opus-5\_with-context,"Link OBU -> vehicle computer, Ethernet/UDP (Step 11 -> 12)",T,Tampering,Forwarded messages are modified on the in-vehicle link; this goes undetected if only the OBU verifies signatures and the link itself is not protected.,TS89
+Opus,Claude Claude-Opus-5\_with-context,"Link OBU -> vehicle computer, Ethernet/UDP (Step 11 -> 12)",D,Denial of service,Flooding the UDP port blocks the forwarding of warnings.,TS90
+Opus,Claude Claude-Opus-5\_with-context,"Vehicle computer, warning logic (Step 12)",S,Spoofing,"The vehicle computer accepts messages without checking the verification result from the OBU, so forged warnings are processed as genuine.",TS91
+Opus,Claude Claude-Opus-5\_with-context,"Vehicle computer, warning logic (Step 12)",T,Tampering,"Relevance thresholds, map data or warning logic are modified, suppressing warnings or triggering them for irrelevant events.",TS92
+Opus,Claude Claude-Opus-5\_with-context,"Vehicle computer, warning logic (Step 12)",R,Repudiation,"Received and displayed warnings are not logged, so it cannot be reconstructed what the driver was told (e.g., in an accident investigation).",TS93
+Opus,Claude Claude-Opus-5\_with-context,"Vehicle computer, warning logic (Step 12)",D,Denial of service,A burst of valid-format messages overloads the warning logic and delays real warnings.,TS94
+Opus,Claude Claude-Opus-5\_with-context,"Vehicle computer, warning logic (Step 12)",E,Elevation of privilege,A compromised vehicle computer is used as a pivot into other in-vehicle networks it is connected to.,TS95
+Opus,Claude Claude-Opus-5\_with-context,Driver HMI (Step 13),T,Tampering,"Manipulated warning content (wrong hazard type, distance or lane) is displayed, prompting dangerous driver reactions such as sudden braking or lane changes.",TS96
+Opus,Claude Claude-Opus-5\_with-context,Driver HMI (Step 13),D,Denial of service,"A flood of false alerts distracts the driver and causes alert fatigue, so genuine warnings are ignored.",TS97
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",1. Cameras (Mono + Stereo),S,Spoofing,Attacker injects fake camera streams or replays previously recorded accident footage to impersonate a live road scene.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",1. Cameras (Mono + Stereo),T,Tampering,Camera firmware or image data is modified to hide accidents or create false hazards.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",1. Cameras (Mono + Stereo),R,Repudiation,No audit trail exists to prove whether captured footage originated from the genuine camera.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",1. Cameras (Mono + Stereo),I,Information Disclosure,Unauthorized access to video streams exposes vehicle and road-user information.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",1. Cameras (Mono + Stereo),D,Denial of Service,"Camera is disabled through jamming, overload, or physical sabotage, preventing accident detection.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",1. Cameras (Mono + Stereo),E,Elevation of Privilege,Exploitation of camera firmware vulnerabilities grants administrative access to the roadside network.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",2. Edge Detector (YOLOv5 Fast Path),S,Spoofing,Malicious device impersonates a trusted camera and sends manipulated object-detection input.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",2. Edge Detector (YOLOv5 Fast Path),T,Tampering,YOLOv5 model weights are altered to misclassify accidents or hazards.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",2. Edge Detector (YOLOv5 Fast Path),R,Repudiation,Absence of model execution logs prevents attribution of incorrect detections.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",2. Edge Detector (YOLOv5 Fast Path),I,Information Disclosure,Sensitive image frames or detection metadata are leaked from edge storage.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",2. Edge Detector (YOLOv5 Fast Path),D,Denial of Service,Adversarial images or excessive traffic exhaust GPU/CPU resources and block real-time processing.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",2. Edge Detector (YOLOv5 Fast Path),E,Elevation of Privilege,Exploiting inference runtime vulnerabilities provides root access to the roadside computing platform.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",3. Situation Detection Agent,S,Spoofing,Unauthorized entity impersonates the MLLM service and returns fabricated hazard assessments.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",3. Situation Detection Agent,T,Tampering,Prompt injection manipulates accident interpretation and generated conclusions.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",3. Situation Detection Agent,R,Repudiation,"Agent decisions cannot be traced back to specific prompts, responses, or model versions.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",3. Situation Detection Agent,I,Information Disclosure,Road images and metadata are exposed to unauthorized users or cloud tenants.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",3. Situation Detection Agent,D,Denial of Service,Flooding the agent with requests prevents processing of legitimate hazards.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",3. Situation Detection Agent,E,Elevation of Privilege,Compromised agent gains unauthorized access to downstream systems and APIs.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",4 & 7. Cloud MLLM (Gemini API),S,Spoofing,Attackers steal API credentials and impersonate the roadside station.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",4 & 7. Cloud MLLM (Gemini API),T,Tampering,Model outputs are manipulated through prompt injection or API traffic modification.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",4 & 7. Cloud MLLM (Gemini API),R,Repudiation,Lack of signed request-response logs prevents proving which recommendations were generated.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",4 & 7. Cloud MLLM (Gemini API),I,Information Disclosure,"Sensitive road imagery, accident information, or prompts are disclosed to unauthorized parties.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",4 & 7. Cloud MLLM (Gemini API),D,Denial of Service,API quota exhaustion or network attacks prevent cloud-based inference.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",4 & 7. Cloud MLLM (Gemini API),E,Elevation of Privilege,Compromised API keys allow attackers to access additional cloud resources.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",5. Distance Estimation Agent (Depth Pro),S,Spoofing,Fake sensor inputs cause incorrect distance calculations.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",5. Distance Estimation Agent (Depth Pro),T,Tampering,Distance estimation models are altered to understate or overstate hazard proximity.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",5. Distance Estimation Agent (Depth Pro),R,Repudiation,Insufficient logging prevents validation of how distance values were generated.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",5. Distance Estimation Agent (Depth Pro),I,Information Disclosure,Environmental and vehicle location information is leaked through outputs.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",5. Distance Estimation Agent (Depth Pro),D,Denial of Service,Resource exhaustion prevents execution of depth estimation.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",5. Distance Estimation Agent (Depth Pro),E,Elevation of Privilege,Model-serving vulnerabilities permit escalation to privileged roadside services.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",6. Message Generation Agent,S,Spoofing,Attacker impersonates the agent and generates fake DENM warning content.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",6. Message Generation Agent,T,Tampering,"Warning messages are modified before encoding, resulting in misleading alerts.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",6. Message Generation Agent,R,Repudiation,Generated messages cannot be linked to the originating hazard assessment.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",6. Message Generation Agent,I,Information Disclosure,Generated messages expose confidential infrastructure information.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",6. Message Generation Agent,D,Denial of Service,Excessive requests interrupt warning generation.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",6. Message Generation Agent,E,Elevation of Privilege,Compromised agent obtains unauthorized control over DENM generation workflows.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",8. DENM Encoder (ASN.1 UPER Payload),S,Spoofing,Unauthorized process generates forged DENM messages.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",8. DENM Encoder (ASN.1 UPER Payload),T,Tampering,Encoded payload fields are altered to report false accident details.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",8. DENM Encoder (ASN.1 UPER Payload),R,Repudiation,No cryptographic linkage exists between generated DENM messages and originating events.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",8. DENM Encoder (ASN.1 UPER Payload),I,Information Disclosure,Encoded messages reveal operational metadata useful to attackers.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",8. DENM Encoder (ASN.1 UPER Payload),D,Denial of Service,Malformed payloads cause parser crashes and encoder failures.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",8. DENM Encoder (ASN.1 UPER Payload),E,Elevation of Privilege,ASN.1 parsing vulnerabilities enable code execution on the encoder host.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","9. RSU (Roadside Unit, Signs, PC5, HSM)",S,Spoofing,Attacker impersonates a legitimate RSU using stolen certificates.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","9. RSU (Roadside Unit, Signs, PC5, HSM)",T,Tampering,Broadcast warning messages or HSM configurations are modified.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","9. RSU (Roadside Unit, Signs, PC5, HSM)",R,Repudiation,RSU operators deny transmitting malicious or incorrect alerts.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","9. RSU (Roadside Unit, Signs, PC5, HSM)",I,Information Disclosure,Vehicle communication metadata and certificates are exposed.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","9. RSU (Roadside Unit, Signs, PC5, HSM)",D,Denial of Service,RF jamming or message flooding prevents dissemination of safety alerts.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","9. RSU (Roadside Unit, Signs, PC5, HSM)",E,Elevation of Privilege,Compromise of the HSM or RSU software grants administrative control over C-V2X communications.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","10. Central ITS-S (PKI, Operator)",S,Spoofing,Stolen PKI credentials allow attackers to impersonate trusted infrastructure.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","10. Central ITS-S (PKI, Operator)",T,Tampering,Certificate issuance or revocation records are manipulated.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","10. Central ITS-S (PKI, Operator)",R,Repudiation,Operators deny certificate actions due to insufficient auditing.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","10. Central ITS-S (PKI, Operator)",I,Information Disclosure,"Private keys, certificates, and operator credentials are exposed.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","10. Central ITS-S (PKI, Operator)",D,Denial of Service,"PKI services become unavailable, preventing certificate validation and message signing.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","10. Central ITS-S (PKI, Operator)",E,Elevation of Privilege,Compromised operator accounts obtain full PKI administration privileges.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",11. OBU (On-Board Unit),S,Spoofing,Rogue OBU impersonates a legitimate vehicle.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",11. OBU (On-Board Unit),T,Tampering,Received DENM messages are modified before validation.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",11. OBU (On-Board Unit),R,Repudiation,Vehicle cannot prove receipt or rejection of safety warnings.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",11. OBU (On-Board Unit),I,Information Disclosure,"Location, communication, and certificate information are leaked.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",11. OBU (On-Board Unit),D,Denial of Service,Radio-channel flooding prevents reception of critical alerts.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",11. OBU (On-Board Unit),E,Elevation of Privilege,Compromised modem firmware grants access to vehicle communication subsystems.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",12. Vehicle Computer (Verification and Warning Logic),S,Spoofing,Fake OBU messages are accepted as trusted warnings.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",12. Vehicle Computer (Verification and Warning Logic),T,Tampering,Verification algorithms or warning thresholds are modified.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",12. Vehicle Computer (Verification and Warning Logic),R,Repudiation,No audit trail exists for warning decisions made by the vehicle computer.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",12. Vehicle Computer (Verification and Warning Logic),I,Information Disclosure,Internal vehicle status and alert data are exposed.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",12. Vehicle Computer (Verification and Warning Logic),D,Denial of Service,Excessive message processing disables warning validation.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",12. Vehicle Computer (Verification and Warning Logic),E,Elevation of Privilege,Attackers exploit software vulnerabilities to gain control of safety functions.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",13. Driver HMI (Visual and Audio Alert),S,Spoofing,Fake alerts are displayed to mislead the driver.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",13. Driver HMI (Visual and Audio Alert),T,Tampering,Alert content or severity levels are altered.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",13. Driver HMI (Visual and Audio Alert),R,Repudiation,There is no evidence proving that a warning was presented to the driver.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",13. Driver HMI (Visual and Audio Alert),I,Information Disclosure,Displayed information reveals vehicle or route details to unauthorized observers.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",13. Driver HMI (Visual and Audio Alert),D,Denial of Service,HMI malfunction suppresses critical safety alerts.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version",13. Driver HMI (Visual and Audio Alert),E,Elevation of Privilege,Compromise of the HMI enables access to other vehicle subsystems.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",S,Spoofing,"Attacker impersonates RSU, OBU, cloud services, or roadside infrastructure endpoints.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",T,Tampering,"Messages in transit are modified, leading to incorrect accident notifications.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",R,Repudiation,Participants deny having transmitted or received safety-critical messages.,
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",I,Information Disclosure,"Eavesdropping reveals DENM payloads, location data, certificates, and operational information.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",D,Denial of Service,"5G disruption, PC5 jamming, or API flooding prevents accident warning delivery.",
+Copilot,"Copilot last version released between August 11, 2026, and August 25, 2026\. free version","Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",E,Elevation of Privilege,Network-level compromise enables unauthorized access to trusted infrastructure services.,
+DeepSeek,DeepSeek 4.1 Flash,Cameras (1),S,Spoofing,Rogue camera node injecting fake video feeds into the edge detector.,
+DeepSeek,DeepSeek 4.1 Flash,Cameras (1),T,Tampering,"Physical or logical modification (e.g., blinding, lens obstruction, replay attacks) of camera streams to prevent accident detection.",
+DeepSeek,DeepSeek 4.1 Flash,Cameras (1),I,Information Disclosure,Unencrypted video feeds intercepted by unauthorized parties.,
+DeepSeek,DeepSeek 4.1 Flash,Cameras (1),D,Denial of Service,Flooding the camera interface to exhaust processing resources or blinding the sensor.,
+DeepSeek,DeepSeek 4.1 Flash,Edge Detector (2),S,Spoofing,Malicious actor impersonating a legitimate camera to feed crafted data.,
+DeepSeek,DeepSeek 4.1 Flash,Edge Detector (2),T,Tampering,Modifying the YOLOv5 model weights or configuration to miss specific hazards.,
+DeepSeek,DeepSeek 4.1 Flash,Edge Detector (2),R,Repudiation,Lack of audit logs for detected hazards or system modifications.,
+DeepSeek,DeepSeek 4.1 Flash,Edge Detector (2),I,Information Disclosure,Extraction of edge processing logic or cached video frames.,
+DeepSeek,DeepSeek 4.1 Flash,Edge Detector (2),D,Denial of Service,Resource exhaustion (CPU/GPU) via high-volume video frame injection.,
+DeepSeek,DeepSeek 4.1 Flash,Edge Detector (2),E,Elevation of Privilege,Exploiting software vulnerabilities to gain root access to the edge device and pivot to the AI agents.,
+DeepSeek,DeepSeek 4.1 Flash,"AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",S,Spoofing,Impersonating the Cloud MLLM API to send fake situation detection or message generation responses.,
+DeepSeek,DeepSeek 4.1 Flash,"AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",T,Tampering,"Adversarial machine learning (poisoning inputs, prompt injection) to alter hazard detection, distance estimation, or message generation.",
+DeepSeek,DeepSeek 4.1 Flash,"AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",R,Repudiation,"Lack of immutable audit trails for AI decisions (e.g., denying an accident was detected or a message was generated).",
+DeepSeek,DeepSeek 4.1 Flash,"AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",I,Information Disclosure,Model inversion or data leakage exposing sensitive training data or inferred accident scenes.,
+DeepSeek,DeepSeek 4.1 Flash,"AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",D,Denial of Service,API flooding or resource exhaustion to prevent real-time accident detection and message generation.,
+DeepSeek,DeepSeek 4.1 Flash,"AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",E,Elevation of Privilege,Exploiting API or container vulnerabilities to execute commands on the cloud infrastructure hosting the MLLM.,
+DeepSeek,DeepSeek 4.1 Flash,DENM Encoder (8),T,Tampering,Modifying the ASN.1 UPER payload before encoding to falsify accident details or locations.,
+DeepSeek,DeepSeek 4.1 Flash,DENM Encoder (8),I,Information Disclosure,Extracting unencrypted DENM payloads prior to transmission.,
+DeepSeek,DeepSeek 4.1 Flash,DENM Encoder (8),D,Denial of Service,Overloading the encoder to delay or drop critical safety messages.,
+DeepSeek,DeepSeek 4.1 Flash,Central ITS-S (10),S,Spoofing,Compromised Certificate Authority issuing rogue certificates to malicious nodes.,
+DeepSeek,DeepSeek 4.1 Flash,Central ITS-S (10),T,Tampering,Unauthorized modification of PKI records or operator configurations.,
+DeepSeek,DeepSeek 4.1 Flash,Central ITS-S (10),R,Repudiation,Administrator denying actions taken on the central system.,
+DeepSeek,DeepSeek 4.1 Flash,Central ITS-S (10),I,Information Disclosure,"Leakage of private keys, operator credentials, or sensitive event reports.",
+DeepSeek,DeepSeek 4.1 Flash,Central ITS-S (10),D,Denial of Service,"DDoS attack on the PKI infrastructure, halting certificate validation for the entire network.",
+DeepSeek,DeepSeek 4.1 Flash,Central ITS-S (10),E,Elevation of Privilege,Exploiting operator interface vulnerabilities to gain root access to the ITS central infrastructure.,
+DeepSeek,DeepSeek 4.1 Flash,RSU (9),S,Spoofing,Compromised RSU broadcasting fake DENMs (Decentralized Environmental Notification Messages).,
+DeepSeek,DeepSeek 4.1 Flash,RSU (9),T,Tampering,Modifying ASN.1 payloads or altering RSU signs/HSM configurations.,
+DeepSeek,DeepSeek 4.1 Flash,RSU (9),R,Repudiation,RSU denying broadcasting a specific safety message.,
+DeepSeek,DeepSeek 4.1 Flash,RSU (9),I,Information Disclosure,Extracting HSM keys from the RSU or reading unencrypted DENM payloads.,
+DeepSeek,DeepSeek 4.1 Flash,RSU (9),D,Denial of Service,HSM overload or PC5 sidelink jamming from the RSU.,
+DeepSeek,DeepSeek 4.1 Flash,RSU (9),E,Elevation of Privilege,Gaining root access to the RSU to manipulate the HSM or broadcast false safety messages.,
+DeepSeek,DeepSeek 4.1 Flash,"Communication Links (5G Uu, PC5 Sidelink, Wired)",S,Spoofing,Spoofing a legitimate RSU or OBU on the PC5 sidelink or 5G network.,
+DeepSeek,DeepSeek 4.1 Flash,"Communication Links (5G Uu, PC5 Sidelink, Wired)",T,Tampering,Man-in-the-Middle (MitM) attacks modifying DENM payloads or AI agent communications during transmission.,
+DeepSeek,DeepSeek 4.1 Flash,"Communication Links (5G Uu, PC5 Sidelink, Wired)",I,Information Disclosure,Eavesdropping on unencrypted 5G or PC5 traffic containing vehicle telemetry or accident reports.,
+DeepSeek,DeepSeek 4.1 Flash,"Communication Links (5G Uu, PC5 Sidelink, Wired)",D,Denial of Service,"Radio frequency (RF) jamming of PC5/5G signals, or cellular network flooding.",
+DeepSeek,DeepSeek 4.1 Flash,"Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",S,Spoofing,Spoofing a legitimate OBU to send false vehicle status or accident reports.,
+DeepSeek,DeepSeek 4.1 Flash,"Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",T,Tampering,Modifying warning logic in the vehicle computer or altering audio/visual alerts on the Driver HMI.,
+DeepSeek,DeepSeek 4.1 Flash,"Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",R,Repudiation,Denying that a warning was issued or received by the vehicle.,
+DeepSeek,DeepSeek 4.1 Flash,"Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",I,Information Disclosure,"Extracting driver behavior data, vehicle location, or HMI interactions from the OBU/Vehicle Computer.",
+DeepSeek,DeepSeek 4.1 Flash,"Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",D,Denial of Service,Flooding the OBU with fake PC5 messages to prevent reception of legitimate DENMs.,
+DeepSeek,DeepSeek 4.1 Flash,"Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",E,Elevation of Privilege,Exploiting OBU vulnerabilities to gain control over the vehicle computer or HMI systems.,
+Medini,Medini Analyze (tool-generated),Mono + Stereo,I,Information Disclosure,Information Disclosure of Mono + Stereo,T001
+Medini,Medini Analyze (tool-generated),Mono + Stereo,T,Tampering,Tampering of Mono + Stereo,T002
+Medini,Medini Analyze (tool-generated),Mono + Stereo,D,Denial of Service,Denial of Service of Mono + Stereo,T003
+Medini,Medini Analyze (tool-generated),Mono + Stereo,S,Spoofing,Spoofing of Mono + Stereo,T004
+Medini,Medini Analyze (tool-generated),Mono + Stereo,E,Elevation of Privilege,Elevation of Privilege of Mono + Stereo,T005
+Medini,Medini Analyze (tool-generated),Mono + Stereo,R,Repudiation,Repudiation of Mono + Stereo,T006
+Medini,Medini Analyze (tool-generated),Mono + Stereo::image_out,I,Information Disclosure,Information Disclosure of image_out,T007
+Medini,Medini Analyze (tool-generated),Mono + Stereo::image_out,T,Tampering,Tampering of image_out,T008
+Medini,Medini Analyze (tool-generated),Mono + Stereo::image_out,D,Denial of Service,Denial of Service of image_out,T009
+Medini,Medini Analyze (tool-generated),image_out ↔ image_in,I,Information Disclosure,Information Disclosure of image_out ↔ image_in,T010
+Medini,Medini Analyze (tool-generated),image_out ↔ image_in,T,Tampering,Tampering of image_out ↔ image_in,T011
+Medini,Medini Analyze (tool-generated),image_out ↔ image_in,D,Denial of Service,Denial of Service of image_out ↔ image_in,T012
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,I,Information Disclosure,Information Disclosure of YOLOv5 fast path,T013
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,T,Tampering,Tampering of YOLOv5 fast path,T014
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,D,Denial of Service,Denial of Service of YOLOv5 fast path,T015
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,S,Spoofing,Spoofing of YOLOv5 fast path,T016
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,E,Elevation of Privilege,Elevation of Privilege of YOLOv5 fast path,T017
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,R,Repudiation,Repudiation of YOLOv5 fast path,T018
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::image_in,I,Information Disclosure,Information Disclosure of image_in,T019
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::image_in,T,Tampering,Tampering of image_in,T020
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::image_in,D,Denial of Service,Denial of Service of image_in,T021
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::detections_out,I,Information Disclosure,Information Disclosure of detections_out,T022
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::detections_out,T,Tampering,Tampering of detections_out,T023
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::detections_out,D,Denial of Service,Denial of Service of detections_out,T024
+Medini,Medini Analyze (tool-generated),detections_out ↔ detections_in,I,Information Disclosure,Information Disclosure of detections_out ↔ detections_in,T025
+Medini,Medini Analyze (tool-generated),detections_out ↔ detections_in,T,Tampering,Tampering of detections_out ↔ detections_in,T026
+Medini,Medini Analyze (tool-generated),detections_out ↔ detections_in,D,Denial of Service,Denial of Service of detections_out ↔ detections_in,T027
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",I,Information Disclosure,"Information Disclosure of Agent 1, MLLM call",T028
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",T,Tampering,"Tampering of Agent 1, MLLM call",T029
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",D,Denial of Service,"Denial of Service of Agent 1, MLLM call",T030
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",S,Spoofing,"Spoofing of Agent 1, MLLM call",T031
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",E,Elevation of Privilege,"Elevation of Privilege of Agent 1, MLLM call",T032
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",R,Repudiation,"Repudiation of Agent 1, MLLM call",T033
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::detections_in",I,Information Disclosure,Information Disclosure of detections_in,T034
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::detections_in",T,Tampering,Tampering of detections_in,T035
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::detections_in",D,Denial of Service,Denial of Service of detections_in,T036
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::hazard_out",I,Information Disclosure,Information Disclosure of hazard_out,T037
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::hazard_out",T,Tampering,Tampering of hazard_out,T038
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::hazard_out",D,Denial of Service,Denial of Service of hazard_out,T039
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::mllm_request",I,Information Disclosure,Information Disclosure of mllm_request,T040
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::mllm_request",T,Tampering,Tampering of mllm_request,T041
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::mllm_request",D,Denial of Service,Denial of Service of mllm_request,T042
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::uu_mllm_link",I,Information Disclosure,Information Disclosure of uu_mllm_link,T043
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::uu_mllm_link",T,Tampering,Tampering of uu_mllm_link,T044
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::uu_mllm_link",D,Denial of Service,Denial of Service of uu_mllm_link,T045
+Medini,Medini Analyze (tool-generated),hazard_out ↔ hazard_in,I,Information Disclosure,Information Disclosure of hazard_out ↔ hazard_in,T046
+Medini,Medini Analyze (tool-generated),hazard_out ↔ hazard_in,T,Tampering,Tampering of hazard_out ↔ hazard_in,T047
+Medini,Medini Analyze (tool-generated),hazard_out ↔ hazard_in,D,Denial of Service,Denial of Service of hazard_out ↔ hazard_in,T048
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in,I,Information Disclosure,Information Disclosure of mllm_request ↔ mllm_in,T049
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in,T,Tampering,Tampering of mllm_request ↔ mllm_in,T050
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in,D,Denial of Service,Denial of Service of mllm_request ↔ mllm_in,T051
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_1,I,Information Disclosure,Information Disclosure of uu_mllm_link ↔ mllm_link_1,T052
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_1,T,Tampering,Tampering of uu_mllm_link ↔ mllm_link_1,T053
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_1,D,Denial of Service,Denial of Service of uu_mllm_link ↔ mllm_link_1,T054
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",I,Information Disclosure,"Information Disclosure of Agent 2, Depth Pro",T055
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",T,Tampering,"Tampering of Agent 2, Depth Pro",T056
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",D,Denial of Service,"Denial of Service of Agent 2, Depth Pro",T057
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",S,Spoofing,"Spoofing of Agent 2, Depth Pro",T058
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",E,Elevation of Privilege,"Elevation of Privilege of Agent 2, Depth Pro",T059
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",R,Repudiation,"Repudiation of Agent 2, Depth Pro",T060
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::hazard_in",I,Information Disclosure,Information Disclosure of hazard_in,T061
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::hazard_in",T,Tampering,Tampering of hazard_in,T062
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::hazard_in",D,Denial of Service,Denial of Service of hazard_in,T063
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::distance_out",I,Information Disclosure,Information Disclosure of distance_out,T064
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::distance_out",T,Tampering,Tampering of distance_out,T065
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::distance_out",D,Denial of Service,Denial of Service of distance_out,T066
+Medini,Medini Analyze (tool-generated),distance_out ↔ distance_in,I,Information Disclosure,Information Disclosure of distance_out ↔ distance_in,T067
+Medini,Medini Analyze (tool-generated),distance_out ↔ distance_in,T,Tampering,Tampering of distance_out ↔ distance_in,T068
+Medini,Medini Analyze (tool-generated),distance_out ↔ distance_in,D,Denial of Service,Denial of Service of distance_out ↔ distance_in,T069
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",I,Information Disclosure,"Information Disclosure of Agent 3, MLLM call",T070
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",T,Tampering,"Tampering of Agent 3, MLLM call",T071
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",D,Denial of Service,"Denial of Service of Agent 3, MLLM call",T072
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",S,Spoofing,"Spoofing of Agent 3, MLLM call",T073
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",E,Elevation of Privilege,"Elevation of Privilege of Agent 3, MLLM call",T074
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",R,Repudiation,"Repudiation of Agent 3, MLLM call",T075
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::distance_in",I,Information Disclosure,Information Disclosure of distance_in,T076
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::distance_in",T,Tampering,Tampering of distance_in,T077
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::distance_in",D,Denial of Service,Denial of Service of distance_in,T078
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::content_out",I,Information Disclosure,Information Disclosure of content_out,T079
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::content_out",T,Tampering,Tampering of content_out,T080
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::content_out",D,Denial of Service,Denial of Service of content_out,T081
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::mllm_request",I,Information Disclosure,Information Disclosure of mllm_request,T082
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::mllm_request",T,Tampering,Tampering of mllm_request,T083
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::mllm_request",D,Denial of Service,Denial of Service of mllm_request,T084
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::uu_mllm_link",I,Information Disclosure,Information Disclosure of uu_mllm_link,T085
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::uu_mllm_link",T,Tampering,Tampering of uu_mllm_link,T086
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::uu_mllm_link",D,Denial of Service,Denial of Service of uu_mllm_link,T087
+Medini,Medini Analyze (tool-generated),content_out ↔ content_in,I,Information Disclosure,Information Disclosure of content_out ↔ content_in,T088
+Medini,Medini Analyze (tool-generated),content_out ↔ content_in,T,Tampering,Tampering of content_out ↔ content_in,T089
+Medini,Medini Analyze (tool-generated),content_out ↔ content_in,D,Denial of Service,Denial of Service of content_out ↔ content_in,T090
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in_2,I,Information Disclosure,Information Disclosure of mllm_request ↔ mllm_in_2,T091
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in_2,T,Tampering,Tampering of mllm_request ↔ mllm_in_2,T092
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in_2,D,Denial of Service,Denial of Service of mllm_request ↔ mllm_in_2,T093
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_2,I,Information Disclosure,Information Disclosure of uu_mllm_link ↔ mllm_link_2,T094
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_2,T,Tampering,Tampering of uu_mllm_link ↔ mllm_link_2,T095
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_2,D,Denial of Service,Denial of Service of uu_mllm_link ↔ mllm_link_2,T096
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,I,Information Disclosure,Information Disclosure of ASN.1 UPER payload,T097
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,T,Tampering,Tampering of ASN.1 UPER payload,T098
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,D,Denial of Service,Denial of Service of ASN.1 UPER payload,T099
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,S,Spoofing,Spoofing of ASN.1 UPER payload,T100
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,E,Elevation of Privilege,Elevation of Privilege of ASN.1 UPER payload,T101
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,R,Repudiation,Repudiation of ASN.1 UPER payload,T102
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::content_in,I,Information Disclosure,Information Disclosure of content_in,T103
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::content_in,T,Tampering,Tampering of content_in,T104
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::content_in,D,Denial of Service,Denial of Service of content_in,T105
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::denm_out,I,Information Disclosure,Information Disclosure of denm_out,T106
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::denm_out,T,Tampering,Tampering of denm_out,T107
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::denm_out,D,Denial of Service,Denial of Service of denm_out,T108
+Medini,Medini Analyze (tool-generated),denm_out ↔ denm_in,I,Information Disclosure,Information Disclosure of denm_out ↔ denm_in,T109
+Medini,Medini Analyze (tool-generated),denm_out ↔ denm_in,T,Tampering,Tampering of denm_out ↔ denm_in,T110
+Medini,Medini Analyze (tool-generated),denm_out ↔ denm_in,D,Denial of Service,Denial of Service of denm_out ↔ denm_in,T111
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",I,Information Disclosure,"Information Disclosure of Signs, PC5, HSM",T112
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",T,Tampering,"Tampering of Signs, PC5, HSM",T113
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",D,Denial of Service,"Denial of Service of Signs, PC5, HSM",T114
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",S,Spoofing,"Spoofing of Signs, PC5, HSM",T115
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",E,Elevation of Privilege,"Elevation of Privilege of Signs, PC5, HSM",T116
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",R,Repudiation,"Repudiation of Signs, PC5, HSM",T117
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::denm_in",I,Information Disclosure,Information Disclosure of denm_in,T118
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::denm_in",T,Tampering,Tampering of denm_in,T119
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::denm_in",D,Denial of Service,Denial of Service of denm_in,T120
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::pc5_out",I,Information Disclosure,Information Disclosure of pc5_out,T121
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::pc5_out",T,Tampering,Tampering of pc5_out,T122
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::pc5_out",D,Denial of Service,Denial of Service of pc5_out,T123
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_uplink",I,Information Disclosure,Information Disclosure of uu_uplink,T124
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_uplink",T,Tampering,Tampering of uu_uplink,T125
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_uplink",D,Denial of Service,Denial of Service of uu_uplink,T126
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_link",I,Information Disclosure,Information Disclosure of uu_link,T127
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_link",T,Tampering,Tampering of uu_link,T128
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_link",D,Denial of Service,Denial of Service of uu_link,T129
+Medini,Medini Analyze (tool-generated),pc5_out ↔ pc5_in,I,Information Disclosure,Information Disclosure of pc5_out ↔ pc5_in,T130
+Medini,Medini Analyze (tool-generated),pc5_out ↔ pc5_in,T,Tampering,Tampering of pc5_out ↔ pc5_in,T131
+Medini,Medini Analyze (tool-generated),pc5_out ↔ pc5_in,D,Denial of Service,Denial of Service of pc5_out ↔ pc5_in,T132
+Medini,Medini Analyze (tool-generated),uu_uplink ↔ uu_in,I,Information Disclosure,Information Disclosure of uu_uplink ↔ uu_in,T133
+Medini,Medini Analyze (tool-generated),uu_uplink ↔ uu_in,T,Tampering,Tampering of uu_uplink ↔ uu_in,T134
+Medini,Medini Analyze (tool-generated),uu_uplink ↔ uu_in,D,Denial of Service,Denial of Service of uu_uplink ↔ uu_in,T135
+Medini,Medini Analyze (tool-generated),uu_link ↔ uu_link_rsu,I,Information Disclosure,Information Disclosure of uu_link ↔ uu_link_rsu,T136
+Medini,Medini Analyze (tool-generated),uu_link ↔ uu_link_rsu,T,Tampering,Tampering of uu_link ↔ uu_link_rsu,T137
+Medini,Medini Analyze (tool-generated),uu_link ↔ uu_link_rsu,D,Denial of Service,Denial of Service of uu_link ↔ uu_link_rsu,T138
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,I,Information Disclosure,Information Disclosure of PC5 + Uumodem,T139
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,T,Tampering,Tampering of PC5 + Uumodem,T140
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,D,Denial of Service,Denial of Service of PC5 + Uumodem,T141
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,S,Spoofing,Spoofing of PC5 + Uumodem,T142
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,E,Elevation of Privilege,Elevation of Privilege of PC5 + Uumodem,T143
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,R,Repudiation,Repudiation of PC5 + Uumodem,T144
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::pc5_in,I,Information Disclosure,Information Disclosure of pc5_in,T145
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::pc5_in,T,Tampering,Tampering of pc5_in,T146
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::pc5_in,D,Denial of Service,Denial of Service of pc5_in,T147
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::warning_out,I,Information Disclosure,Information Disclosure of warning_out,T148
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::warning_out,T,Tampering,Tampering of warning_out,T149
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::warning_out,D,Denial of Service,Denial of Service of warning_out,T150
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,I,Information Disclosure,Information Disclosure of uu_modem,T151
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,T,Tampering,Tampering of uu_modem,T152
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,D,Denial of Service,Denial of Service of uu_modem,T153
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,I,Information Disclosure,Information Disclosure of uu_modem,T154
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,T,Tampering,Tampering of uu_modem,T155
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,D,Denial of Service,Denial of Service of uu_modem,T156
+Medini,Medini Analyze (tool-generated),warning_out ↔ warning_in,I,Information Disclosure,Information Disclosure of warning_out ↔ warning_in,T157
+Medini,Medini Analyze (tool-generated),warning_out ↔ warning_in,T,Tampering,Tampering of warning_out ↔ warning_in,T158
+Medini,Medini Analyze (tool-generated),warning_out ↔ warning_in,D,Denial of Service,Denial of Service of warning_out ↔ warning_in,T159
+Medini,Medini Analyze (tool-generated),uu_modem ↔ uu_in_2,I,Information Disclosure,Information Disclosure of uu_modem ↔ uu_in_2,T160
+Medini,Medini Analyze (tool-generated),uu_modem ↔ uu_in_2,T,Tampering,Tampering of uu_modem ↔ uu_in_2,T161
+Medini,Medini Analyze (tool-generated),uu_modem ↔ uu_in_2,D,Denial of Service,Denial of Service of uu_modem ↔ uu_in_2,T162
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",I,Information Disclosure,"Information Disclosure of Verify, warning logic",T163
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",T,Tampering,"Tampering of Verify, warning logic",T164
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",D,Denial of Service,"Denial of Service of Verify, warning logic",T165
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",S,Spoofing,"Spoofing of Verify, warning logic",T166
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",E,Elevation of Privilege,"Elevation of Privilege of Verify, warning logic",T167
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",R,Repudiation,"Repudiation of Verify, warning logic",T168
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::warning_in",I,Information Disclosure,Information Disclosure of warning_in,T169
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::warning_in",T,Tampering,Tampering of warning_in,T170
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::warning_in",D,Denial of Service,Denial of Service of warning_in,T171
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::alert_out",I,Information Disclosure,Information Disclosure of alert_out,T172
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::alert_out",T,Tampering,Tampering of alert_out,T173
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::alert_out",D,Denial of Service,Denial of Service of alert_out,T174
+Medini,Medini Analyze (tool-generated),alert_out ↔ alert_in,I,Information Disclosure,Information Disclosure of alert_out ↔ alert_in,T175
+Medini,Medini Analyze (tool-generated),alert_out ↔ alert_in,T,Tampering,Tampering of alert_out ↔ alert_in,T176
+Medini,Medini Analyze (tool-generated),alert_out ↔ alert_in,D,Denial of Service,Denial of Service of alert_out ↔ alert_in,T177
+Medini,Medini Analyze (tool-generated),Visual + audio alert,I,Information Disclosure,Information Disclosure of Visual + audio alert,T178
+Medini,Medini Analyze (tool-generated),Visual + audio alert,T,Tampering,Tampering of Visual + audio alert,T179
+Medini,Medini Analyze (tool-generated),Visual + audio alert,D,Denial of Service,Denial of Service of Visual + audio alert,T180
+Medini,Medini Analyze (tool-generated),Visual + audio alert,S,Spoofing,Spoofing of Visual + audio alert,T181
+Medini,Medini Analyze (tool-generated),Visual + audio alert,E,Elevation of Privilege,Elevation of Privilege of Visual + audio alert,T182
+Medini,Medini Analyze (tool-generated),Visual + audio alert,R,Repudiation,Repudiation of Visual + audio alert,T183
+Medini,Medini Analyze (tool-generated),Visual + audio alert::alert_in,I,Information Disclosure,Information Disclosure of alert_in,T184
+Medini,Medini Analyze (tool-generated),Visual + audio alert::alert_in,T,Tampering,Tampering of alert_in,T185
+Medini,Medini Analyze (tool-generated),Visual + audio alert::alert_in,D,Denial of Service,Denial of Service of alert_in,T186
+Medini,Medini Analyze (tool-generated),Gemini API,I,Information Disclosure,Information Disclosure of Gemini API,T187
+Medini,Medini Analyze (tool-generated),Gemini API,T,Tampering,Tampering of Gemini API,T188
+Medini,Medini Analyze (tool-generated),Gemini API,D,Denial of Service,Denial of Service of Gemini API,T189
+Medini,Medini Analyze (tool-generated),Gemini API,S,Spoofing,Spoofing of Gemini API,T190
+Medini,Medini Analyze (tool-generated),Gemini API,E,Elevation of Privilege,Elevation of Privilege of Gemini API,T191
+Medini,Medini Analyze (tool-generated),Gemini API,R,Repudiation,Repudiation of Gemini API,T192
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in,I,Information Disclosure,Information Disclosure of mllm_in,T193
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in,T,Tampering,Tampering of mllm_in,T194
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in,D,Denial of Service,Denial of Service of mllm_in,T195
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in_2,I,Information Disclosure,Information Disclosure of mllm_in_2,T196
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in_2,T,Tampering,Tampering of mllm_in_2,T197
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in_2,D,Denial of Service,Denial of Service of mllm_in_2,T198
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_1,I,Information Disclosure,Information Disclosure of mllm_link_1,T199
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_1,T,Tampering,Tampering of mllm_link_1,T200
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_1,D,Denial of Service,Denial of Service of mllm_link_1,T201
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_2,I,Information Disclosure,Information Disclosure of mllm_link_2,T202
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_2,T,Tampering,Tampering of mllm_link_2,T203
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_2,D,Denial of Service,Denial of Service of mllm_link_2,T204
+Medini,Medini Analyze (tool-generated),"PKI, operator",I,Information Disclosure,"Information Disclosure of PKI, operator",T205
+Medini,Medini Analyze (tool-generated),"PKI, operator",T,Tampering,"Tampering of PKI, operator",T206
+Medini,Medini Analyze (tool-generated),"PKI, operator",D,Denial of Service,"Denial of Service of PKI, operator",T207
+Medini,Medini Analyze (tool-generated),"PKI, operator",S,Spoofing,"Spoofing of PKI, operator",T208
+Medini,Medini Analyze (tool-generated),"PKI, operator",E,Elevation of Privilege,"Elevation of Privilege of PKI, operator",T209
+Medini,Medini Analyze (tool-generated),"PKI, operator",R,Repudiation,"Repudiation of PKI, operator",T210
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in",I,Information Disclosure,Information Disclosure of uu_in,T211
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in",T,Tampering,Tampering of uu_in,T212
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in",D,Denial of Service,Denial of Service of uu_in,T213
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in_2",I,Information Disclosure,Information Disclosure of uu_in_2,T214
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in_2",T,Tampering,Tampering of uu_in_2,T215
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in_2",D,Denial of Service,Denial of Service of uu_in_2,T216
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_link_rsu",I,Information Disclosure,Information Disclosure of uu_link_rsu,T217
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_link_rsu",T,Tampering,Tampering of uu_link_rsu,T218
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_link_rsu",D,Denial of Service,Denial of Service of uu_link_rsu,T219
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_modem_out",I,Information Disclosure,Information Disclosure of uu_modem_out,T220
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_modem_out",T,Tampering,Tampering of uu_modem_out,T221
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_modem_out",D,Denial of Service,Denial of Service of uu_modem_out,T222
+Medini,Medini Analyze (tool-generated),uu_modem_out ↔ uu_modem,I,Information Disclosure,Information Disclosure of uu_modem_out ↔ uu_modem,T223
+Medini,Medini Analyze (tool-generated),uu_modem_out ↔ uu_modem,T,Tampering,Tampering of uu_modem_out ↔ uu_modem,T224
+Medini,Medini Analyze (tool-generated),uu_modem_out ↔ uu_modem,D,Denial of Service,Denial of Service of uu_modem_out ↔ uu_modem,T225
