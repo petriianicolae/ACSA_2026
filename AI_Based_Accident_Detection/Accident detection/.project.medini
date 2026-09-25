@@ -1,0 +1,180 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<pjm:MediniProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ac="http://www.ikv.de/medini/metamodels/AutoCounter/1.0" xmlns:fta="http://www.ikv.de/medini/metamodels/FTA/2.0" xmlns:pjm="http://www.ikv.de/medini/metamodels/ProjectModel" xmi:id="_b-QbsLW-EfGpj828tN4UIA" mediniIdentifier="_b-QbsLW-EfGpj828tN4UIA" name="Accident detection" toolVersion="25.1.1.250228184338-79474c9">
+  <eAnnotations xmi:id="_b-azwLW-EfGpj828tN4UIA" source="analyzeSourceTag">
+    <details xmi:id="_b-azwbW-EfGpj828tN4UIA" key="kind" value=""/>
+    <details xmi:id="_b-azwrW-EfGpj828tN4UIA" key="ProjectDomains" value="ISO21434"/>
+    <details xmi:id="_cLJBILW-EfGpj828tN4UIA" key="created" value="1789996496434"/>
+  </eAnnotations>
+  <eAnnotations xmi:id="_b-azw7W-EfGpj828tN4UIA" source="preference#eventProbabilityParameters">
+    <contents xsi:type="fta:EventProbabilityParameters" xmi:id="_b-azxLW-EfGpj828tN4UIA"/>
+  </eAnnotations>
+  <containedElements xsi:type="ac:AutoCounterValueScope" xmi:id="_b-azxbW-EfGpj828tN4UIA">
+    <autoCounterValues xmi:id="_Wua_ELaVEfG51-STqqQBiw" metaclass="security.Threat" feature="id" value="225"/>
+  </containedElements>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGELW-EfGpj828tN4UIA" mediniIdentifier="_b-UGELW-EfGpj828tN4UIA" name="sysml" resourceURI="sysml" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGEbW-EfGpj828tN4UIA" mediniIdentifier="_b-UGEbW-EfGpj828tN4UIA" name="simulink" resourceURI="simulink" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGErW-EfGpj828tN4UIA" mediniIdentifier="_b-UGErW-EfGpj828tN4UIA" name="failures" resourceURI="failures" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGE7W-EfGpj828tN4UIA" mediniIdentifier="_b-UGE7W-EfGpj828tN4UIA" name="hazop" resourceURI="hazop" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGFLW-EfGpj828tN4UIA" mediniIdentifier="_b-UGFLW-EfGpj828tN4UIA" name="checklist" resourceURI="checklist" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGFbW-EfGpj828tN4UIA" mediniIdentifier="_b-UGFbW-EfGpj828tN4UIA" name="hls" resourceURI="hls" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGFrW-EfGpj828tN4UIA" mediniIdentifier="_b-UGFrW-EfGpj828tN4UIA" name="commons" resourceURI="commons" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGF7W-EfGpj828tN4UIA" mediniIdentifier="_b-UGF7W-EfGpj828tN4UIA" name="fta" resourceURI="fta" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGGLW-EfGpj828tN4UIA" mediniIdentifier="_b-UGGLW-EfGpj828tN4UIA" name="fmea" resourceURI="fmea" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGGbW-EfGpj828tN4UIA" mediniIdentifier="_b-UGGbW-EfGpj828tN4UIA" name="docs" resourceURI="docs" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGGrW-EfGpj828tN4UIA" mediniIdentifier="_b-UGGrW-EfGpj828tN4UIA" name="swa" resourceURI="swa" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGG7W-EfGpj828tN4UIA" mediniIdentifier="_b-UGG7W-EfGpj828tN4UIA" name="items" resourceURI="items" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGHLW-EfGpj828tN4UIA" mediniIdentifier="_b-UGHLW-EfGpj828tN4UIA" name="config" resourceURI="config" folder="true" type="CONFIG_FOLDER"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGHbW-EfGpj828tN4UIA" mediniIdentifier="_b-UGHbW-EfGpj828tN4UIA" name="pm" resourceURI="pm" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGHrW-EfGpj828tN4UIA" mediniIdentifier="_b-UGHrW-EfGpj828tN4UIA" name="dc" resourceURI="dc" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGH7W-EfGpj828tN4UIA" mediniIdentifier="_b-UGH7W-EfGpj828tN4UIA" name="goals" resourceURI="goals" folder="true"/>
+  <containedElements xsi:type="pjm:PJResource" xmi:id="_b-UGILW-EfGpj828tN4UIA" mediniIdentifier="_b-UGILW-EfGpj828tN4UIA" name=".autocounter" resourceURI=".autocounter" type="AUTO_COUNTER"/>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-V7QLW-EfGpj828tN4UIA" mediniIdentifier="_b-V7QLW-EfGpj828tN4UIA" name="Context Establishment">
+    <eAnnotations xmi:id="_b-azxrW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-azx7W-EfGpj828tN4UIA" key="kind" value="ItemDefinitions"/>
+    </eAnnotations>
+    <containedElements xsi:type="pjm:PJProxyModel" xmi:id="_uuTBALXDEfGIG6kl4PRZLQ" mediniIdentifier="_uuTBALXDEfGIG6kl4PRZLQ">
+      <eAnnotations xmi:id="_uuToELXDEfGIG6kl4PRZLQ" source="analyzeSourceTag">
+        <details xmi:id="_uuToEbXDEfGIG6kl4PRZLQ" key="LibraryModel" value="on"/>
+        <details xmi:id="_uuToErXDEfGIG6kl4PRZLQ" key="LibraryModelVersion" value=""/>
+      </eAnnotations>
+      <containedElements xsi:type="pjm:PJDiagram" xmi:id="_uuUPILXDEfGIG6kl4PRZLQ" mediniIdentifier="_uuUPILXDEfGIG6kl4PRZLQ" name="System Architecture" uri="sysml/_uuUPILXDEfGIG6kl4PRZLQ.sysml_diagram" modelID="SysML" editorID="de.ikv.medini.editor.sysml.block.diagram.part.SysmlDiagramEditorID">
+        <canvasElement href="sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_utvnYLXDEfGIG6kl4PRZLQ"/>
+        <diagram href="sysml/_uuUPILXDEfGIG6kl4PRZLQ.sysml_diagram#_uucK8LXDEfGIG6kl4PRZLQ"/>
+      </containedElements>
+      <containedElements xsi:type="pjm:PJProxyModel" xmi:id="_uufOQLXDEfGIG6kl4PRZLQ" mediniIdentifier="_uufOQLXDEfGIG6kl4PRZLQ">
+        <originalModel href="sysml/_utvnYLXDEfGIG6kl4PRZLQ_sys0.layout#_uumjALXDEfGIG6kl4PRZLQ"/>
+      </containedElements>
+      <originalModel href="sysml/_utvnYLXDEfGIG6kl4PRZLQ.sysml#_utvnYLXDEfGIG6kl4PRZLQ"/>
+    </containedElements>
+    <containedElements xsi:type="pjm:PJProxyModel" xmi:id="_WuTqULaVEfG51-STqqQBiw" mediniIdentifier="_WuTqULaVEfG51-STqqQBiw">
+      <containedElements xsi:type="pjm:PJProxyModel" xmi:id="_WuVfgLaVEfG51-STqqQBiw" mediniIdentifier="_WuVfgLaVEfG51-STqqQBiw">
+        <originalModel href="failures/_WuOx6LaVEfG51-STqqQBiw_weaknesses0.layout#_WuZw8LaVEfG51-STqqQBiw"/>
+      </containedElements>
+      <originalModel href="failures/_WuOx6LaVEfG51-STqqQBiw.weaknesses#_WuOx6LaVEfG51-STqqQBiw"/>
+    </containedElements>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJYLW-EfGpj828tN4UIA" mediniIdentifier="_b-XJYLW-EfGpj828tN4UIA" name="Threat Analysis and Risk Assessment">
+    <eAnnotations xmi:id="_b-azyLW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-azybW-EfGpj828tN4UIA" key="kind" value="ThreatAssessmentModels"/>
+    </eAnnotations>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJYbW-EfGpj828tN4UIA" mediniIdentifier="_b-XJYbW-EfGpj828tN4UIA" name="Security Goals and Requirements">
+    <eAnnotations xmi:id="_b-azyrW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-azy7W-EfGpj828tN4UIA" key="kind" value="SafetyGoalModels"/>
+    </eAnnotations>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJYrW-EfGpj828tN4UIA" mediniIdentifier="_b-XJYrW-EfGpj828tN4UIA" name="System Design">
+    <eAnnotations xmi:id="_b-azzLW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-azzbW-EfGpj828tN4UIA" key="kind" value="SystemArchitectureModels"/>
+    </eAnnotations>
+    <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJY7W-EfGpj828tN4UIA" mediniIdentifier="_b-XJY7W-EfGpj828tN4UIA" name="Hardware Models">
+      <eAnnotations xmi:id="_b-azzrW-EfGpj828tN4UIA" source="analyzeSourceTag">
+        <details xmi:id="_b-azz7W-EfGpj828tN4UIA" key="kind" value="SystemArchitectureModels"/>
+      </eAnnotations>
+    </nestedPackages>
+    <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJZLW-EfGpj828tN4UIA" mediniIdentifier="_b-XJZLW-EfGpj828tN4UIA" name="Software Models">
+      <eAnnotations xmi:id="_b-az0LW-EfGpj828tN4UIA" source="analyzeSourceTag">
+        <details xmi:id="_b-az0bW-EfGpj828tN4UIA" key="kind" value="SystemArchitectureModels"/>
+      </eAnnotations>
+    </nestedPackages>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJZbW-EfGpj828tN4UIA" mediniIdentifier="_b-XJZbW-EfGpj828tN4UIA" name="Security Analysis">
+    <eAnnotations xmi:id="_b-az0rW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-az07W-EfGpj828tN4UIA" key="kind" value=""/>
+    </eAnnotations>
+    <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJZrW-EfGpj828tN4UIA" mediniIdentifier="_b-XJZrW-EfGpj828tN4UIA" name="Attack Trees">
+      <eAnnotations xmi:id="_b-az1LW-EfGpj828tN4UIA" source="analyzeSourceTag">
+        <details xmi:id="_b-az1bW-EfGpj828tN4UIA" key="kind" value="AttackTrees"/>
+      </eAnnotations>
+    </nestedPackages>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJZ7W-EfGpj828tN4UIA" mediniIdentifier="_b-XJZ7W-EfGpj828tN4UIA" name="Checklists">
+    <eAnnotations xmi:id="_b-az1rW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-az17W-EfGpj828tN4UIA" key="kind" value="Checklists"/>
+    </eAnnotations>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJaLW-EfGpj828tN4UIA" mediniIdentifier="_b-XJaLW-EfGpj828tN4UIA" name="Catalogs">
+    <eAnnotations xmi:id="_b-ba0LW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba0bW-EfGpj828tN4UIA" key="kind" value="DrivingSituationsCatalogs"/>
+    </eAnnotations>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJabW-EfGpj828tN4UIA" mediniIdentifier="_b-XJabW-EfGpj828tN4UIA" name="SafetyMechanismsCatalogs">
+    <eAnnotations xmi:id="_b-ba0rW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba07W-EfGpj828tN4UIA" key="kind" value="SafetyMechanismCatalogs"/>
+    </eAnnotations>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJarW-EfGpj828tN4UIA" mediniIdentifier="_b-XJarW-EfGpj828tN4UIA" name="FailureRateCatalogs">
+    <eAnnotations xmi:id="_b-ba1LW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba1bW-EfGpj828tN4UIA" key="kind" value="FailureRateCatalogs"/>
+    </eAnnotations>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJa7W-EfGpj828tN4UIA" mediniIdentifier="_b-XJa7W-EfGpj828tN4UIA" name="MissionProfiles">
+    <eAnnotations xmi:id="_b-ba1rW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba17W-EfGpj828tN4UIA" key="kind" value="MissionProfiles"/>
+    </eAnnotations>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJbLW-EfGpj828tN4UIA" mediniIdentifier="_b-XJbLW-EfGpj828tN4UIA" name="Guideword Templates">
+    <eAnnotations xmi:id="_b-ba2LW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba2bW-EfGpj828tN4UIA" key="kind" value="HazardAndOperabilityTemplates"/>
+    </eAnnotations>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJbbW-EfGpj828tN4UIA" mediniIdentifier="_b-XJbbW-EfGpj828tN4UIA" name="Cybersecurity">
+    <eAnnotations xmi:id="_b-ba2rW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba27W-EfGpj828tN4UIA" key="kind" value="Cybersec"/>
+    </eAnnotations>
+    <containedElements xsi:type="pjm:PJProxyModel" xmi:id="_cEveMLW-EfGpj828tN4UIA" mediniIdentifier="_cEveMLW-EfGpj828tN4UIA">
+      <originalModel href="commons/settings.cybersec#_UAACoM74EemH8PpOxVZSBg"/>
+    </containedElements>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJbrW-EfGpj828tN4UIA" mediniIdentifier="_b-XJbrW-EfGpj828tN4UIA" name="Project Management">
+    <eAnnotations xmi:id="_b-ba3LW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba3bW-EfGpj828tN4UIA" key="kind" value="ProjectManagement"/>
+    </eAnnotations>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJb7W-EfGpj828tN4UIA" mediniIdentifier="_b-XJb7W-EfGpj828tN4UIA" name="RiskClassification">
+    <eAnnotations xmi:id="_b-ba3rW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba37W-EfGpj828tN4UIA" key="kind" value="RiskClassification"/>
+    </eAnnotations>
+    <containedElements xsi:type="pjm:PJProxyModel" xmi:id="_cFd28LW-EfGpj828tN4UIA" mediniIdentifier="_cFd28LW-EfGpj828tN4UIA">
+      <originalModel href="commons/settings.riskclassification#_cFcBwLW-EfGpj828tN4UIA"/>
+    </containedElements>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJcLW-EfGpj828tN4UIA" mediniIdentifier="_b-XJcLW-EfGpj828tN4UIA" name="Layout Templates">
+    <eAnnotations xmi:id="_b-ba4LW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba4bW-EfGpj828tN4UIA" key="kind" value="LayoutTemplates"/>
+    </eAnnotations>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJcbW-EfGpj828tN4UIA" mediniIdentifier="_b-XJcbW-EfGpj828tN4UIA" name="Settings">
+    <eAnnotations xmi:id="_b-ba4rW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba47W-EfGpj828tN4UIA" key="kind" value="Settings"/>
+    </eAnnotations>
+    <containedElements xsi:type="pjm:PJProxyModel" xmi:id="_cCfbcLW-EfGpj828tN4UIA" mediniIdentifier="_cCfbcLW-EfGpj828tN4UIA" name="Preferences">
+      <originalModel href=".preferences#_cCeNULW-EfGpj828tN4UIA"/>
+    </containedElements>
+  </nestedPackages>
+  <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJcrW-EfGpj828tN4UIA" mediniIdentifier="_b-XJcrW-EfGpj828tN4UIA" name="config">
+    <eAnnotations xmi:id="_b-ba5LW-EfGpj828tN4UIA" source="analyzeSourceTag">
+      <details xmi:id="_b-ba5bW-EfGpj828tN4UIA" key="kind" value="CustomConfiguration"/>
+    </eAnnotations>
+    <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJc7W-EfGpj828tN4UIA" mediniIdentifier="_b-XJc7W-EfGpj828tN4UIA" name="mappings">
+      <eAnnotations xmi:id="_b-ba5rW-EfGpj828tN4UIA" source="analyzeSourceTag">
+        <details xmi:id="_b-ba57W-EfGpj828tN4UIA" key="kind" value="CustomConfigurationMappings"/>
+      </eAnnotations>
+    </nestedPackages>
+    <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJdLW-EfGpj828tN4UIA" mediniIdentifier="_b-XJdLW-EfGpj828tN4UIA" name="scripts">
+      <eAnnotations xmi:id="_b-ba6LW-EfGpj828tN4UIA" source="analyzeSourceTag">
+        <details xmi:id="_b-ba6bW-EfGpj828tN4UIA" key="kind" value="CustomConfigurationScripts"/>
+      </eAnnotations>
+      <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJdbW-EfGpj828tN4UIA" mediniIdentifier="_b-XJdbW-EfGpj828tN4UIA" name=".hooks">
+        <eAnnotations xmi:id="_b-ba6rW-EfGpj828tN4UIA" source="analyzeSourceTag">
+          <details xmi:id="_b-ba67W-EfGpj828tN4UIA" key="kind" value="CustomConfigurationScriptsHooks"/>
+        </eAnnotations>
+      </nestedPackages>
+    </nestedPackages>
+    <nestedPackages xsi:type="pjm:PJPackage" xmi:id="_b-XJdrW-EfGpj828tN4UIA" mediniIdentifier="_b-XJdrW-EfGpj828tN4UIA" name="reports">
+      <eAnnotations xmi:id="_b-ba7LW-EfGpj828tN4UIA" source="analyzeSourceTag">
+        <details xmi:id="_b-ba7bW-EfGpj828tN4UIA" key="kind" value="CustomConfigurationReports"/>
+      </eAnnotations>
+    </nestedPackages>
+  </nestedPackages>
+</pjm:MediniProject>

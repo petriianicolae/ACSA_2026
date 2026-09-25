@@ -1,0 +1,68 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<fmea:RiskClassification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fmea="http://www.ikv.de/analyze/metamodels/FMEA/1.0" xmi:id="_cFcBwLW-EfGpj828tN4UIA">
+  <severityRankings xmi:id="_cFcBwbW-EfGpj828tN4UIA" defaultRanking="_cFcBwrW-EfGpj828tN4UIA">
+    <riskRankings xmi:id="_cFcBwrW-EfGpj828tN4UIA" label="-" description="Not defined"/>
+    <riskRankings xmi:id="_cFcBw7W-EfGpj828tN4UIA" value="1" label="1" description="None"/>
+    <riskRankings xmi:id="_cFcBxLW-EfGpj828tN4UIA" value="2" label="2" description="Very Minor"/>
+    <riskRankings xmi:id="_cFcBxbW-EfGpj828tN4UIA" value="3" label="3" description="Minor"/>
+    <riskRankings xmi:id="_cFcBxrW-EfGpj828tN4UIA" value="4" label="4" description="Very Low"/>
+    <riskRankings xmi:id="_cFcBx7W-EfGpj828tN4UIA" value="5" label="5" description="Low"/>
+    <riskRankings xmi:id="_cFcByLW-EfGpj828tN4UIA" value="6" label="6" description="Moderate"/>
+    <riskRankings xmi:id="_cFcBybW-EfGpj828tN4UIA" value="7" label="7" description="High"/>
+    <riskRankings xmi:id="_cFcByrW-EfGpj828tN4UIA" value="8" label="8" description="Very High"/>
+    <riskRankings xmi:id="_cFcBy7W-EfGpj828tN4UIA" value="9" label="9" description="Hazardous with warning"/>
+    <riskRankings xmi:id="_cFcBzLW-EfGpj828tN4UIA" value="10" label="10" description="Hazardous without warning"/>
+  </severityRankings>
+  <occurrenceRankings xmi:id="_cFcBzbW-EfGpj828tN4UIA" defaultRanking="_cFcBzrW-EfGpj828tN4UIA">
+    <riskRankings xmi:id="_cFcBzrW-EfGpj828tN4UIA" label="-" description="Not defined"/>
+    <riskRankings xmi:id="_cFcBz7W-EfGpj828tN4UIA" value="1" label="1" description="Remote - failure is unlikely"/>
+    <riskRankings xmi:id="_cFcB0LW-EfGpj828tN4UIA" value="2" label="2" description="Low - relatively few failures"/>
+    <riskRankings xmi:id="_cFcB0bW-EfGpj828tN4UIA" value="3" label="3" description="Low - relatively few failures"/>
+    <riskRankings xmi:id="_cFcB0rW-EfGpj828tN4UIA" value="4" label="4" description="Moderate - occasional failures"/>
+    <riskRankings xmi:id="_cFcB07W-EfGpj828tN4UIA" value="5" label="5" description="Moderate - occasional failures"/>
+    <riskRankings xmi:id="_cFcB1LW-EfGpj828tN4UIA" value="6" label="6" description="Moderate - occasional failures"/>
+    <riskRankings xmi:id="_cFcB1bW-EfGpj828tN4UIA" value="7" label="7" description="High - repeated failures"/>
+    <riskRankings xmi:id="_cFcB1rW-EfGpj828tN4UIA" value="8" label="8" description="High - repeated failures"/>
+    <riskRankings xmi:id="_cFcB17W-EfGpj828tN4UIA" value="9" label="9" description="Very high - persistent failures"/>
+    <riskRankings xmi:id="_cFcB2LW-EfGpj828tN4UIA" value="10" label="10" description="Very high - persistent failures"/>
+  </occurrenceRankings>
+  <detectionRankings xmi:id="_cFcB2bW-EfGpj828tN4UIA" defaultRanking="_cFcB2rW-EfGpj828tN4UIA">
+    <riskRankings xmi:id="_cFcB2rW-EfGpj828tN4UIA" label="-" description="Not defined"/>
+    <riskRankings xmi:id="_cFcB27W-EfGpj828tN4UIA" value="1" label="1" description="Almost certain"/>
+    <riskRankings xmi:id="_cFcB3LW-EfGpj828tN4UIA" value="2" label="2" description="Very high"/>
+    <riskRankings xmi:id="_cFcB3bW-EfGpj828tN4UIA" value="3" label="3" description="High"/>
+    <riskRankings xmi:id="_cFcB3rW-EfGpj828tN4UIA" value="4" label="4" description="Moderately high"/>
+    <riskRankings xmi:id="_cFcB37W-EfGpj828tN4UIA" value="5" label="5" description="Moderate"/>
+    <riskRankings xmi:id="_cFcB4LW-EfGpj828tN4UIA" value="6" label="6" description="Low"/>
+    <riskRankings xmi:id="_cFcB4bW-EfGpj828tN4UIA" value="7" label="7" description="Very low"/>
+    <riskRankings xmi:id="_cFcB4rW-EfGpj828tN4UIA" value="8" label="8" description="Remote"/>
+    <riskRankings xmi:id="_cFcB47W-EfGpj828tN4UIA" value="9" label="9" description="Very remote"/>
+    <riskRankings xmi:id="_cFcB5LW-EfGpj828tN4UIA" value="10" label="10" description="Absolutely uncertain"/>
+  </detectionRankings>
+  <frequencyRankings xmi:id="_cFcB5bW-EfGpj828tN4UIA" defaultRanking="_cFcB5rW-EfGpj828tN4UIA">
+    <riskRankings xmi:id="_cFcB5rW-EfGpj828tN4UIA" label="-" description="Not defined"/>
+    <riskRankings xmi:id="_cFcB57W-EfGpj828tN4UIA" value="1" label="1" description="Cannot Occur"/>
+    <riskRankings xmi:id="_cFcB6LW-EfGpj828tN4UIA" value="2" label="2" description="Extremely low"/>
+    <riskRankings xmi:id="_cFcB6bW-EfGpj828tN4UIA" value="3" label="3" description="Very low"/>
+    <riskRankings xmi:id="_cFcB6rW-EfGpj828tN4UIA" value="4" label="4" description="Low"/>
+    <riskRankings xmi:id="_cFcB67W-EfGpj828tN4UIA" value="5" label="5" description="Medium"/>
+    <riskRankings xmi:id="_cFcB7LW-EfGpj828tN4UIA" value="6" label="6" description="Medium"/>
+    <riskRankings xmi:id="_cFcB7bW-EfGpj828tN4UIA" value="7" label="7" description="Medium"/>
+    <riskRankings xmi:id="_cFcB7rW-EfGpj828tN4UIA" value="8" label="8" description="High"/>
+    <riskRankings xmi:id="_cFcB77W-EfGpj828tN4UIA" value="9" label="9" description="High"/>
+    <riskRankings xmi:id="_cFcB8LW-EfGpj828tN4UIA" value="10" label="10" description="Extremely high or cannot be determined"/>
+  </frequencyRankings>
+  <monitoringRankings xmi:id="_cFcB8bW-EfGpj828tN4UIA" defaultRanking="_cFcB8rW-EfGpj828tN4UIA">
+    <riskRankings xmi:id="_cFcB8rW-EfGpj828tN4UIA" label="-" description="Not defined"/>
+    <riskRankings xmi:id="_cFcB87W-EfGpj828tN4UIA" value="1" label="1" description="Reliable"/>
+    <riskRankings xmi:id="_cFcB9LW-EfGpj828tN4UIA" value="2" label="2" description="Very High"/>
+    <riskRankings xmi:id="_cFcB9bW-EfGpj828tN4UIA" value="3" label="3" description="High"/>
+    <riskRankings xmi:id="_cFcB9rW-EfGpj828tN4UIA" value="4" label="4" description="Moderately High"/>
+    <riskRankings xmi:id="_cFcB97W-EfGpj828tN4UIA" value="5" label="5" description="Moderate"/>
+    <riskRankings xmi:id="_cFcB-LW-EfGpj828tN4UIA" value="6" label="6" description="Moderate"/>
+    <riskRankings xmi:id="_cFcB-bW-EfGpj828tN4UIA" value="7" label="7" description="Moderately Low"/>
+    <riskRankings xmi:id="_cFcB-rW-EfGpj828tN4UIA" value="8" label="8" description="Low"/>
+    <riskRankings xmi:id="_cFcB-7W-EfGpj828tN4UIA" value="9" label="9" description="Very low"/>
+    <riskRankings xmi:id="_cFcB_LW-EfGpj828tN4UIA" value="10" label="10" description="Not effective"/>
+  </monitoringRankings>
+</fmea:RiskClassification>

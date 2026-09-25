@@ -1,0 +1,16 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<layout:LayoutState xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:layout="http://www.ikv.de/medini/metamodels/LayoutModel/1.0" xmi:id="_WuZw8LaVEfG51-STqqQBiw" type="weaknesses0_Threat">
+  <tables xmi:id="_WuZw8baVEfG51-STqqQBiw">
+    <columns xmi:id="_WuZw8raVEfG51-STqqQBiw" refId="de.ikv.analyze.editors.tables.models.EditableFeatureColumn#!ID_COLUMN"/>
+    <columns xmi:id="_WuZw87aVEfG51-STqqQBiw" refId="de.ikv.analyze.editors.tables.models.EditableFeatureColumn#!NAME_COLUMN"/>
+    <columns xmi:id="_WuZw9LaVEfG51-STqqQBiw" refId="de.ikv.analyze.editors.tables.models.EditableFeatureColumn#!ASSETS_COLUMN"/>
+    <columns xmi:id="_WuZw9baVEfG51-STqqQBiw" refId="de.ikv.analyze.editors.tables.models.EditableFeatureColumn#!TO_BE_ASSESSED_COLUMN"/>
+    <columns xmi:id="_WuZw9raVEfG51-STqqQBiw" refId="de.ikv.analyze.editors.tables.models.EditableFeatureColumn#!KIND_COLUMN"/>
+    <columns xmi:id="_WuZw97aVEfG51-STqqQBiw" refId="de.ikv.analyze.editors.tables.models.EditableFeatureColumn#!DESCRIPTION_COLUMN"/>
+    <columns xmi:id="_WuZw-LaVEfG51-STqqQBiw" refId="de.ikv.analyze.domain.ui.iso21434.tables.columns.HEAVENSProfilePropertyColumn#!EQUIPMENT_COLUMN"/>
+    <columns xmi:id="_WuZw-baVEfG51-STqqQBiw" refId="de.ikv.analyze.domain.ui.iso21434.tables.columns.HEAVENSProfilePropertyColumn#!EXPERTISE_COLUMN"/>
+    <columns xmi:id="_WuZw-raVEfG51-STqqQBiw" refId="de.ikv.analyze.domain.ui.iso21434.tables.columns.HEAVENSProfilePropertyColumn#!KNOWLEDGE_COLUMN"/>
+    <columns xmi:id="_WuZw-7aVEfG51-STqqQBiw" refId="de.ikv.analyze.domain.ui.iso21434.tables.columns.HEAVENSProfilePropertyColumn#!OPPORTUNITY_COLUMN"/>
+    <columns xmi:id="_WuZw_LaVEfG51-STqqQBiw" refId="de.ikv.analyze.domain.ui.iso21434.tables.columns.HEAVENSProfilePropertyColumn#!LIKELIHOOD_LEVEL_COLUMN"/>
+  </tables>
+</layout:LayoutState>
