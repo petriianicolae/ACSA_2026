@@ -1,0 +1,8 @@
+Model,Assets,Scenarios,Coverage % of assets x 6,Mean words/scenario,Themes covered (of 24)
+ChatGPT,17,90,88,17.1,29
+Gemini,7,18,43,20.5,20
+Sonnet,14,52,62,14.4,28
+Opus,23,97,70,21.9,34
+Copilot,13,78,100,9.5,26
+DeepSeek,8,41,85,11.7,23
+Ansys Medini,62,0,0,0,32

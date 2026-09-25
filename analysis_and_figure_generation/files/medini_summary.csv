@@ -1,0 +1,16 @@
+Metric,Value
+Threat scenarios,225
+Distinct assets,62
+Assets: Components,12
+Scenarios on components,72
+Assets: Ports,33
+Scenarios on ports,102
+Assets: Data flows,17
+Scenarios on data flows,51
+Scenarios: Spoofing,12
+Scenarios: Tampering,63
+Scenarios: Repudiation,12
+Scenarios: Information Disclosure,63
+Scenarios: Denial of Service,63
+Scenarios: Elevation of Privilege,12
+Mean words per scenario,5.1

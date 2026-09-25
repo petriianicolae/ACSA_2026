@@ -1,0 +1,6 @@
+Attack,ChatGPT,Gemini,Sonnet,Opus,Copilot,DeepSeek,Medini
+Adversarial examples,"S,D",T,T,"S,T,D",D,T,T
+Prompt injection,E,â€“,T,"S,T,E",T,T,T
+ASN.1 parser exploit,D,T,T,D,"D,E",â€“,"T,D,E"
+Camera blinding,â€“,"T,D",D,D,â€“,"T,D",D
+DENM replay,T,â€“,"S,T",S,â€“,â€“,T

@@ -1,0 +1,226 @@
+model_short,model_full,asset,asset_type,parent_element,stride_letter,stride_label,scenario,scenario_id,to_be_assessed
+Medini,Medini Analyze (tool-generated),Mono + Stereo,component,Mono + Stereo,I,Information Disclosure,Information Disclosure of Mono + Stereo,T001,true
+Medini,Medini Analyze (tool-generated),Mono + Stereo,component,Mono + Stereo,T,Tampering,Tampering of Mono + Stereo,T002,true
+Medini,Medini Analyze (tool-generated),Mono + Stereo,component,Mono + Stereo,D,Denial of Service,Denial of Service of Mono + Stereo,T003,true
+Medini,Medini Analyze (tool-generated),Mono + Stereo,component,Mono + Stereo,S,Spoofing,Spoofing of Mono + Stereo,T004,true
+Medini,Medini Analyze (tool-generated),Mono + Stereo,component,Mono + Stereo,E,Elevation of Privilege,Elevation of Privilege of Mono + Stereo,T005,true
+Medini,Medini Analyze (tool-generated),Mono + Stereo,component,Mono + Stereo,R,Repudiation,Repudiation of Mono + Stereo,T006,true
+Medini,Medini Analyze (tool-generated),Mono + Stereo::image_out,port,Mono + Stereo,I,Information Disclosure,Information Disclosure of image_out,T007,true
+Medini,Medini Analyze (tool-generated),Mono + Stereo::image_out,port,Mono + Stereo,T,Tampering,Tampering of image_out,T008,true
+Medini,Medini Analyze (tool-generated),Mono + Stereo::image_out,port,Mono + Stereo,D,Denial of Service,Denial of Service of image_out,T009,true
+Medini,Medini Analyze (tool-generated),image_out ↔ image_in,data flow,image_out,I,Information Disclosure,Information Disclosure of image_out ↔ image_in,T010,true
+Medini,Medini Analyze (tool-generated),image_out ↔ image_in,data flow,image_out,T,Tampering,Tampering of image_out ↔ image_in,T011,true
+Medini,Medini Analyze (tool-generated),image_out ↔ image_in,data flow,image_out,D,Denial of Service,Denial of Service of image_out ↔ image_in,T012,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,component,YOLOv5 fast path,I,Information Disclosure,Information Disclosure of YOLOv5 fast path,T013,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,component,YOLOv5 fast path,T,Tampering,Tampering of YOLOv5 fast path,T014,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,component,YOLOv5 fast path,D,Denial of Service,Denial of Service of YOLOv5 fast path,T015,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,component,YOLOv5 fast path,S,Spoofing,Spoofing of YOLOv5 fast path,T016,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,component,YOLOv5 fast path,E,Elevation of Privilege,Elevation of Privilege of YOLOv5 fast path,T017,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path,component,YOLOv5 fast path,R,Repudiation,Repudiation of YOLOv5 fast path,T018,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::image_in,port,YOLOv5 fast path,I,Information Disclosure,Information Disclosure of image_in,T019,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::image_in,port,YOLOv5 fast path,T,Tampering,Tampering of image_in,T020,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::image_in,port,YOLOv5 fast path,D,Denial of Service,Denial of Service of image_in,T021,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::detections_out,port,YOLOv5 fast path,I,Information Disclosure,Information Disclosure of detections_out,T022,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::detections_out,port,YOLOv5 fast path,T,Tampering,Tampering of detections_out,T023,true
+Medini,Medini Analyze (tool-generated),YOLOv5 fast path::detections_out,port,YOLOv5 fast path,D,Denial of Service,Denial of Service of detections_out,T024,true
+Medini,Medini Analyze (tool-generated),detections_out ↔ detections_in,data flow,detections_out,I,Information Disclosure,Information Disclosure of detections_out ↔ detections_in,T025,true
+Medini,Medini Analyze (tool-generated),detections_out ↔ detections_in,data flow,detections_out,T,Tampering,Tampering of detections_out ↔ detections_in,T026,true
+Medini,Medini Analyze (tool-generated),detections_out ↔ detections_in,data flow,detections_out,D,Denial of Service,Denial of Service of detections_out ↔ detections_in,T027,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",component,"Agent 1, MLLM call",I,Information Disclosure,"Information Disclosure of Agent 1, MLLM call",T028,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",component,"Agent 1, MLLM call",T,Tampering,"Tampering of Agent 1, MLLM call",T029,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",component,"Agent 1, MLLM call",D,Denial of Service,"Denial of Service of Agent 1, MLLM call",T030,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",component,"Agent 1, MLLM call",S,Spoofing,"Spoofing of Agent 1, MLLM call",T031,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",component,"Agent 1, MLLM call",E,Elevation of Privilege,"Elevation of Privilege of Agent 1, MLLM call",T032,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call",component,"Agent 1, MLLM call",R,Repudiation,"Repudiation of Agent 1, MLLM call",T033,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::detections_in",port,"Agent 1, MLLM call",I,Information Disclosure,Information Disclosure of detections_in,T034,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::detections_in",port,"Agent 1, MLLM call",T,Tampering,Tampering of detections_in,T035,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::detections_in",port,"Agent 1, MLLM call",D,Denial of Service,Denial of Service of detections_in,T036,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::hazard_out",port,"Agent 1, MLLM call",I,Information Disclosure,Information Disclosure of hazard_out,T037,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::hazard_out",port,"Agent 1, MLLM call",T,Tampering,Tampering of hazard_out,T038,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::hazard_out",port,"Agent 1, MLLM call",D,Denial of Service,Denial of Service of hazard_out,T039,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::mllm_request",port,"Agent 1, MLLM call",I,Information Disclosure,Information Disclosure of mllm_request,T040,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::mllm_request",port,"Agent 1, MLLM call",T,Tampering,Tampering of mllm_request,T041,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::mllm_request",port,"Agent 1, MLLM call",D,Denial of Service,Denial of Service of mllm_request,T042,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::uu_mllm_link",port,"Agent 1, MLLM call",I,Information Disclosure,Information Disclosure of uu_mllm_link,T043,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::uu_mllm_link",port,"Agent 1, MLLM call",T,Tampering,Tampering of uu_mllm_link,T044,true
+Medini,Medini Analyze (tool-generated),"Agent 1, MLLM call::uu_mllm_link",port,"Agent 1, MLLM call",D,Denial of Service,Denial of Service of uu_mllm_link,T045,true
+Medini,Medini Analyze (tool-generated),hazard_out ↔ hazard_in,data flow,hazard_out,I,Information Disclosure,Information Disclosure of hazard_out ↔ hazard_in,T046,true
+Medini,Medini Analyze (tool-generated),hazard_out ↔ hazard_in,data flow,hazard_out,T,Tampering,Tampering of hazard_out ↔ hazard_in,T047,true
+Medini,Medini Analyze (tool-generated),hazard_out ↔ hazard_in,data flow,hazard_out,D,Denial of Service,Denial of Service of hazard_out ↔ hazard_in,T048,true
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in,data flow,mllm_request,I,Information Disclosure,Information Disclosure of mllm_request ↔ mllm_in,T049,true
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in,data flow,mllm_request,T,Tampering,Tampering of mllm_request ↔ mllm_in,T050,true
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in,data flow,mllm_request,D,Denial of Service,Denial of Service of mllm_request ↔ mllm_in,T051,true
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_1,data flow,uu_mllm_link,I,Information Disclosure,Information Disclosure of uu_mllm_link ↔ mllm_link_1,T052,true
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_1,data flow,uu_mllm_link,T,Tampering,Tampering of uu_mllm_link ↔ mllm_link_1,T053,true
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_1,data flow,uu_mllm_link,D,Denial of Service,Denial of Service of uu_mllm_link ↔ mllm_link_1,T054,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",component,"Agent 2, Depth Pro",I,Information Disclosure,"Information Disclosure of Agent 2, Depth Pro",T055,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",component,"Agent 2, Depth Pro",T,Tampering,"Tampering of Agent 2, Depth Pro",T056,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",component,"Agent 2, Depth Pro",D,Denial of Service,"Denial of Service of Agent 2, Depth Pro",T057,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",component,"Agent 2, Depth Pro",S,Spoofing,"Spoofing of Agent 2, Depth Pro",T058,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",component,"Agent 2, Depth Pro",E,Elevation of Privilege,"Elevation of Privilege of Agent 2, Depth Pro",T059,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro",component,"Agent 2, Depth Pro",R,Repudiation,"Repudiation of Agent 2, Depth Pro",T060,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::hazard_in",port,"Agent 2, Depth Pro",I,Information Disclosure,Information Disclosure of hazard_in,T061,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::hazard_in",port,"Agent 2, Depth Pro",T,Tampering,Tampering of hazard_in,T062,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::hazard_in",port,"Agent 2, Depth Pro",D,Denial of Service,Denial of Service of hazard_in,T063,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::distance_out",port,"Agent 2, Depth Pro",I,Information Disclosure,Information Disclosure of distance_out,T064,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::distance_out",port,"Agent 2, Depth Pro",T,Tampering,Tampering of distance_out,T065,true
+Medini,Medini Analyze (tool-generated),"Agent 2, Depth Pro::distance_out",port,"Agent 2, Depth Pro",D,Denial of Service,Denial of Service of distance_out,T066,true
+Medini,Medini Analyze (tool-generated),distance_out ↔ distance_in,data flow,distance_out,I,Information Disclosure,Information Disclosure of distance_out ↔ distance_in,T067,true
+Medini,Medini Analyze (tool-generated),distance_out ↔ distance_in,data flow,distance_out,T,Tampering,Tampering of distance_out ↔ distance_in,T068,true
+Medini,Medini Analyze (tool-generated),distance_out ↔ distance_in,data flow,distance_out,D,Denial of Service,Denial of Service of distance_out ↔ distance_in,T069,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",component,"Agent 3, MLLM call",I,Information Disclosure,"Information Disclosure of Agent 3, MLLM call",T070,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",component,"Agent 3, MLLM call",T,Tampering,"Tampering of Agent 3, MLLM call",T071,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",component,"Agent 3, MLLM call",D,Denial of Service,"Denial of Service of Agent 3, MLLM call",T072,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",component,"Agent 3, MLLM call",S,Spoofing,"Spoofing of Agent 3, MLLM call",T073,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",component,"Agent 3, MLLM call",E,Elevation of Privilege,"Elevation of Privilege of Agent 3, MLLM call",T074,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call",component,"Agent 3, MLLM call",R,Repudiation,"Repudiation of Agent 3, MLLM call",T075,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::distance_in",port,"Agent 3, MLLM call",I,Information Disclosure,Information Disclosure of distance_in,T076,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::distance_in",port,"Agent 3, MLLM call",T,Tampering,Tampering of distance_in,T077,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::distance_in",port,"Agent 3, MLLM call",D,Denial of Service,Denial of Service of distance_in,T078,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::content_out",port,"Agent 3, MLLM call",I,Information Disclosure,Information Disclosure of content_out,T079,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::content_out",port,"Agent 3, MLLM call",T,Tampering,Tampering of content_out,T080,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::content_out",port,"Agent 3, MLLM call",D,Denial of Service,Denial of Service of content_out,T081,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::mllm_request",port,"Agent 3, MLLM call",I,Information Disclosure,Information Disclosure of mllm_request,T082,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::mllm_request",port,"Agent 3, MLLM call",T,Tampering,Tampering of mllm_request,T083,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::mllm_request",port,"Agent 3, MLLM call",D,Denial of Service,Denial of Service of mllm_request,T084,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::uu_mllm_link",port,"Agent 3, MLLM call",I,Information Disclosure,Information Disclosure of uu_mllm_link,T085,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::uu_mllm_link",port,"Agent 3, MLLM call",T,Tampering,Tampering of uu_mllm_link,T086,true
+Medini,Medini Analyze (tool-generated),"Agent 3, MLLM call::uu_mllm_link",port,"Agent 3, MLLM call",D,Denial of Service,Denial of Service of uu_mllm_link,T087,true
+Medini,Medini Analyze (tool-generated),content_out ↔ content_in,data flow,content_out,I,Information Disclosure,Information Disclosure of content_out ↔ content_in,T088,true
+Medini,Medini Analyze (tool-generated),content_out ↔ content_in,data flow,content_out,T,Tampering,Tampering of content_out ↔ content_in,T089,true
+Medini,Medini Analyze (tool-generated),content_out ↔ content_in,data flow,content_out,D,Denial of Service,Denial of Service of content_out ↔ content_in,T090,true
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in_2,data flow,mllm_request,I,Information Disclosure,Information Disclosure of mllm_request ↔ mllm_in_2,T091,true
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in_2,data flow,mllm_request,T,Tampering,Tampering of mllm_request ↔ mllm_in_2,T092,true
+Medini,Medini Analyze (tool-generated),mllm_request ↔ mllm_in_2,data flow,mllm_request,D,Denial of Service,Denial of Service of mllm_request ↔ mllm_in_2,T093,true
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_2,data flow,uu_mllm_link,I,Information Disclosure,Information Disclosure of uu_mllm_link ↔ mllm_link_2,T094,true
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_2,data flow,uu_mllm_link,T,Tampering,Tampering of uu_mllm_link ↔ mllm_link_2,T095,true
+Medini,Medini Analyze (tool-generated),uu_mllm_link ↔ mllm_link_2,data flow,uu_mllm_link,D,Denial of Service,Denial of Service of uu_mllm_link ↔ mllm_link_2,T096,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,component,ASN.1 UPER payload,I,Information Disclosure,Information Disclosure of ASN.1 UPER payload,T097,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,component,ASN.1 UPER payload,T,Tampering,Tampering of ASN.1 UPER payload,T098,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,component,ASN.1 UPER payload,D,Denial of Service,Denial of Service of ASN.1 UPER payload,T099,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,component,ASN.1 UPER payload,S,Spoofing,Spoofing of ASN.1 UPER payload,T100,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,component,ASN.1 UPER payload,E,Elevation of Privilege,Elevation of Privilege of ASN.1 UPER payload,T101,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload,component,ASN.1 UPER payload,R,Repudiation,Repudiation of ASN.1 UPER payload,T102,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::content_in,port,ASN.1 UPER payload,I,Information Disclosure,Information Disclosure of content_in,T103,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::content_in,port,ASN.1 UPER payload,T,Tampering,Tampering of content_in,T104,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::content_in,port,ASN.1 UPER payload,D,Denial of Service,Denial of Service of content_in,T105,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::denm_out,port,ASN.1 UPER payload,I,Information Disclosure,Information Disclosure of denm_out,T106,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::denm_out,port,ASN.1 UPER payload,T,Tampering,Tampering of denm_out,T107,true
+Medini,Medini Analyze (tool-generated),ASN.1 UPER payload::denm_out,port,ASN.1 UPER payload,D,Denial of Service,Denial of Service of denm_out,T108,true
+Medini,Medini Analyze (tool-generated),denm_out ↔ denm_in,data flow,denm_out,I,Information Disclosure,Information Disclosure of denm_out ↔ denm_in,T109,true
+Medini,Medini Analyze (tool-generated),denm_out ↔ denm_in,data flow,denm_out,T,Tampering,Tampering of denm_out ↔ denm_in,T110,true
+Medini,Medini Analyze (tool-generated),denm_out ↔ denm_in,data flow,denm_out,D,Denial of Service,Denial of Service of denm_out ↔ denm_in,T111,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",component,"Signs, PC5, HSM",I,Information Disclosure,"Information Disclosure of Signs, PC5, HSM",T112,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",component,"Signs, PC5, HSM",T,Tampering,"Tampering of Signs, PC5, HSM",T113,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",component,"Signs, PC5, HSM",D,Denial of Service,"Denial of Service of Signs, PC5, HSM",T114,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",component,"Signs, PC5, HSM",S,Spoofing,"Spoofing of Signs, PC5, HSM",T115,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",component,"Signs, PC5, HSM",E,Elevation of Privilege,"Elevation of Privilege of Signs, PC5, HSM",T116,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM",component,"Signs, PC5, HSM",R,Repudiation,"Repudiation of Signs, PC5, HSM",T117,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::denm_in",port,"Signs, PC5, HSM",I,Information Disclosure,Information Disclosure of denm_in,T118,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::denm_in",port,"Signs, PC5, HSM",T,Tampering,Tampering of denm_in,T119,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::denm_in",port,"Signs, PC5, HSM",D,Denial of Service,Denial of Service of denm_in,T120,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::pc5_out",port,"Signs, PC5, HSM",I,Information Disclosure,Information Disclosure of pc5_out,T121,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::pc5_out",port,"Signs, PC5, HSM",T,Tampering,Tampering of pc5_out,T122,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::pc5_out",port,"Signs, PC5, HSM",D,Denial of Service,Denial of Service of pc5_out,T123,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_uplink",port,"Signs, PC5, HSM",I,Information Disclosure,Information Disclosure of uu_uplink,T124,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_uplink",port,"Signs, PC5, HSM",T,Tampering,Tampering of uu_uplink,T125,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_uplink",port,"Signs, PC5, HSM",D,Denial of Service,Denial of Service of uu_uplink,T126,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_link",port,"Signs, PC5, HSM",I,Information Disclosure,Information Disclosure of uu_link,T127,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_link",port,"Signs, PC5, HSM",T,Tampering,Tampering of uu_link,T128,true
+Medini,Medini Analyze (tool-generated),"Signs, PC5, HSM::uu_link",port,"Signs, PC5, HSM",D,Denial of Service,Denial of Service of uu_link,T129,true
+Medini,Medini Analyze (tool-generated),pc5_out ↔ pc5_in,data flow,pc5_out,I,Information Disclosure,Information Disclosure of pc5_out ↔ pc5_in,T130,true
+Medini,Medini Analyze (tool-generated),pc5_out ↔ pc5_in,data flow,pc5_out,T,Tampering,Tampering of pc5_out ↔ pc5_in,T131,true
+Medini,Medini Analyze (tool-generated),pc5_out ↔ pc5_in,data flow,pc5_out,D,Denial of Service,Denial of Service of pc5_out ↔ pc5_in,T132,true
+Medini,Medini Analyze (tool-generated),uu_uplink ↔ uu_in,data flow,uu_uplink,I,Information Disclosure,Information Disclosure of uu_uplink ↔ uu_in,T133,true
+Medini,Medini Analyze (tool-generated),uu_uplink ↔ uu_in,data flow,uu_uplink,T,Tampering,Tampering of uu_uplink ↔ uu_in,T134,true
+Medini,Medini Analyze (tool-generated),uu_uplink ↔ uu_in,data flow,uu_uplink,D,Denial of Service,Denial of Service of uu_uplink ↔ uu_in,T135,true
+Medini,Medini Analyze (tool-generated),uu_link ↔ uu_link_rsu,data flow,uu_link,I,Information Disclosure,Information Disclosure of uu_link ↔ uu_link_rsu,T136,true
+Medini,Medini Analyze (tool-generated),uu_link ↔ uu_link_rsu,data flow,uu_link,T,Tampering,Tampering of uu_link ↔ uu_link_rsu,T137,true
+Medini,Medini Analyze (tool-generated),uu_link ↔ uu_link_rsu,data flow,uu_link,D,Denial of Service,Denial of Service of uu_link ↔ uu_link_rsu,T138,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,component,PC5 + Uumodem,I,Information Disclosure,Information Disclosure of PC5 + Uumodem,T139,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,component,PC5 + Uumodem,T,Tampering,Tampering of PC5 + Uumodem,T140,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,component,PC5 + Uumodem,D,Denial of Service,Denial of Service of PC5 + Uumodem,T141,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,component,PC5 + Uumodem,S,Spoofing,Spoofing of PC5 + Uumodem,T142,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,component,PC5 + Uumodem,E,Elevation of Privilege,Elevation of Privilege of PC5 + Uumodem,T143,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem,component,PC5 + Uumodem,R,Repudiation,Repudiation of PC5 + Uumodem,T144,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::pc5_in,port,PC5 + Uumodem,I,Information Disclosure,Information Disclosure of pc5_in,T145,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::pc5_in,port,PC5 + Uumodem,T,Tampering,Tampering of pc5_in,T146,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::pc5_in,port,PC5 + Uumodem,D,Denial of Service,Denial of Service of pc5_in,T147,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::warning_out,port,PC5 + Uumodem,I,Information Disclosure,Information Disclosure of warning_out,T148,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::warning_out,port,PC5 + Uumodem,T,Tampering,Tampering of warning_out,T149,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::warning_out,port,PC5 + Uumodem,D,Denial of Service,Denial of Service of warning_out,T150,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,port,PC5 + Uumodem,I,Information Disclosure,Information Disclosure of uu_modem,T151,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,port,PC5 + Uumodem,T,Tampering,Tampering of uu_modem,T152,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,port,PC5 + Uumodem,D,Denial of Service,Denial of Service of uu_modem,T153,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,port,PC5 + Uumodem,I,Information Disclosure,Information Disclosure of uu_modem,T154,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,port,PC5 + Uumodem,T,Tampering,Tampering of uu_modem,T155,true
+Medini,Medini Analyze (tool-generated),PC5 + Uumodem::uu_modem,port,PC5 + Uumodem,D,Denial of Service,Denial of Service of uu_modem,T156,true
+Medini,Medini Analyze (tool-generated),warning_out ↔ warning_in,data flow,warning_out,I,Information Disclosure,Information Disclosure of warning_out ↔ warning_in,T157,true
+Medini,Medini Analyze (tool-generated),warning_out ↔ warning_in,data flow,warning_out,T,Tampering,Tampering of warning_out ↔ warning_in,T158,true
+Medini,Medini Analyze (tool-generated),warning_out ↔ warning_in,data flow,warning_out,D,Denial of Service,Denial of Service of warning_out ↔ warning_in,T159,true
+Medini,Medini Analyze (tool-generated),uu_modem ↔ uu_in_2,data flow,uu_modem,I,Information Disclosure,Information Disclosure of uu_modem ↔ uu_in_2,T160,true
+Medini,Medini Analyze (tool-generated),uu_modem ↔ uu_in_2,data flow,uu_modem,T,Tampering,Tampering of uu_modem ↔ uu_in_2,T161,true
+Medini,Medini Analyze (tool-generated),uu_modem ↔ uu_in_2,data flow,uu_modem,D,Denial of Service,Denial of Service of uu_modem ↔ uu_in_2,T162,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",component,"Verify, warning logic",I,Information Disclosure,"Information Disclosure of Verify, warning logic",T163,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",component,"Verify, warning logic",T,Tampering,"Tampering of Verify, warning logic",T164,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",component,"Verify, warning logic",D,Denial of Service,"Denial of Service of Verify, warning logic",T165,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",component,"Verify, warning logic",S,Spoofing,"Spoofing of Verify, warning logic",T166,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",component,"Verify, warning logic",E,Elevation of Privilege,"Elevation of Privilege of Verify, warning logic",T167,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic",component,"Verify, warning logic",R,Repudiation,"Repudiation of Verify, warning logic",T168,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::warning_in",port,"Verify, warning logic",I,Information Disclosure,Information Disclosure of warning_in,T169,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::warning_in",port,"Verify, warning logic",T,Tampering,Tampering of warning_in,T170,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::warning_in",port,"Verify, warning logic",D,Denial of Service,Denial of Service of warning_in,T171,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::alert_out",port,"Verify, warning logic",I,Information Disclosure,Information Disclosure of alert_out,T172,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::alert_out",port,"Verify, warning logic",T,Tampering,Tampering of alert_out,T173,true
+Medini,Medini Analyze (tool-generated),"Verify, warning logic::alert_out",port,"Verify, warning logic",D,Denial of Service,Denial of Service of alert_out,T174,true
+Medini,Medini Analyze (tool-generated),alert_out ↔ alert_in,data flow,alert_out,I,Information Disclosure,Information Disclosure of alert_out ↔ alert_in,T175,true
+Medini,Medini Analyze (tool-generated),alert_out ↔ alert_in,data flow,alert_out,T,Tampering,Tampering of alert_out ↔ alert_in,T176,true
+Medini,Medini Analyze (tool-generated),alert_out ↔ alert_in,data flow,alert_out,D,Denial of Service,Denial of Service of alert_out ↔ alert_in,T177,true
+Medini,Medini Analyze (tool-generated),Visual + audio alert,component,Visual + audio alert,I,Information Disclosure,Information Disclosure of Visual + audio alert,T178,true
+Medini,Medini Analyze (tool-generated),Visual + audio alert,component,Visual + audio alert,T,Tampering,Tampering of Visual + audio alert,T179,true
+Medini,Medini Analyze (tool-generated),Visual + audio alert,component,Visual + audio alert,D,Denial of Service,Denial of Service of Visual + audio alert,T180,true
+Medini,Medini Analyze (tool-generated),Visual + audio alert,component,Visual + audio alert,S,Spoofing,Spoofing of Visual + audio alert,T181,true
+Medini,Medini Analyze (tool-generated),Visual + audio alert,component,Visual + audio alert,E,Elevation of Privilege,Elevation of Privilege of Visual + audio alert,T182,true
+Medini,Medini Analyze (tool-generated),Visual + audio alert,component,Visual + audio alert,R,Repudiation,Repudiation of Visual + audio alert,T183,true
+Medini,Medini Analyze (tool-generated),Visual + audio alert::alert_in,port,Visual + audio alert,I,Information Disclosure,Information Disclosure of alert_in,T184,true
+Medini,Medini Analyze (tool-generated),Visual + audio alert::alert_in,port,Visual + audio alert,T,Tampering,Tampering of alert_in,T185,true
+Medini,Medini Analyze (tool-generated),Visual + audio alert::alert_in,port,Visual + audio alert,D,Denial of Service,Denial of Service of alert_in,T186,true
+Medini,Medini Analyze (tool-generated),Gemini API,component,Gemini API,I,Information Disclosure,Information Disclosure of Gemini API,T187,true
+Medini,Medini Analyze (tool-generated),Gemini API,component,Gemini API,T,Tampering,Tampering of Gemini API,T188,true
+Medini,Medini Analyze (tool-generated),Gemini API,component,Gemini API,D,Denial of Service,Denial of Service of Gemini API,T189,true
+Medini,Medini Analyze (tool-generated),Gemini API,component,Gemini API,S,Spoofing,Spoofing of Gemini API,T190,true
+Medini,Medini Analyze (tool-generated),Gemini API,component,Gemini API,E,Elevation of Privilege,Elevation of Privilege of Gemini API,T191,true
+Medini,Medini Analyze (tool-generated),Gemini API,component,Gemini API,R,Repudiation,Repudiation of Gemini API,T192,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in,port,Gemini API,I,Information Disclosure,Information Disclosure of mllm_in,T193,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in,port,Gemini API,T,Tampering,Tampering of mllm_in,T194,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in,port,Gemini API,D,Denial of Service,Denial of Service of mllm_in,T195,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in_2,port,Gemini API,I,Information Disclosure,Information Disclosure of mllm_in_2,T196,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in_2,port,Gemini API,T,Tampering,Tampering of mllm_in_2,T197,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_in_2,port,Gemini API,D,Denial of Service,Denial of Service of mllm_in_2,T198,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_1,port,Gemini API,I,Information Disclosure,Information Disclosure of mllm_link_1,T199,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_1,port,Gemini API,T,Tampering,Tampering of mllm_link_1,T200,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_1,port,Gemini API,D,Denial of Service,Denial of Service of mllm_link_1,T201,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_2,port,Gemini API,I,Information Disclosure,Information Disclosure of mllm_link_2,T202,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_2,port,Gemini API,T,Tampering,Tampering of mllm_link_2,T203,true
+Medini,Medini Analyze (tool-generated),Gemini API::mllm_link_2,port,Gemini API,D,Denial of Service,Denial of Service of mllm_link_2,T204,true
+Medini,Medini Analyze (tool-generated),"PKI, operator",component,"PKI, operator",I,Information Disclosure,"Information Disclosure of PKI, operator",T205,true
+Medini,Medini Analyze (tool-generated),"PKI, operator",component,"PKI, operator",T,Tampering,"Tampering of PKI, operator",T206,true
+Medini,Medini Analyze (tool-generated),"PKI, operator",component,"PKI, operator",D,Denial of Service,"Denial of Service of PKI, operator",T207,true
+Medini,Medini Analyze (tool-generated),"PKI, operator",component,"PKI, operator",S,Spoofing,"Spoofing of PKI, operator",T208,true
+Medini,Medini Analyze (tool-generated),"PKI, operator",component,"PKI, operator",E,Elevation of Privilege,"Elevation of Privilege of PKI, operator",T209,true
+Medini,Medini Analyze (tool-generated),"PKI, operator",component,"PKI, operator",R,Repudiation,"Repudiation of PKI, operator",T210,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in",port,"PKI, operator",I,Information Disclosure,Information Disclosure of uu_in,T211,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in",port,"PKI, operator",T,Tampering,Tampering of uu_in,T212,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in",port,"PKI, operator",D,Denial of Service,Denial of Service of uu_in,T213,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in_2",port,"PKI, operator",I,Information Disclosure,Information Disclosure of uu_in_2,T214,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in_2",port,"PKI, operator",T,Tampering,Tampering of uu_in_2,T215,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_in_2",port,"PKI, operator",D,Denial of Service,Denial of Service of uu_in_2,T216,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_link_rsu",port,"PKI, operator",I,Information Disclosure,Information Disclosure of uu_link_rsu,T217,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_link_rsu",port,"PKI, operator",T,Tampering,Tampering of uu_link_rsu,T218,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_link_rsu",port,"PKI, operator",D,Denial of Service,Denial of Service of uu_link_rsu,T219,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_modem_out",port,"PKI, operator",I,Information Disclosure,Information Disclosure of uu_modem_out,T220,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_modem_out",port,"PKI, operator",T,Tampering,Tampering of uu_modem_out,T221,true
+Medini,Medini Analyze (tool-generated),"PKI, operator::uu_modem_out",port,"PKI, operator",D,Denial of Service,Denial of Service of uu_modem_out,T222,true
+Medini,Medini Analyze (tool-generated),uu_modem_out ↔ uu_modem,data flow,uu_modem_out,I,Information Disclosure,Information Disclosure of uu_modem_out ↔ uu_modem,T223,true
+Medini,Medini Analyze (tool-generated),uu_modem_out ↔ uu_modem,data flow,uu_modem_out,T,Tampering,Tampering of uu_modem_out ↔ uu_modem,T224,true
+Medini,Medini Analyze (tool-generated),uu_modem_out ↔ uu_modem,data flow,uu_modem_out,D,Denial of Service,Denial of Service of uu_modem_out ↔ uu_modem,T225,true

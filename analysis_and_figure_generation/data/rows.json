@@ -1,0 +1,5411 @@
+[
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "1. Cameras (Mono + Stereo)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker injects a forged camera stream or replays previously recorded road images so that the accident-detection system perceives a false traffic situation.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "1. Cameras (Mono + Stereo)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Camera firmware, calibration parameters, timestamps, or image frames are modified in transit or at the roadside ITS station, causing incorrect object detection or distance estimation.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "1. Cameras (Mono + Stereo)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Unauthorized access to live or stored camera imagery exposes vehicle occupants, license plates, road users, or other potentially sensitive visual information.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "1. Cameras (Mono + Stereo)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "An attacker jams, floods, disconnects, or disables the camera interface, preventing the system from detecting accidents.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "2. Edge Detector (YOLOv5 fast path)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Adversarial or fabricated images are supplied to the detector so that nonexistent vehicles, pedestrians, or hazards are detected.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "2. Edge Detector (YOLOv5 fast path)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "The YOLOv5 model, weights, configuration, preprocessing pipeline, or confidence thresholds are modified to suppress or create detections.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "2. Edge Detector (YOLOv5 fast path)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Intermediate detections, image buffers, or debug interfaces are exposed to an unauthorized party.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "2. Edge Detector (YOLOv5 fast path)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Malformed inputs or excessive image frames exhaust CPU/GPU resources and prevent real-time detection.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "2. Edge Detector (YOLOv5 fast path)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "A vulnerability in the detector runtime or inference service is exploited to obtain operating-system privileges on the roadside station.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "3. Situation Detection Agent 1 / MLLM call",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker impersonates the trusted MLLM service or injects fabricated scene descriptions into the agent's input.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "3. Situation Detection Agent 1 / MLLM call",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Prompts, agent context, system instructions, tool parameters, or detected-object data are modified so the agent incorrectly classifies a non-accident as an accident or misses a real accident.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "3. Situation Detection Agent 1 / MLLM call",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Camera-derived scene descriptions, location information, or accident context are disclosed to an unauthorized cloud service, API consumer, or attacker.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "3. Situation Detection Agent 1 / MLLM call",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Repeated or oversized MLLM requests consume API quotas or network resources and delay situation classification.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "3. Situation Detection Agent 1 / MLLM call",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Prompt injection or agent-service vulnerabilities cause the agent to invoke unauthorized tools, APIs, or local system functions.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "4 & 7. Cloud MLLM / Gemini API",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A rogue endpoint impersonates the cloud MLLM API, causing the roadside system to send accident data to an attacker-controlled service.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "4 & 7. Cloud MLLM / Gemini API",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Requests or responses between the roadside station and cloud MLLM are modified, potentially changing accident classification or generated content.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "4 & 7. Cloud MLLM / Gemini API",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "A lack of reliable request, response, and identity logging makes it difficult to determine which API account generated a critical accident-analysis result.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "4 & 7. Cloud MLLM / Gemini API",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Images, scene descriptions, location, or vehicle-related information sent to the cloud are exposed through compromised credentials, insecure API configuration, or unauthorized access.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "4 & 7. Cloud MLLM / Gemini API",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "API quota exhaustion, credential abuse, network disruption, or provider unavailability prevents timely MLLM analysis.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "4 & 7. Cloud MLLM / Gemini API",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromised API credentials are reused to obtain access to additional cloud resources, data, or administrative functions.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "5. Distance Estimate Agent 2 / Depth Pro",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A manipulated stereo/depth input causes the component to estimate a false distance to a vehicle, pedestrian, or obstacle.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "5. Distance Estimate Agent 2 / Depth Pro",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Depth-model weights, calibration data, or processing parameters are altered so that estimated distances are systematically incorrect.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "5. Distance Estimate Agent 2 / Depth Pro",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Depth maps or intermediate spatial data are exposed, revealing the structure of scenes captured by roadside cameras.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "5. Distance Estimate Agent 2 / Depth Pro",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Excessive inference requests or malformed depth inputs cause the distance-estimation service to become unavailable.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "6. Message Generation Agent 3 / MLLM call",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker impersonates the message-generation service and generates a fraudulent safety warning or DENM message.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "6. Message Generation Agent 3 / MLLM call",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Accident context, distance information, warning text, severity, location, or message parameters are changed before DENM encoding.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "6. Message Generation Agent 3 / MLLM call",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Insufficient provenance information prevents tracing a transmitted warning back to the specific agent, input event, and model response.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "6. Message Generation Agent 3 / MLLM call",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "The generated message or its underlying accident context reveals sensitive location or vehicle information.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "6. Message Generation Agent 3 / MLLM call",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "The message-generation agent is overwhelmed, causing safety messages to be delayed beyond their useful lifetime.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "6. Message Generation Agent 3 / MLLM call",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Prompt injection or compromised agent credentials allow unauthorized access to message-generation APIs or downstream ITS functions.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "8. DENM Encoder / ASN.1 UPER Payload",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker constructs a valid-looking DENM payload and injects it into the communication path while pretending to be the roadside ITS station.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "8. DENM Encoder / ASN.1 UPER Payload",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "DENM fields such as event type, coordinates, severity, timestamp, validity period, or relevance area are modified before transmission.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "8. DENM Encoder / ASN.1 UPER Payload",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Without end-to-end message identifiers and audit records, the sender may later deny having generated a particular DENM event.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "8. DENM Encoder / ASN.1 UPER Payload",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Unprotected DENM payloads expose accident location, event details, timestamps, or other contextual information to passive observers.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "8. DENM Encoder / ASN.1 UPER Payload",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Malformed ASN.1/UPER payloads trigger parser failures, excessive processing, or rejection of legitimate safety messages.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "9. RSU (Signs, PC5, HSM)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker impersonates the RSU and broadcasts forged accident or road-hazard notifications to nearby vehicles.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "9. RSU (Signs, PC5, HSM)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "RSU configuration, firmware, signed-message handling, or radio parameters are modified to alter transmitted safety information.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "9. RSU (Signs, PC5, HSM)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Insufficient security logging prevents attribution of signed or transmitted messages to a particular RSU instance or administrative operator.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "9. RSU (Signs, PC5, HSM)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "RSU management interfaces, PC5 traffic, or stored event information are accessed by an unauthorized party.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "9. RSU (Signs, PC5, HSM)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "RF jamming, flooding, repeated invalid messages, or exploitation of RSU services prevents timely safety-message broadcasting.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "9. RSU (Signs, PC5, HSM)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "A compromised RSU service account is used to gain administrative control over signing functions, radio configuration, or HSM operations.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "10. Central ITS-S PKI / Operator",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker steals or forges ITS credentials or certificates and impersonates a legitimate RSU, vehicle, or backend identity.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "10. Central ITS-S PKI / Operator",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Certificate status, trust relationships, revocation information, or operator-controlled PKI configuration are modified.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "10. Central ITS-S PKI / Operator",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Weak PKI audit trails make it difficult to prove which operator or process issued, revoked, or renewed a credential.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "10. Central ITS-S PKI / Operator",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Private keys, certificate metadata, enrollment information, or operator records are disclosed to unauthorized parties.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "10. Central ITS-S PKI / Operator",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "The PKI, certificate-status service, or enrollment service is made unavailable, causing legitimate ITS entities to lose the ability to authenticate or validate messages.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "10. Central ITS-S PKI / Operator",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromise of a PKI administrator account allows an attacker to issue trusted certificates for unauthorized systems.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "0. Certificates and Event Reports",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Forged certificates or fabricated event reports are presented as being generated by legitimate ITS entities.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "0. Certificates and Event Reports",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Event reports are modified after generation, including accident time, location, severity, sensor evidence, or responsible system identity.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "0. Certificates and Event Reports",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Missing timestamps, signatures, hash chains, or audit records prevent forensic attribution of accident reports and certificate operations.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "0. Certificates and Event Reports",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Event reports expose vehicle identifiers, road locations, camera-derived information, or operational metadata to unauthorized users.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "0. Certificates and Event Reports",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Attackers delete, corrupt, or flood the event-reporting store, preventing investigation and operational monitoring.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "11. OBU / PC5 + Uu Modem",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A rogue device impersonates a legitimate vehicle OBU or roadside node and sends forged safety messages.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "11. OBU / PC5 + Uu Modem",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "PC5 or Uu messages are modified, replayed, or reordered so that the vehicle receives an incorrect accident warning.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "11. OBU / PC5 + Uu Modem",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Inadequate message-level evidence prevents proving which OBU transmitted or received a particular safety event.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "11. OBU / PC5 + Uu Modem",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Unauthorized listeners infer vehicle identity, trajectory, location, or nearby accident information from wireless traffic.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "11. OBU / PC5 + Uu Modem",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "PC5/Uu jamming, signaling floods, malformed packets, or modem resource exhaustion prevent reception of urgent safety messages.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "11. OBU / PC5 + Uu Modem",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "A modem or OBU vulnerability is exploited to gain privileged access to vehicle-network interfaces.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "12. Vehicle Computer / Verification and Warning Logic",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Forged but apparently valid messages are presented to the vehicle computer as originating from a trusted RSU or authorized ITS entity.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "12. Vehicle Computer / Verification and Warning Logic",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Verification logic, certificate validation, warning thresholds, software binaries, or configuration parameters are modified to suppress or alter alerts.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "12. Vehicle Computer / Verification and Warning Logic",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Lack of secure logs prevents forensic determination of which warning was received, verified, rejected, or presented.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "12. Vehicle Computer / Verification and Warning Logic",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Vehicle computer logs or message buffers expose trip, location, accident, or communication information.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "12. Vehicle Computer / Verification and Warning Logic",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "A flood of invalid or computationally expensive messages exhausts verification resources and delays processing of genuine safety events.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "12. Vehicle Computer / Verification and Warning Logic",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploitation of the warning-processing software provides unauthorized access to privileged vehicle-network functions.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "13. Driver HMI (Visual + Audio Alert)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A malicious component generates a false safety alert that appears to originate from the trusted accident-detection system.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "13. Driver HMI (Visual + Audio Alert)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Alert severity, visual content, audio content, timing, or suppression settings are modified so the driver does not receive the correct warning.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "13. Driver HMI (Visual + Audio Alert)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "The system cannot establish whether a warning was actually displayed or audibly presented to the driver because HMI events were not securely logged.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "13. Driver HMI (Visual + Audio Alert)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "HMI diagnostic interfaces expose accident notifications, vehicle location, or system-state information to unauthorized users.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "13. Driver HMI (Visual + Audio Alert)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "The display/audio subsystem is disabled, overloaded, or flooded with alerts, causing a genuine warning to be missed.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "13. Driver HMI (Visual + Audio Alert)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "A compromised HMI interface is used as a path to obtain higher privileges on the vehicle computer or other in-vehicle systems.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "5G Uu / Cloud Communication Links",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A malicious endpoint impersonates the intended cloud or roadside service using stolen credentials or compromised network identities.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "5G Uu / Cloud Communication Links",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Requests, MLLM responses, certificates, or event data are altered while traversing the cellular network.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "5G Uu / Cloud Communication Links",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Unprotected or improperly authenticated traffic reveals accident imagery, event metadata, location, or API credentials.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "5G Uu / Cloud Communication Links",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Cellular jamming, signaling attacks, traffic flooding, or carrier-side disruption prevents cloud interaction during an accident.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "PC5 Sidelink Communications",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A malicious transmitter sends forged vehicle or RSU safety messages over PC5.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "PC5 Sidelink Communications",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Wireless messages are altered, replayed, delayed, or reordered so that vehicles receive inaccurate accident information.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "PC5 Sidelink Communications",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Passive radio monitoring reveals safety-event details, device identifiers, or movement-related information.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "PC5 Sidelink Communications",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "RF interference, protocol flooding, or repeated malformed packets prevent delivery of legitimate PC5 safety messages.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "AI Models, Prompts, Agent Policies and Model Configuration",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An unauthorized model or agent presents itself as an approved accident-detection component.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "AI Models, Prompts, Agent Policies and Model Configuration",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Model files, prompts, system instructions, agent policies, safety rules, or threshold parameters are altered to induce unsafe decisions.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "AI Models, Prompts, Agent Policies and Model Configuration",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Absence of model/version and prompt provenance makes it impossible to determine which AI configuration produced a safety-critical decision.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "AI Models, Prompts, Agent Policies and Model Configuration",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Proprietary prompts, model outputs, inference data, or training-related information are exposed through debugging or service interfaces.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "AI Models, Prompts, Agent Policies and Model Configuration",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Resource-intensive or adversarial inputs force AI inference components beyond their real-time processing capacity.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "AI Models, Prompts, Agent Policies and Model Configuration",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "An AI agent is manipulated through prompt injection into accessing tools, files, APIs, or operating-system resources outside its intended authority.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "End-to-End Accident Detection Data Flow",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker inserts a false accident event into the pipeline so that downstream components treat it as a trusted detection.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "End-to-End Accident Detection Data Flow",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Event state, timestamps, location, distance, severity, or identity are modified between detection, AI analysis, DENM generation, RSU transmission, and vehicle verification.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "End-to-End Accident Detection Data Flow",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Missing end-to-end correlation identifiers, signatures, synchronized timestamps, and audit logs prevent reconstruction of the complete accident-detection chain.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "End-to-End Accident Detection Data Flow",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Sensitive event data is exposed at intermediate processing stages, including camera images, AI prompts, model responses, and vehicle communication metadata.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "End-to-End Accident Detection Data Flow",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "An attacker disrupts one or more pipeline stages so that a valid accident is not detected, analyzed, transmitted, verified, or presented to the driver in time.",
+  "id": ""
+ },
+ {
+  "m": "ChatGPT",
+  "model": "ChatGPT GPT-5.6 Luna",
+  "asset": "End-to-End Accident Detection Data Flow",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromise of a low-trust component, such as a camera or exposed API, is used as a pivot to reach privileged AI, PKI, RSU, OBU, or vehicle-control functions.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "1. Cameras (Mono + stereo)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker feeds a pre-recorded or manipulated video stream into the camera interface to simulate a false traffic accident.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "1. Cameras (Mono + stereo)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Physically altering, blinding with lasers, or damaging the camera sensors to disrupt visual input to the Roadside ITS station.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "1. Cameras (Mono + stereo)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Physically covering the camera lens or overwhelming the sensor with intense light to prevent image capture.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "2. Edge detector (YOLOv5 fast path) and AI Agents (3. Situation detection, 5. Distance estimate, 6. Message generation)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Adversarial machine learning attacks via slight physical alterations to the environment causing YOLOv5 or the MLLM agents to misclassify objects, accident severity, or distance estimates.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "2. Edge detector (YOLOv5 fast path) and AI Agents (3. Situation detection, 5. Distance estimate, 6. Message generation)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploiting software vulnerabilities in the local AI agents or underlying OS to execute arbitrary code and gain unauthorized control over the Roadside ITS station.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "4 & 7. Cloud MLLM (Gemini API) and 5G Uu cellular links",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Interception of unencrypted or weakly encrypted 5G traffic, exposing sensitive visual data sent to the Cloud MLLM.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "4 & 7. Cloud MLLM (Gemini API) and 5G Uu cellular links",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "RF jamming of the 5G Uu cellular link, preventing the Roadside ITS station from communicating with the Cloud MLLM for situation detection and message generation.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "4 & 7. Cloud MLLM (Gemini API) and 5G Uu cellular links",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Man-in-the-Middle (MitM) attacks altering the prompt sent to the Gemini API or the returning hazard classification, assuming TLS is bypassed or improperly validated.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "8. DENM encoder (ASN.1 UPER payload) and 9. RSU (Signs, PC5, HSM)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Exploiting parsing vulnerabilities such as buffer overflows in the ASN.1 UPER encoder to crash the RSU or execute arbitrary code.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "8. DENM encoder (ASN.1 UPER payload) and 9. RSU (Signs, PC5, HSM)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A compromised device impersonates the legitimate RSU by extracting keys from a vulnerable HSM to broadcast fake hazard warnings.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "8. DENM encoder (ASN.1 UPER payload) and 9. RSU (Signs, PC5, HSM)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Extracting private signing keys or certificates stored improperly within the RSU's Hardware Security Module (HSM).",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "10. Central ITS-S (PKI, operator) and 0. Certificates, event reports",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Compromise of the Root or Subordinate CA within the PKI, allowing an attacker to issue fraudulent certificates for rogue RSUs or OBUs.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "10. Central ITS-S (PKI, operator) and 0. Certificates, event reports",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "An attacker gains unauthorized access to the operator console, allowing them to revoke legitimate certificates or issue false network-wide event reports.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "10. Central ITS-S (PKI, operator) and 0. Certificates, event reports",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Insufficient logging mechanisms at the Central ITS-S allow a malicious insider or compromised node to delete traces of fraudulent certificate issuance or false event reporting.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "11. OBU (PC5 + Uu modem) and PC5 sidelink",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "RF jamming of the PC5 sidelink frequency, preventing the OBU from receiving critical DENM alerts from the RSU.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "11. OBU (PC5 + Uu modem) and PC5 sidelink",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Sybil attack where an attacker broadcasts false vehicle telemetry over the PC5 interface using multiple forged OBU identities to trigger false collision warnings.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "12. Vehicle computer (Verify, warning logic) and 13. Driver HMI (Visual + audio alert)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Malware infection on the vehicle computer altering the warning logic to suppress legitimate collision alerts or trigger continuous false alarms on the Driver HMI.",
+  "id": ""
+ },
+ {
+  "m": "Gemini",
+  "model": "Gemini 3.1 Pro extended thinking",
+  "asset": "12. Vehicle computer (Verify, warning logic) and 13. Driver HMI (Visual + audio alert)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Exploiting the OBU-to-Vehicle computer interface to extract sensitive vehicle telemetry and driver behavior data.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Cameras (Mono + Stereo, Edge)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Attacker replaces or spoofs the camera feed (e.g., video injection) to feed fabricated scenes into the pipeline.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Cameras (Mono + Stereo, Edge)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Physical tampering with camera lens/position, or manipulation of the raw video stream in transit to the edge detector.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Cameras (Mono + Stereo, Edge)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Camera blinded/jammed (laser, IR, physical obstruction) or feed flooded to prevent hazard detection.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Cameras (Mono + Stereo, Edge)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Unauthorized interception of raw video stream exposing personal data (license plates, pedestrian faces).",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Edge Detector (YOLOv5 fast path)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Adversarial perturbation/patch attacks on input images causing misclassification of hazards (evasion attack).",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Edge Detector (YOLOv5 fast path)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploiting a vulnerability in the inference runtime to gain code execution on the roadside edge device.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Edge Detector (YOLOv5 fast path)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Resource exhaustion via crafted high-complexity frames causing inference latency spikes or crashes.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Edge Detector (YOLOv5 fast path)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Lack of logging/integrity on model version used, allowing denial that a faulty/outdated model produced a missed detection.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "AI Agents: Situation Detection (Agent 1)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Prompt injection via manipulated image/metadata causing the MLLM call to misclassify or ignore a real hazard.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "AI Agents: Situation Detection (Agent 1)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Malicious actor spoofs the agent's request to the cloud MLLM, injecting a fabricated scene description.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "AI Agents: Situation Detection (Agent 1)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Flooding Agent 1 with requests to exhaust cloud MLLM API quota/rate limits, delaying real hazard detection.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "AI Agents: Situation Detection (Agent 1)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Sensitive roadside imagery sent to external Cloud MLLM (Gemini API) is exposed via API logging or third-party breach.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Cloud MLLM (Gemini API) - Agents 1 & 3",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Man-in-the-middle attack impersonating the Cloud MLLM endpoint to return falsified hazard/message data.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Cloud MLLM (Gemini API) - Agents 1 & 3",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "API response tampered in transit, altering severity classification or generated DENM message content.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Cloud MLLM (Gemini API) - Agents 1 & 3",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Cloud API outage, throttling, or targeted DDoS on the API endpoint disrupts situation detection and message generation.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Cloud MLLM (Gemini API) - Agents 1 & 3",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Third-party cloud provider retains/logs sensitive roadside imagery or location data beyond intended use.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Cloud MLLM (Gemini API) - Agents 1 & 3",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromised API credentials/key allow attacker to submit arbitrary requests or exfiltrate historical query data.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Distance Estimate (Agent 2, Depth Pro)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Manipulation of depth estimation inputs/outputs to under- or over-report hazard distance, causing incorrect warning timing.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Distance Estimate (Agent 2, Depth Pro)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Malformed stereo input causes depth model to hang or crash, stalling the pipeline before message generation.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Message Generation (Agent 3, MLLM call)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Injection attack alters generated hazard message content/severity before DENM encoding.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Message Generation (Agent 3, MLLM call)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "No cryptographic binding between agent output and final DENM payload, allowing denial of message origin/authorship.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Message Generation (Agent 3, MLLM call)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Malformed or oversized MLLM output causes downstream DENM encoder to fail or drop messages.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "DENM Encoder (ASN.1 UPER payload)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Malformed or crafted input triggers ASN.1 parser vulnerabilities (buffer overflow) enabling payload corruption or code execution.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "DENM Encoder (ASN.1 UPER payload)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Injection of a fraudulent DENM message without going through legitimate detection pipeline (bypassing Agents 1-3).",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "DENM Encoder (ASN.1 UPER payload)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Absence of signed audit trail linking each DENM message to the specific detection event that generated it.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "RSU (Roadside Unit - Signs, PC5, HSM)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Rogue RSU impersonation broadcasting false DENM messages to nearby vehicles (fake hazard alerts).",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "RSU (Roadside Unit - Signs, PC5, HSM)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Physical/firmware tampering with the RSU to alter broadcast messages or extract HSM key material.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "RSU (Roadside Unit - Signs, PC5, HSM)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "RF jamming of PC5 sidelink or flooding RSU with bogus messages, preventing legitimate DENM broadcast.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "RSU (Roadside Unit - Signs, PC5, HSM)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploitation of RSU management interface to gain administrative control and reconfigure signage/broadcast behavior.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "RSU (Roadside Unit - Signs, PC5, HSM)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Side-channel or physical attack on HSM leaks private signing keys used for message authentication.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Central ITS-S (PKI, Operator)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Attacker impersonates the Central ITS-S to issue fraudulent certificates to rogue RSUs/OBUs.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Central ITS-S (PKI, Operator)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Compromise of the PKI root/intermediate CA allowing forged or revoked certificates to remain trusted.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Central ITS-S (PKI, Operator)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Insider or compromised operator account used to issue unauthorized certificates or push malicious configuration.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Central ITS-S (PKI, Operator)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Attack on certificate revocation/issuance services disrupts trust chain validation across the fleet.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Central ITS-S (PKI, Operator)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Insufficient logging of certificate issuance/revocation events prevents accountability for a rogue trust decision.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "OBU (On-Board Unit, PC5 + Uu modem)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Attacker spoofs a legitimate RSU/vehicle identity over PC5 to inject false DENM messages directly to the OBU.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "OBU (On-Board Unit, PC5 + Uu modem)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Firmware tampering or malware installed on the OBU to alter received message handling or relay falsified data.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "OBU (On-Board Unit, PC5 + Uu modem)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Jamming of PC5/Uu radio interfaces or message flooding overwhelms OBU processing, dropping legitimate alerts.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "OBU (On-Board Unit, PC5 + Uu modem)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Eavesdropping on Uu cellular link exposes vehicle location and event report data.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Vehicle Computer (Verify, warning logic)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Bypass or disabling of DENM signature verification logic, allowing unauthenticated messages to trigger driver warnings.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Vehicle Computer (Verify, warning logic)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Flooding with valid-looking DENM messages causes alert fatigue or processing overload, suppressing real warnings.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Vehicle Computer (Verify, warning logic)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploit in warning-logic software grants attacker control over in-vehicle systems beyond the HMI (lateral movement).",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Vehicle Computer (Verify, warning logic)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "No secure logging of received/verified messages, preventing forensic reconstruction of a false-alarm or missed-alarm incident.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Driver HMI (Visual + audio alert)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Manipulation of alert content/timing to desensitize driver (suppressed alert) or cause distraction (false repeated alerts).",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Driver HMI (Visual + audio alert)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Overloading the HMI with spurious alerts to mask a genuine hazard warning.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "PC5 Sidelink / 5G Uu Communication Channels",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "GNSS/location spoofing combined with message replay to simulate a hazard at a false location.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "PC5 Sidelink / 5G Uu Communication Channels",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Message replay attack retransmitting old valid DENM messages to trigger outdated or irrelevant warnings.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "PC5 Sidelink / 5G Uu Communication Channels",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "RF jamming or protocol-level flooding disrupts V2X communication between RSU and OBU.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "PC5 Sidelink / 5G Uu Communication Channels",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Passive sniffing of unencrypted sidelink traffic reveals vehicle movement patterns (privacy/tracking risk).",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Certificates & Event Reports (0. Certificate/report channel)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Forged or stolen certificate used to authenticate a malicious RSU/OBU to the Central ITS-S.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Certificates & Event Reports (0. Certificate/report channel)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Event reports altered in transit to hide malicious activity or misreport hazard statistics to the operator.",
+  "id": ""
+ },
+ {
+  "m": "Sonnet",
+  "model": "Claude Sonnet 5 Medium",
+  "asset": "Certificates & Event Reports (0. Certificate/report channel)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Weak non-repudiation controls allow an entity to deny having sent a fraudulent or malformed event report.",
+  "id": ""
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Cameras, mono + stereo (Step 1)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker stages a fake scene in the camera view (e.g., a mannequin on the carriageway, a printed image of an overturned vehicle, or a display placed in front of the lens), so the system reports a non-existent accident and a false DENM is broadcast.",
+  "id": "TS01"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Cameras, mono + stereo (Step 1)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "An attacker with physical access to the pole re-aims or moves the camera, so the stored camera position no longer matches the scene and every reported event location is wrong.",
+  "id": "TS02"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Cameras, mono + stereo (Step 1)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "Unauthorized access to the camera or its management interface exposes live images of road users, including faces and licence plates (personal data under GDPR).",
+  "id": "TS03"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Cameras, mono + stereo (Step 1)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "The camera is blinded (laser or strong light), covered, painted over or disconnected from power, so real accidents in its field of view are not detected and no warning is issued.",
+  "id": "TS04"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Cameras, mono + stereo (Step 1)",
+  "stride": "Elevation of privilege",
+  "s": "E",
+  "scenario": "Default credentials or vulnerable firmware on the IP infrastructure camera are exploited to gain a foothold on the roadside network, from which the computing unit and the RSU can be attacked.",
+  "id": "TS05"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Video link camera -> roadside computing unit (Step 1 -> 2)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "A man-in-the-middle on the camera link replaces the live stream with recorded footage: an old accident video to trigger false warnings, or an empty road to hide a real accident.",
+  "id": "TS06"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Video link camera -> roadside computing unit (Step 1 -> 2)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "The video stream is sent without encryption on the roadside network and is captured by an attacker, disclosing images of road users.",
+  "id": "TS07"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Video link camera -> roadside computing unit (Step 1 -> 2)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "The camera link is cut or flooded with traffic, so no frames reach the detector.",
+  "id": "TS08"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "An attacker with access to the roadside cabinet or to an exposed remote service (e.g., SSH) replaces software, container images or configuration on the unit, altering the detector, the prompts or the DENM encoder.",
+  "id": "TS09"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "A malicious or unsigned software update (operating system, Python packages, agent framework components) is installed on the unit, introducing hidden logic that manipulates detections or messages.",
+  "id": "TS10"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Changes to software, prompts or configuration on the unit are not recorded in tamper-evident logs, so a manipulation cannot be traced to an actor or a point in time.",
+  "id": "TS11"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "Secrets stored on the unit (Gemini API key, network credentials, camera position data) are extracted after physical theft of the unit or a remote compromise.",
+  "id": "TS12"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Malware or crafted inputs exhaust the CPU, GPU or memory of the unit, stopping real-time processing of frames.",
+  "id": "TS13"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Roadside computing unit, NVIDIA Jetson Orin (hosts Steps 2-8)",
+  "stride": "Elevation of privilege",
+  "s": "E",
+  "scenario": "A vulnerability in the operating system or in an agent framework dependency is exploited to obtain root access, giving the attacker full control over detection and message generation.",
+  "id": "TS14"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "YOLOv5 edge detector and trigger rule (Step 2)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Adversarial patches (printed patterns on vehicles, signs or clothing) make YOLOv5 report stopped vehicles or pedestrians that do not exist, sending fabricated candidate events to the MLLM agents.",
+  "id": "TS15"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "YOLOv5 edge detector and trigger rule (Step 2)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "The YOLOv5 weights or the trigger rule are replaced or poisoned so that selected event types (e.g., overturned vehicles) are never forwarded, silently suppressing warnings.",
+  "id": "TS16"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "YOLOv5 edge detector and trigger rule (Step 2)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Adversarial patterns hide real objects from the detector (evasion), so frames containing a real accident are filtered out before they reach the agents.",
+  "id": "TS17"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "YOLOv5 edge detector and trigger rule (Step 2)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "An attacker repeatedly creates trigger conditions (e.g., objects placed on the road edge) to flood the agents with MLLM requests, exhausting the API quota or budget and delaying genuine events.",
+  "id": "TS18"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Situation detection agent and prompt 1 (Steps 3-4)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Text visible in the camera image (on a sign, sticker or vehicle wrap) acts as a prompt injection that instructs the MLLM to report an incident, producing a spoofed hazard.",
+  "id": "TS19"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Situation detection agent and prompt 1 (Steps 3-4)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Prompt 1 stored on the computing unit is modified so that the agent applies different detection criteria (e.g., always returning no incident).",
+  "id": "TS20"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Situation detection agent and prompt 1 (Steps 3-4)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "A prompt injection in the image makes the MLLM return a manipulated bounding box or situation type, shifting the reported hazard position or changing its classification.",
+  "id": "TS21"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Situation detection agent and prompt 1 (Steps 3-4)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "The prompt, model version, input frame and response behind each detection decision are not logged, so a false or missed detection cannot be attributed to the model, the input or an attacker.",
+  "id": "TS22"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Situation detection agent and prompt 1 (Steps 3-4)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Crafted images or injected text cause malformed (non-JSON) output, refusals or excessive response times, stalling the pipeline for real events.",
+  "id": "TS23"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Situation detection agent and prompt 1 (Steps 3-4)",
+  "stride": "Elevation of privilege",
+  "s": "E",
+  "scenario": "Injected instructions make the agent framework perform actions beyond its role (e.g., invoking the message generation agent without a confirmed hazard, or calling other tools configured in the framework).",
+  "id": "TS24"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Cloud MLLM, Gemini API (Steps 4 and 7)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A spoofed API endpoint (via DNS manipulation on the roadside network or a compromised proxy) answers in place of the Gemini API with forged detection results and DENM parameters.",
+  "id": "TS25"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Cloud MLLM, Gemini API (Steps 4 and 7)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "A compromise or malicious insider at the provider, or an unannounced model update, changes the model's behaviour and alters detection results and DENM field values without the operator's knowledge.",
+  "id": "TS26"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Cloud MLLM, Gemini API (Steps 4 and 7)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Processing at the provider cannot be audited by the operator, so it cannot be shown whether an incorrect output originated in the model or in manipulated input.",
+  "id": "TS27"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Cloud MLLM, Gemini API (Steps 4 and 7)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "Frames sent to the third-party cloud, containing faces, licence plates and the camera location, are retained, logged or reused by the provider, disclosing personal data outside the operator's control.",
+  "id": "TS28"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Cloud MLLM, Gemini API (Steps 4 and 7)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Provider outage, rate limiting, quota exhaustion or account suspension stops Steps 4 and 7, so no DENM can be generated.",
+  "id": "TS29"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Gemini API key and cloud account",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A stolen API key lets an attacker impersonate the system towards the provider, consuming quota and incurring costs until the legitimate requests are rate-limited.",
+  "id": "TS30"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Gemini API key and cloud account",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "The key leaks through source code repositories, configuration backups, logs or monitoring traces.",
+  "id": "TS31"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Gemini API key and cloud account",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Revocation of a leaked key or suspension of the cloud account interrupts the service until new credentials are deployed.",
+  "id": "TS32"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Gemini API key and cloud account",
+  "stride": "Elevation of privilege",
+  "s": "E",
+  "scenario": "If the key belongs to a cloud project with broader permissions, its compromise gives access to other cloud resources of the operator.",
+  "id": "TS33"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link roadside computing unit <-> Gemini API over 5G Uu (Steps 3-4 and 6-7)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "A man-in-the-middle (rogue base station, compromised gateway, or a client that does not validate TLS certificates) modifies requests or responses, e.g., changing the incident flag or the cause code.",
+  "id": "TS34"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link roadside computing unit <-> Gemini API over 5G Uu (Steps 3-4 and 6-7)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "Missing or weak TLS exposes the images and prompts in transit.",
+  "id": "TS35"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link roadside computing unit <-> Gemini API over 5G Uu (Steps 3-4 and 6-7)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Cellular jamming, a forced downgrade by a rogue base station, or blocking of the SIM subscription cuts the connection to the MLLM.",
+  "id": "TS36"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Distance estimate agent (Depth Pro) and stored camera position data (Step 5)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Adversarial or deliberately unusual scene content (e.g., reflective surfaces or projected patterns) makes Depth Pro produce a wrong distance, placing the hazard at the wrong position in the DENM.",
+  "id": "TS37"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Distance estimate agent (Depth Pro) and stored camera position data (Step 5)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "The stored camera position and orientation parameters are altered, shifting every computed event location so that warnings refer to the wrong road section.",
+  "id": "TS38"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Distance estimate agent (Depth Pro) and stored camera position data (Step 5)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "The Depth Pro model file is replaced with a manipulated version that returns systematically biased distances.",
+  "id": "TS39"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Distance estimate agent (Depth Pro) and stored camera position data (Step 5)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Inputs that make the depth model fail or run slowly delay or block message generation.",
+  "id": "TS40"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Message generation agent and prompt 2 (Steps 6-7)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "A prompt injection through scene text or manipulated inputs makes the MLLM return wrong DENM fields (e.g., wrong cause code, open lanes reported as closed, a lower speed limit), so drivers receive misleading instructions.",
+  "id": "TS41"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Message generation agent and prompt 2 (Steps 6-7)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Prompt 2 or the list of allowed field values is modified on the computing unit, producing systematically wrong or attacker-chosen message content.",
+  "id": "TS42"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Message generation agent and prompt 2 (Steps 6-7)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker who controls the MLLM response (see TS25 and TS34) sets the event position fields so that the DENM describes a hazard at a location the camera does not cover.",
+  "id": "TS43"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Message generation agent and prompt 2 (Steps 6-7)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Generated DENMs are not linked to their input frame, prompt, model version and model response, preventing post-incident investigation of a harmful message.",
+  "id": "TS44"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Message generation agent and prompt 2 (Steps 6-7)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Prompt-induced oversized or malformed model output exceeds processing limits and blocks message generation.",
+  "id": "TS45"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "DENM encoder and DENM payload, ASN.1 UPER (Step 8)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Model output that bypasses schema and plausibility validation yields a DENM with out-of-range or inconsistent fields, which receiving V2X stacks may misinterpret or crash on.",
+  "id": "TS46"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "DENM encoder and DENM payload, ASN.1 UPER (Step 8)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "The encoder code or its ASN.1 definitions are modified to produce syntactically valid but semantically altered messages.",
+  "id": "TS47"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "DENM encoder and DENM payload, ASN.1 UPER (Step 8)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Crafted field values trigger encoding errors or exceptions, stopping DENM generation.",
+  "id": "TS48"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link roadside computing unit -> RSU, Ethernet/UDP (Step 8 -> 9)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A device on the roadside network (including a compromised camera) sends forged UDP packets to the RSU input port; the RSU signs and broadcasts them as legitimate DENMs.",
+  "id": "TS49"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link roadside computing unit -> RSU, Ethernet/UDP (Step 8 -> 9)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "An attacker on the local network (e.g., by ARP spoofing) modifies the DENM payload before it reaches the RSU and is signed.",
+  "id": "TS50"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link roadside computing unit -> RSU, Ethernet/UDP (Step 8 -> 9)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "Unencrypted UDP traffic is captured, revealing message content and the internal addressing of the roadside station.",
+  "id": "TS51"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link roadside computing unit -> RSU, Ethernet/UDP (Step 8 -> 9)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Flooding the RSU input port or the roadside switch prevents payloads from reaching the RSU.",
+  "id": "TS52"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "RSU with hardware security module and signing keys (Step 9)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A rogue roadside device broadcasts DENMs claiming to be the RSU; the forgery succeeds if valid credentials were stolen or if receivers do not verify signatures.",
+  "id": "TS53"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "RSU with hardware security module and signing keys (Step 9)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "The RSU firmware or configuration is modified through its management interface (e.g., default or weak credentials), changing its signing or forwarding behaviour.",
+  "id": "TS54"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "RSU with hardware security module and signing keys (Step 9)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "The RSU signs every payload received on its UDP input without authenticating or logging its origin, so it cannot be established which component produced a harmful message.",
+  "id": "TS55"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "RSU with hardware security module and signing keys (Step 9)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "Because of misconfiguration, signing keys are generated or stored outside the hardware security module, allowing their extraction.",
+  "id": "TS56"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "RSU with hardware security module and signing keys (Step 9)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Network flooding, a firmware crash, power loss or physical destruction of the pole-mounted RSU stops all broadcasts.",
+  "id": "TS57"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "RSU with hardware security module and signing keys (Step 9)",
+  "stride": "Elevation of privilege",
+  "s": "E",
+  "scenario": "Exploiting a vulnerability in the RSU management services gives root access, letting the attacker use the hardware security module as a signing oracle for arbitrary messages.",
+  "id": "TS58"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "PC5 sidelink RSU -> OBU (Step 9 -> 11)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker with a C-V2X radio transmits forged DENMs on PC5; they are accepted if OBUs do not verify signatures or if the attacker holds valid credentials.",
+  "id": "TS59"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "PC5 sidelink RSU -> OBU (Step 9 -> 11)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Valid signed DENMs are recorded and replayed at another time or place; they are accepted if freshness and location checks are missing.",
+  "id": "TS60"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "PC5 sidelink RSU -> OBU (Step 9 -> 11)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Signal overshadowing: the attacker transmits a stronger, modified copy of a legitimate message so that nearby OBUs receive the altered version.",
+  "id": "TS61"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "PC5 sidelink RSU -> OBU (Step 9 -> 11)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Jamming the 5.9 GHz channel, or flooding it with valid-format messages to congest it, prevents OBUs from receiving warnings.",
+  "id": "TS62"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Security credentials and PKI enrolment (Step 0)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Stolen enrolment credentials or authorization tickets let an attacker obtain or use valid certificates and sign forged DENMs that receivers accept.",
+  "id": "TS63"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Security credentials and PKI enrolment (Step 0)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "The trust store (root certificates or trust list) on the RSU or OBU is modified so that it trusts an attacker-controlled certificate authority.",
+  "id": "TS64"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Security credentials and PKI enrolment (Step 0)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Certificates are not traceable to an accountable station in the PKI, so a misbehaving station cannot be identified and revoked.",
+  "id": "TS65"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Security credentials and PKI enrolment (Step 0)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Expired certificates, or a PKI that is unreachable during renewal, cause the RSU's messages to be rejected by OBUs, silencing warnings.",
+  "id": "TS66"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Security credentials and PKI enrolment (Step 0)",
+  "stride": "Elevation of privilege",
+  "s": "E",
+  "scenario": "Compromise of the authorization authority allows certificates with broader permissions to be issued (e.g., for any DENM cause code), which receivers then trust.",
+  "id": "TS67"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Central ITS-S, operator back-end (Step 10)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "An attacker impersonates an RSU towards the central ITS-S and injects fake event reports, which are redistributed over V2N to many vehicles.",
+  "id": "TS68"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Central ITS-S, operator back-end (Step 10)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Phishing or credential theft gives an attacker access to an operator account, from which warnings can be published or cancelled.",
+  "id": "TS69"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Central ITS-S, operator back-end (Step 10)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "A compromised operator account or back-end component modifies or cancels real events, suppressing warnings for vehicles outside RSU range.",
+  "id": "TS70"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Central ITS-S, operator back-end (Step 10)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Missing audit logs allow an operator to deny having published or cancelled a warning.",
+  "id": "TS71"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Central ITS-S, operator back-end (Step 10)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "Event logs and camera snapshots stored at the back-end disclose personal data and details of the roadside infrastructure.",
+  "id": "TS72"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Central ITS-S, operator back-end (Step 10)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "A DDoS attack on the back-end prevents V2N redistribution and certificate renewal.",
+  "id": "TS73"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Central ITS-S, operator back-end (Step 10)",
+  "stride": "Elevation of privilege",
+  "s": "E",
+  "scenario": "A vulnerability in the back-end grants administrative control over all connected RSUs (remote configuration and firmware updates), enabling a fleet-wide compromise.",
+  "id": "TS74"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link RSU <-> central ITS-S over 5G Uu (Step 0 and Step 9 -> 10)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "A man-in-the-middle modifies event reports or certificate responses in transit.",
+  "id": "TS75"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link RSU <-> central ITS-S over 5G Uu (Step 0 and Step 9 -> 10)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "Interception of unprotected management traffic exposes credentials and configuration of the RSU.",
+  "id": "TS76"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link RSU <-> central ITS-S over 5G Uu (Step 0 and Step 9 -> 10)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Cellular jamming or a network outage blocks event reports and certificate renewal.",
+  "id": "TS77"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "V2N link central ITS-S -> OBU over 5G Uu (Step 10 -> 11)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A fake V2N server or a compromised cellular path delivers forged DENMs to OBUs; they are accepted if the OBU relies on transport security instead of verifying message signatures.",
+  "id": "TS78"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "V2N link central ITS-S -> OBU over 5G Uu (Step 10 -> 11)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "Area-based subscriptions to warnings reveal vehicle locations to the back-end or to an attacker observing the traffic.",
+  "id": "TS79"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "V2N link central ITS-S -> OBU over 5G Uu (Step 10 -> 11)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Congestion or outage of the cellular network prevents warnings from reaching vehicles outside RSU range.",
+  "id": "TS80"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "GNSS position and time (RSU and OBU, Steps 9 and 11)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "GNSS spoofing gives the OBU a false position, so its relevance check discards genuine warnings or accepts irrelevant ones; at the RSU it corrupts the position and time used in signed messages.",
+  "id": "TS81"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "GNSS position and time (RSU and OBU, Steps 9 and 11)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Manipulated GNSS time makes receivers reject valid messages as expired or accept replayed ones.",
+  "id": "TS82"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "GNSS position and time (RSU and OBU, Steps 9 and 11)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "GNSS jamming disrupts the time synchronization needed by LTE-V2X PC5 and the position-based relevance filtering.",
+  "id": "TS83"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "OBU (Step 11)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Firmware tampering through physical access in the vehicle (e.g., debug ports) disables signature verification, so forged DENMs are accepted.",
+  "id": "TS84"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "OBU (Step 11)",
+  "stride": "Information disclosure",
+  "s": "I",
+  "scenario": "Credentials are extracted from the OBU and used to sign forged messages elsewhere.",
+  "id": "TS85"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "OBU (Step 11)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Malformed DENMs (fuzzing) crash the OBU's V2X stack, stopping reception.",
+  "id": "TS86"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "OBU (Step 11)",
+  "stride": "Elevation of privilege",
+  "s": "E",
+  "scenario": "A vulnerability in the OBU's cellular (Uu) interface or management service is exploited remotely, giving code execution inside the vehicle.",
+  "id": "TS87"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link OBU -> vehicle computer, Ethernet/UDP (Step 11 -> 12)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "A device connected to the in-vehicle Ethernet injects forged UDP messages that the vehicle computer treats as received DENMs.",
+  "id": "TS88"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link OBU -> vehicle computer, Ethernet/UDP (Step 11 -> 12)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Forwarded messages are modified on the in-vehicle link; this goes undetected if only the OBU verifies signatures and the link itself is not protected.",
+  "id": "TS89"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Link OBU -> vehicle computer, Ethernet/UDP (Step 11 -> 12)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "Flooding the UDP port blocks the forwarding of warnings.",
+  "id": "TS90"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Vehicle computer, warning logic (Step 12)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "The vehicle computer accepts messages without checking the verification result from the OBU, so forged warnings are processed as genuine.",
+  "id": "TS91"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Vehicle computer, warning logic (Step 12)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Relevance thresholds, map data or warning logic are modified, suppressing warnings or triggering them for irrelevant events.",
+  "id": "TS92"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Vehicle computer, warning logic (Step 12)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Received and displayed warnings are not logged, so it cannot be reconstructed what the driver was told (e.g., in an accident investigation).",
+  "id": "TS93"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Vehicle computer, warning logic (Step 12)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "A burst of valid-format messages overloads the warning logic and delays real warnings.",
+  "id": "TS94"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Vehicle computer, warning logic (Step 12)",
+  "stride": "Elevation of privilege",
+  "s": "E",
+  "scenario": "A compromised vehicle computer is used as a pivot into other in-vehicle networks it is connected to.",
+  "id": "TS95"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Driver HMI (Step 13)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Manipulated warning content (wrong hazard type, distance or lane) is displayed, prompting dangerous driver reactions such as sudden braking or lane changes.",
+  "id": "TS96"
+ },
+ {
+  "m": "Opus",
+  "model": "Claude Claude-Opus-5\\_with-context",
+  "asset": "Driver HMI (Step 13)",
+  "stride": "Denial of service",
+  "s": "D",
+  "scenario": "A flood of false alerts distracts the driver and causes alert fatigue, so genuine warnings are ignored.",
+  "id": "TS97"
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "1. Cameras (Mono + Stereo)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Attacker injects fake camera streams or replays previously recorded accident footage to impersonate a live road scene.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "1. Cameras (Mono + Stereo)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Camera firmware or image data is modified to hide accidents or create false hazards.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "1. Cameras (Mono + Stereo)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "No audit trail exists to prove whether captured footage originated from the genuine camera.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "1. Cameras (Mono + Stereo)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Unauthorized access to video streams exposes vehicle and road-user information.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "1. Cameras (Mono + Stereo)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Camera is disabled through jamming, overload, or physical sabotage, preventing accident detection.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "1. Cameras (Mono + Stereo)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploitation of camera firmware vulnerabilities grants administrative access to the roadside network.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "2. Edge Detector (YOLOv5 Fast Path)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Malicious device impersonates a trusted camera and sends manipulated object-detection input.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "2. Edge Detector (YOLOv5 Fast Path)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "YOLOv5 model weights are altered to misclassify accidents or hazards.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "2. Edge Detector (YOLOv5 Fast Path)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Absence of model execution logs prevents attribution of incorrect detections.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "2. Edge Detector (YOLOv5 Fast Path)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Sensitive image frames or detection metadata are leaked from edge storage.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "2. Edge Detector (YOLOv5 Fast Path)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Adversarial images or excessive traffic exhaust GPU/CPU resources and block real-time processing.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "2. Edge Detector (YOLOv5 Fast Path)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploiting inference runtime vulnerabilities provides root access to the roadside computing platform.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "3. Situation Detection Agent",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Unauthorized entity impersonates the MLLM service and returns fabricated hazard assessments.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "3. Situation Detection Agent",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Prompt injection manipulates accident interpretation and generated conclusions.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "3. Situation Detection Agent",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Agent decisions cannot be traced back to specific prompts, responses, or model versions.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "3. Situation Detection Agent",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Road images and metadata are exposed to unauthorized users or cloud tenants.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "3. Situation Detection Agent",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Flooding the agent with requests prevents processing of legitimate hazards.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "3. Situation Detection Agent",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromised agent gains unauthorized access to downstream systems and APIs.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "4 & 7. Cloud MLLM (Gemini API)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Attackers steal API credentials and impersonate the roadside station.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "4 & 7. Cloud MLLM (Gemini API)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Model outputs are manipulated through prompt injection or API traffic modification.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "4 & 7. Cloud MLLM (Gemini API)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Lack of signed request-response logs prevents proving which recommendations were generated.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "4 & 7. Cloud MLLM (Gemini API)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Sensitive road imagery, accident information, or prompts are disclosed to unauthorized parties.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "4 & 7. Cloud MLLM (Gemini API)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "API quota exhaustion or network attacks prevent cloud-based inference.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "4 & 7. Cloud MLLM (Gemini API)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromised API keys allow attackers to access additional cloud resources.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "5. Distance Estimation Agent (Depth Pro)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Fake sensor inputs cause incorrect distance calculations.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "5. Distance Estimation Agent (Depth Pro)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Distance estimation models are altered to understate or overstate hazard proximity.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "5. Distance Estimation Agent (Depth Pro)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Insufficient logging prevents validation of how distance values were generated.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "5. Distance Estimation Agent (Depth Pro)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Environmental and vehicle location information is leaked through outputs.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "5. Distance Estimation Agent (Depth Pro)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Resource exhaustion prevents execution of depth estimation.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "5. Distance Estimation Agent (Depth Pro)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Model-serving vulnerabilities permit escalation to privileged roadside services.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "6. Message Generation Agent",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Attacker impersonates the agent and generates fake DENM warning content.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "6. Message Generation Agent",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Warning messages are modified before encoding, resulting in misleading alerts.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "6. Message Generation Agent",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Generated messages cannot be linked to the originating hazard assessment.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "6. Message Generation Agent",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Generated messages expose confidential infrastructure information.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "6. Message Generation Agent",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Excessive requests interrupt warning generation.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "6. Message Generation Agent",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromised agent obtains unauthorized control over DENM generation workflows.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "8. DENM Encoder (ASN.1 UPER Payload)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Unauthorized process generates forged DENM messages.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "8. DENM Encoder (ASN.1 UPER Payload)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Encoded payload fields are altered to report false accident details.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "8. DENM Encoder (ASN.1 UPER Payload)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "No cryptographic linkage exists between generated DENM messages and originating events.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "8. DENM Encoder (ASN.1 UPER Payload)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Encoded messages reveal operational metadata useful to attackers.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "8. DENM Encoder (ASN.1 UPER Payload)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Malformed payloads cause parser crashes and encoder failures.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "8. DENM Encoder (ASN.1 UPER Payload)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "ASN.1 parsing vulnerabilities enable code execution on the encoder host.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "9. RSU (Roadside Unit, Signs, PC5, HSM)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Attacker impersonates a legitimate RSU using stolen certificates.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "9. RSU (Roadside Unit, Signs, PC5, HSM)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Broadcast warning messages or HSM configurations are modified.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "9. RSU (Roadside Unit, Signs, PC5, HSM)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "RSU operators deny transmitting malicious or incorrect alerts.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "9. RSU (Roadside Unit, Signs, PC5, HSM)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Vehicle communication metadata and certificates are exposed.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "9. RSU (Roadside Unit, Signs, PC5, HSM)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "RF jamming or message flooding prevents dissemination of safety alerts.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "9. RSU (Roadside Unit, Signs, PC5, HSM)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromise of the HSM or RSU software grants administrative control over C-V2X communications.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "10. Central ITS-S (PKI, Operator)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Stolen PKI credentials allow attackers to impersonate trusted infrastructure.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "10. Central ITS-S (PKI, Operator)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Certificate issuance or revocation records are manipulated.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "10. Central ITS-S (PKI, Operator)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Operators deny certificate actions due to insufficient auditing.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "10. Central ITS-S (PKI, Operator)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Private keys, certificates, and operator credentials are exposed.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "10. Central ITS-S (PKI, Operator)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "PKI services become unavailable, preventing certificate validation and message signing.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "10. Central ITS-S (PKI, Operator)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromised operator accounts obtain full PKI administration privileges.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "11. OBU (On-Board Unit)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Rogue OBU impersonates a legitimate vehicle.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "11. OBU (On-Board Unit)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Received DENM messages are modified before validation.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "11. OBU (On-Board Unit)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Vehicle cannot prove receipt or rejection of safety warnings.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "11. OBU (On-Board Unit)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Location, communication, and certificate information are leaked.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "11. OBU (On-Board Unit)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Radio-channel flooding prevents reception of critical alerts.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "11. OBU (On-Board Unit)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromised modem firmware grants access to vehicle communication subsystems.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "12. Vehicle Computer (Verification and Warning Logic)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Fake OBU messages are accepted as trusted warnings.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "12. Vehicle Computer (Verification and Warning Logic)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Verification algorithms or warning thresholds are modified.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "12. Vehicle Computer (Verification and Warning Logic)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "No audit trail exists for warning decisions made by the vehicle computer.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "12. Vehicle Computer (Verification and Warning Logic)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Internal vehicle status and alert data are exposed.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "12. Vehicle Computer (Verification and Warning Logic)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Excessive message processing disables warning validation.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "12. Vehicle Computer (Verification and Warning Logic)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Attackers exploit software vulnerabilities to gain control of safety functions.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "13. Driver HMI (Visual and Audio Alert)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Fake alerts are displayed to mislead the driver.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "13. Driver HMI (Visual and Audio Alert)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Alert content or severity levels are altered.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "13. Driver HMI (Visual and Audio Alert)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "There is no evidence proving that a warning was presented to the driver.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "13. Driver HMI (Visual and Audio Alert)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Displayed information reveals vehicle or route details to unauthorized observers.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "13. Driver HMI (Visual and Audio Alert)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "HMI malfunction suppresses critical safety alerts.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "13. Driver HMI (Visual and Audio Alert)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Compromise of the HMI enables access to other vehicle subsystems.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Attacker impersonates RSU, OBU, cloud services, or roadside infrastructure endpoints.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Messages in transit are modified, leading to incorrect accident notifications.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Participants deny having transmitted or received safety-critical messages.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Eavesdropping reveals DENM payloads, location data, certificates, and operational information.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "5G disruption, PC5 jamming, or API flooding prevents accident warning delivery.",
+  "id": ""
+ },
+ {
+  "m": "Copilot",
+  "model": "Copilot last version released between August 11, 2026, and August 25, 2026\\. free version",
+  "asset": "Communication Links (5G Uu, PC5 Sidelink, RSU-Cloud APIs)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Network-level compromise enables unauthorized access to trusted infrastructure services.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Cameras (1)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Rogue camera node injecting fake video feeds into the edge detector.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Cameras (1)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Physical or logical modification (e.g., blinding, lens obstruction, replay attacks) of camera streams to prevent accident detection.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Cameras (1)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Unencrypted video feeds intercepted by unauthorized parties.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Cameras (1)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Flooding the camera interface to exhaust processing resources or blinding the sensor.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Edge Detector (2)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Malicious actor impersonating a legitimate camera to feed crafted data.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Edge Detector (2)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Modifying the YOLOv5 model weights or configuration to miss specific hazards.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Edge Detector (2)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Lack of audit logs for detected hazards or system modifications.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Edge Detector (2)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Extraction of edge processing logic or cached video frames.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Edge Detector (2)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Resource exhaustion (CPU/GPU) via high-volume video frame injection.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Edge Detector (2)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploiting software vulnerabilities to gain root access to the edge device and pivot to the AI agents.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Impersonating the Cloud MLLM API to send fake situation detection or message generation responses.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Adversarial machine learning (poisoning inputs, prompt injection) to alter hazard detection, distance estimation, or message generation.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Lack of immutable audit trails for AI decisions (e.g., denying an accident was detected or a message was generated).",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Model inversion or data leakage exposing sensitive training data or inferred accident scenes.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "API flooding or resource exhaustion to prevent real-time accident detection and message generation.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "AI Agents (3, 5, 6) and Cloud MLLM (4 & 7)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploiting API or container vulnerabilities to execute commands on the cloud infrastructure hosting the MLLM.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "DENM Encoder (8)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Modifying the ASN.1 UPER payload before encoding to falsify accident details or locations.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "DENM Encoder (8)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Extracting unencrypted DENM payloads prior to transmission.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "DENM Encoder (8)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Overloading the encoder to delay or drop critical safety messages.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Central ITS-S (10)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Compromised Certificate Authority issuing rogue certificates to malicious nodes.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Central ITS-S (10)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Unauthorized modification of PKI records or operator configurations.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Central ITS-S (10)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Administrator denying actions taken on the central system.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Central ITS-S (10)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Leakage of private keys, operator credentials, or sensitive event reports.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Central ITS-S (10)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "DDoS attack on the PKI infrastructure, halting certificate validation for the entire network.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Central ITS-S (10)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploiting operator interface vulnerabilities to gain root access to the ITS central infrastructure.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "RSU (9)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Compromised RSU broadcasting fake DENMs (Decentralized Environmental Notification Messages).",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "RSU (9)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Modifying ASN.1 payloads or altering RSU signs/HSM configurations.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "RSU (9)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "RSU denying broadcasting a specific safety message.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "RSU (9)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Extracting HSM keys from the RSU or reading unencrypted DENM payloads.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "RSU (9)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "HSM overload or PC5 sidelink jamming from the RSU.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "RSU (9)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Gaining root access to the RSU to manipulate the HSM or broadcast false safety messages.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Communication Links (5G Uu, PC5 Sidelink, Wired)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing a legitimate RSU or OBU on the PC5 sidelink or 5G network.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Communication Links (5G Uu, PC5 Sidelink, Wired)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Man-in-the-Middle (MitM) attacks modifying DENM payloads or AI agent communications during transmission.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Communication Links (5G Uu, PC5 Sidelink, Wired)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Eavesdropping on unencrypted 5G or PC5 traffic containing vehicle telemetry or accident reports.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Communication Links (5G Uu, PC5 Sidelink, Wired)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Radio frequency (RF) jamming of PC5/5G signals, or cellular network flooding.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing a legitimate OBU to send false vehicle status or accident reports.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Modifying warning logic in the vehicle computer or altering audio/visual alerts on the Driver HMI.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Denying that a warning was issued or received by the vehicle.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Extracting driver behavior data, vehicle location, or HMI interactions from the OBU/Vehicle Computer.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Flooding the OBU with fake PC5 messages to prevent reception of legitimate DENMs.",
+  "id": ""
+ },
+ {
+  "m": "DeepSeek",
+  "model": "DeepSeek 4.1 Flash",
+  "asset": "Vehicle ITS Station (OBU 11, Vehicle Computer 12, Driver HMI 13)",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Exploiting OBU vulnerabilities to gain control over the vehicle computer or HMI systems.",
+  "id": ""
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Mono + Stereo",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of Mono + Stereo",
+  "id": "T001"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Mono + Stereo",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of Mono + Stereo",
+  "id": "T002"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Mono + Stereo",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of Mono + Stereo",
+  "id": "T003"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Mono + Stereo",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of Mono + Stereo",
+  "id": "T004"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Mono + Stereo",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of Mono + Stereo",
+  "id": "T005"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Mono + Stereo",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of Mono + Stereo",
+  "id": "T006"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Mono + Stereo::image_out",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of image_out",
+  "id": "T007"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Mono + Stereo::image_out",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of image_out",
+  "id": "T008"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Mono + Stereo::image_out",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of image_out",
+  "id": "T009"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "image_out \u2194 image_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of image_out \u2194 image_in",
+  "id": "T010"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "image_out \u2194 image_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of image_out \u2194 image_in",
+  "id": "T011"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "image_out \u2194 image_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of image_out \u2194 image_in",
+  "id": "T012"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of YOLOv5 fast path",
+  "id": "T013"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of YOLOv5 fast path",
+  "id": "T014"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of YOLOv5 fast path",
+  "id": "T015"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of YOLOv5 fast path",
+  "id": "T016"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of YOLOv5 fast path",
+  "id": "T017"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of YOLOv5 fast path",
+  "id": "T018"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path::image_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of image_in",
+  "id": "T019"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path::image_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of image_in",
+  "id": "T020"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path::image_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of image_in",
+  "id": "T021"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path::detections_out",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of detections_out",
+  "id": "T022"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path::detections_out",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of detections_out",
+  "id": "T023"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "YOLOv5 fast path::detections_out",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of detections_out",
+  "id": "T024"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "detections_out \u2194 detections_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of detections_out \u2194 detections_in",
+  "id": "T025"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "detections_out \u2194 detections_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of detections_out \u2194 detections_in",
+  "id": "T026"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "detections_out \u2194 detections_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of detections_out \u2194 detections_in",
+  "id": "T027"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of Agent 1, MLLM call",
+  "id": "T028"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of Agent 1, MLLM call",
+  "id": "T029"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of Agent 1, MLLM call",
+  "id": "T030"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of Agent 1, MLLM call",
+  "id": "T031"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of Agent 1, MLLM call",
+  "id": "T032"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of Agent 1, MLLM call",
+  "id": "T033"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::detections_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of detections_in",
+  "id": "T034"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::detections_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of detections_in",
+  "id": "T035"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::detections_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of detections_in",
+  "id": "T036"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::hazard_out",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of hazard_out",
+  "id": "T037"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::hazard_out",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of hazard_out",
+  "id": "T038"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::hazard_out",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of hazard_out",
+  "id": "T039"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::mllm_request",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of mllm_request",
+  "id": "T040"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::mllm_request",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of mllm_request",
+  "id": "T041"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::mllm_request",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of mllm_request",
+  "id": "T042"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::uu_mllm_link",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_mllm_link",
+  "id": "T043"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::uu_mllm_link",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_mllm_link",
+  "id": "T044"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 1, MLLM call::uu_mllm_link",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_mllm_link",
+  "id": "T045"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "hazard_out \u2194 hazard_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of hazard_out \u2194 hazard_in",
+  "id": "T046"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "hazard_out \u2194 hazard_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of hazard_out \u2194 hazard_in",
+  "id": "T047"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "hazard_out \u2194 hazard_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of hazard_out \u2194 hazard_in",
+  "id": "T048"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "mllm_request \u2194 mllm_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of mllm_request \u2194 mllm_in",
+  "id": "T049"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "mllm_request \u2194 mllm_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of mllm_request \u2194 mllm_in",
+  "id": "T050"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "mllm_request \u2194 mllm_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of mllm_request \u2194 mllm_in",
+  "id": "T051"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_mllm_link \u2194 mllm_link_1",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_mllm_link \u2194 mllm_link_1",
+  "id": "T052"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_mllm_link \u2194 mllm_link_1",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_mllm_link \u2194 mllm_link_1",
+  "id": "T053"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_mllm_link \u2194 mllm_link_1",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_mllm_link \u2194 mllm_link_1",
+  "id": "T054"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of Agent 2, Depth Pro",
+  "id": "T055"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of Agent 2, Depth Pro",
+  "id": "T056"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of Agent 2, Depth Pro",
+  "id": "T057"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of Agent 2, Depth Pro",
+  "id": "T058"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of Agent 2, Depth Pro",
+  "id": "T059"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of Agent 2, Depth Pro",
+  "id": "T060"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro::hazard_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of hazard_in",
+  "id": "T061"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro::hazard_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of hazard_in",
+  "id": "T062"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro::hazard_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of hazard_in",
+  "id": "T063"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro::distance_out",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of distance_out",
+  "id": "T064"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro::distance_out",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of distance_out",
+  "id": "T065"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 2, Depth Pro::distance_out",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of distance_out",
+  "id": "T066"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "distance_out \u2194 distance_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of distance_out \u2194 distance_in",
+  "id": "T067"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "distance_out \u2194 distance_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of distance_out \u2194 distance_in",
+  "id": "T068"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "distance_out \u2194 distance_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of distance_out \u2194 distance_in",
+  "id": "T069"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of Agent 3, MLLM call",
+  "id": "T070"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of Agent 3, MLLM call",
+  "id": "T071"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of Agent 3, MLLM call",
+  "id": "T072"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of Agent 3, MLLM call",
+  "id": "T073"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of Agent 3, MLLM call",
+  "id": "T074"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of Agent 3, MLLM call",
+  "id": "T075"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::distance_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of distance_in",
+  "id": "T076"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::distance_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of distance_in",
+  "id": "T077"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::distance_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of distance_in",
+  "id": "T078"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::content_out",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of content_out",
+  "id": "T079"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::content_out",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of content_out",
+  "id": "T080"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::content_out",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of content_out",
+  "id": "T081"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::mllm_request",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of mllm_request",
+  "id": "T082"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::mllm_request",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of mllm_request",
+  "id": "T083"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::mllm_request",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of mllm_request",
+  "id": "T084"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::uu_mllm_link",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_mllm_link",
+  "id": "T085"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::uu_mllm_link",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_mllm_link",
+  "id": "T086"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Agent 3, MLLM call::uu_mllm_link",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_mllm_link",
+  "id": "T087"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "content_out \u2194 content_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of content_out \u2194 content_in",
+  "id": "T088"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "content_out \u2194 content_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of content_out \u2194 content_in",
+  "id": "T089"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "content_out \u2194 content_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of content_out \u2194 content_in",
+  "id": "T090"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "mllm_request \u2194 mllm_in_2",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of mllm_request \u2194 mllm_in_2",
+  "id": "T091"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "mllm_request \u2194 mllm_in_2",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of mllm_request \u2194 mllm_in_2",
+  "id": "T092"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "mllm_request \u2194 mllm_in_2",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of mllm_request \u2194 mllm_in_2",
+  "id": "T093"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_mllm_link \u2194 mllm_link_2",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_mllm_link \u2194 mllm_link_2",
+  "id": "T094"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_mllm_link \u2194 mllm_link_2",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_mllm_link \u2194 mllm_link_2",
+  "id": "T095"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_mllm_link \u2194 mllm_link_2",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_mllm_link \u2194 mllm_link_2",
+  "id": "T096"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of ASN.1 UPER payload",
+  "id": "T097"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of ASN.1 UPER payload",
+  "id": "T098"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of ASN.1 UPER payload",
+  "id": "T099"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of ASN.1 UPER payload",
+  "id": "T100"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of ASN.1 UPER payload",
+  "id": "T101"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of ASN.1 UPER payload",
+  "id": "T102"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload::content_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of content_in",
+  "id": "T103"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload::content_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of content_in",
+  "id": "T104"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload::content_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of content_in",
+  "id": "T105"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload::denm_out",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of denm_out",
+  "id": "T106"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload::denm_out",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of denm_out",
+  "id": "T107"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "ASN.1 UPER payload::denm_out",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of denm_out",
+  "id": "T108"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "denm_out \u2194 denm_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of denm_out \u2194 denm_in",
+  "id": "T109"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "denm_out \u2194 denm_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of denm_out \u2194 denm_in",
+  "id": "T110"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "denm_out \u2194 denm_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of denm_out \u2194 denm_in",
+  "id": "T111"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of Signs, PC5, HSM",
+  "id": "T112"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of Signs, PC5, HSM",
+  "id": "T113"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of Signs, PC5, HSM",
+  "id": "T114"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of Signs, PC5, HSM",
+  "id": "T115"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of Signs, PC5, HSM",
+  "id": "T116"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of Signs, PC5, HSM",
+  "id": "T117"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::denm_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of denm_in",
+  "id": "T118"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::denm_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of denm_in",
+  "id": "T119"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::denm_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of denm_in",
+  "id": "T120"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::pc5_out",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of pc5_out",
+  "id": "T121"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::pc5_out",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of pc5_out",
+  "id": "T122"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::pc5_out",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of pc5_out",
+  "id": "T123"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::uu_uplink",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_uplink",
+  "id": "T124"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::uu_uplink",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_uplink",
+  "id": "T125"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::uu_uplink",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_uplink",
+  "id": "T126"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::uu_link",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_link",
+  "id": "T127"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::uu_link",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_link",
+  "id": "T128"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Signs, PC5, HSM::uu_link",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_link",
+  "id": "T129"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "pc5_out \u2194 pc5_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of pc5_out \u2194 pc5_in",
+  "id": "T130"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "pc5_out \u2194 pc5_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of pc5_out \u2194 pc5_in",
+  "id": "T131"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "pc5_out \u2194 pc5_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of pc5_out \u2194 pc5_in",
+  "id": "T132"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_uplink \u2194 uu_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_uplink \u2194 uu_in",
+  "id": "T133"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_uplink \u2194 uu_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_uplink \u2194 uu_in",
+  "id": "T134"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_uplink \u2194 uu_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_uplink \u2194 uu_in",
+  "id": "T135"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_link \u2194 uu_link_rsu",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_link \u2194 uu_link_rsu",
+  "id": "T136"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_link \u2194 uu_link_rsu",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_link \u2194 uu_link_rsu",
+  "id": "T137"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_link \u2194 uu_link_rsu",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_link \u2194 uu_link_rsu",
+  "id": "T138"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of PC5 + Uumodem",
+  "id": "T139"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of PC5 + Uumodem",
+  "id": "T140"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of PC5 + Uumodem",
+  "id": "T141"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of PC5 + Uumodem",
+  "id": "T142"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of PC5 + Uumodem",
+  "id": "T143"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of PC5 + Uumodem",
+  "id": "T144"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::pc5_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of pc5_in",
+  "id": "T145"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::pc5_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of pc5_in",
+  "id": "T146"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::pc5_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of pc5_in",
+  "id": "T147"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::warning_out",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of warning_out",
+  "id": "T148"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::warning_out",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of warning_out",
+  "id": "T149"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::warning_out",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of warning_out",
+  "id": "T150"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::uu_modem",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_modem",
+  "id": "T151"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::uu_modem",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_modem",
+  "id": "T152"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::uu_modem",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_modem",
+  "id": "T153"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::uu_modem",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_modem",
+  "id": "T154"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::uu_modem",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_modem",
+  "id": "T155"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PC5 + Uumodem::uu_modem",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_modem",
+  "id": "T156"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "warning_out \u2194 warning_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of warning_out \u2194 warning_in",
+  "id": "T157"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "warning_out \u2194 warning_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of warning_out \u2194 warning_in",
+  "id": "T158"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "warning_out \u2194 warning_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of warning_out \u2194 warning_in",
+  "id": "T159"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_modem \u2194 uu_in_2",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_modem \u2194 uu_in_2",
+  "id": "T160"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_modem \u2194 uu_in_2",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_modem \u2194 uu_in_2",
+  "id": "T161"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_modem \u2194 uu_in_2",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_modem \u2194 uu_in_2",
+  "id": "T162"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of Verify, warning logic",
+  "id": "T163"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of Verify, warning logic",
+  "id": "T164"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of Verify, warning logic",
+  "id": "T165"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of Verify, warning logic",
+  "id": "T166"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of Verify, warning logic",
+  "id": "T167"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of Verify, warning logic",
+  "id": "T168"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic::warning_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of warning_in",
+  "id": "T169"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic::warning_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of warning_in",
+  "id": "T170"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic::warning_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of warning_in",
+  "id": "T171"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic::alert_out",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of alert_out",
+  "id": "T172"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic::alert_out",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of alert_out",
+  "id": "T173"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Verify, warning logic::alert_out",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of alert_out",
+  "id": "T174"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "alert_out \u2194 alert_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of alert_out \u2194 alert_in",
+  "id": "T175"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "alert_out \u2194 alert_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of alert_out \u2194 alert_in",
+  "id": "T176"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "alert_out \u2194 alert_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of alert_out \u2194 alert_in",
+  "id": "T177"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Visual + audio alert",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of Visual + audio alert",
+  "id": "T178"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Visual + audio alert",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of Visual + audio alert",
+  "id": "T179"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Visual + audio alert",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of Visual + audio alert",
+  "id": "T180"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Visual + audio alert",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of Visual + audio alert",
+  "id": "T181"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Visual + audio alert",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of Visual + audio alert",
+  "id": "T182"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Visual + audio alert",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of Visual + audio alert",
+  "id": "T183"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Visual + audio alert::alert_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of alert_in",
+  "id": "T184"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Visual + audio alert::alert_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of alert_in",
+  "id": "T185"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Visual + audio alert::alert_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of alert_in",
+  "id": "T186"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of Gemini API",
+  "id": "T187"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of Gemini API",
+  "id": "T188"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of Gemini API",
+  "id": "T189"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of Gemini API",
+  "id": "T190"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of Gemini API",
+  "id": "T191"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of Gemini API",
+  "id": "T192"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of mllm_in",
+  "id": "T193"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of mllm_in",
+  "id": "T194"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of mllm_in",
+  "id": "T195"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_in_2",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of mllm_in_2",
+  "id": "T196"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_in_2",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of mllm_in_2",
+  "id": "T197"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_in_2",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of mllm_in_2",
+  "id": "T198"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_link_1",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of mllm_link_1",
+  "id": "T199"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_link_1",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of mllm_link_1",
+  "id": "T200"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_link_1",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of mllm_link_1",
+  "id": "T201"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_link_2",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of mllm_link_2",
+  "id": "T202"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_link_2",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of mllm_link_2",
+  "id": "T203"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "Gemini API::mllm_link_2",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of mllm_link_2",
+  "id": "T204"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of PKI, operator",
+  "id": "T205"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of PKI, operator",
+  "id": "T206"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of PKI, operator",
+  "id": "T207"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator",
+  "stride": "Spoofing",
+  "s": "S",
+  "scenario": "Spoofing of PKI, operator",
+  "id": "T208"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator",
+  "stride": "Elevation of Privilege",
+  "s": "E",
+  "scenario": "Elevation of Privilege of PKI, operator",
+  "id": "T209"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator",
+  "stride": "Repudiation",
+  "s": "R",
+  "scenario": "Repudiation of PKI, operator",
+  "id": "T210"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_in",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_in",
+  "id": "T211"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_in",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_in",
+  "id": "T212"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_in",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_in",
+  "id": "T213"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_in_2",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_in_2",
+  "id": "T214"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_in_2",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_in_2",
+  "id": "T215"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_in_2",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_in_2",
+  "id": "T216"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_link_rsu",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_link_rsu",
+  "id": "T217"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_link_rsu",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_link_rsu",
+  "id": "T218"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_link_rsu",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_link_rsu",
+  "id": "T219"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_modem_out",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_modem_out",
+  "id": "T220"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_modem_out",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_modem_out",
+  "id": "T221"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "PKI, operator::uu_modem_out",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_modem_out",
+  "id": "T222"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_modem_out \u2194 uu_modem",
+  "stride": "Information Disclosure",
+  "s": "I",
+  "scenario": "Information Disclosure of uu_modem_out \u2194 uu_modem",
+  "id": "T223"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_modem_out \u2194 uu_modem",
+  "stride": "Tampering",
+  "s": "T",
+  "scenario": "Tampering of uu_modem_out \u2194 uu_modem",
+  "id": "T224"
+ },
+ {
+  "m": "Medini",
+  "model": "Medini Analyze (tool-generated)",
+  "asset": "uu_modem_out \u2194 uu_modem",
+  "stride": "Denial of Service",
+  "s": "D",
+  "scenario": "Denial of Service of uu_modem_out \u2194 uu_modem",
+  "id": "T225"
+ }
+]
